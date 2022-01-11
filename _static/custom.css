@@ -1,0 +1,6 @@
+div.sphinxsidebar {
+    height: 100%;
+    overflow-y: auto;
+    position: initial;
+    font-size: 70%;
+}
