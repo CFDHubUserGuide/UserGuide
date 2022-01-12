@@ -104,7 +104,7 @@ A launch file ``launch.sh`` is a shell script that has the following instruction
        #$ -N jobName           # jobName
        #$ -j y                 # merges output and errors
        #$ -S /bin/bash         # scripting language
-       #$ -l walltime=1:00:00  # jobDuration hh:mm:ss
+       #$ -l h_rt=1:00:00      # jobDuration hh:mm:ss
        #$ -q hub.q             # queueName
        #$ -pe mpi 16           # cpuNumber
       
