@@ -100,7 +100,7 @@ The result of the computation will be written on file (please make sure to save 
     #$ -N myMatlabJob       # jobName
     #$ -j y                 # merges output and errors
     #$ -S /bin/bash         # scripting language
-    #$ -l walltime=1:00:00  # jobDuration hh:mm:ss
+    #$ -l h_rt=1:00:00      # jobDuration hh:mm:ss
     #$ -q hub.q             # queueName
     #$ -pe mpi 2            # cpuNumber
     #________________________________________________________
@@ -272,7 +272,7 @@ Here an example of launch file:
     #$ -N myOpenFOAMJob     # jobName
     #$ -j y                 # merges output and errors
     #$ -S /bin/bash         # scripting language
-    #$ -l walltime=3:00:00  # jobDuration hh:mm:ss
+    #$ -l h_rt=3:00:00      # jobDuration hh:mm:ss
     #$ -q hub.q             # queueName
     #$ -pe mpi 4            # cpuNumber
     #---------------------------------------------------------
@@ -289,7 +289,7 @@ Here an example of launch file:
     #./Allrun
     
     blockMesh >& log.blockMesh
-    decomposePar >& log.snappyHexMesh
+    decomposePar >& log.decomposePar
     mpirun snappyHexMesh -parallel >& log.snappyHexMesh
     mpirun simpleFoam -parallel >& log.simpleFoam
     reconstructPar -latestTime >& log.reconstructPar
@@ -429,7 +429,7 @@ Here an example of launch file:
     #$ -N myPythonJob       # jobName
     #$ -j y                 # merges output and errors
     #$ -S /bin/bash         # scripting language
-    #$ -l walltime=2:00:00  # jobDuration hh:mm:ss
+    #$ -l h_rt=2:00:00      # jobDuration hh:mm:ss
     #$ -q hub.q             # queueName
     #$ -pe mpi 2            # cpuNumber
     #---------------------------------------------------------
