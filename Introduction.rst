@@ -12,7 +12,7 @@ GENERAL INFORMATION
 
 CFDHub is a HPC system located in Milan, Bovisa campus, which is at disposal for intensive computations. It is shared by various research groups of the Politecnico di Milano from various departments such as Aerospace, Bio, Chemical, Energy, Environmental and Mechanical Engineering.
 
-CFDHub is a Linux based cluster. The OS installed is *CentOS release 6.5*. If you need some information on how to work in a Linux environment you may check the `Ubuntu Help <https://help.ubuntu.com/community/UsingTheTerminal>`_ or a `UNIX Tutorial <http://www.ee.surrey.ac.uk/Teaching/Unix/index.html>`_.
+CFDHub is a Linux based cluster. The OS installed is *CentOS release 7.9*. If you need some information on how to work in a Linux environment you may check the `Ubuntu Help <https://help.ubuntu.com/community/UsingTheTerminal>`_ or a `UNIX Tutorial <http://www.ee.surrey.ac.uk/Teaching/Unix/index.html>`_.
 
 CFDHub framework shares a common environment to facilitate the use of resources and the portability of data and programs.
 
