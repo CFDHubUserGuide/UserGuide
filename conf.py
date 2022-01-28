@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'User Guide'
-copyright = '2021, Paolo Schito'
+copyright = '2021, CFDHub@polimi.it'
 author = 'Paolo Schito'
 
 # The full version, including alpha/beta/rc tags
