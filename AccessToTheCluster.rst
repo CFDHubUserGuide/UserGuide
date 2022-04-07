@@ -10,7 +10,6 @@ The cluster environment is Linux OS. If you need some information on how to work
 
 The master is the machine that manages all the communications between the cluster resources and the login nodes. Login nodes (*nodevg-0-x*) are the nodes used to manage the interaction between users and graphical parts and the computing nodes. When you log into the cluster you actually log into the master and then to the login nodes.
 
-#.. figure:: images/cfdhubStructure.png
 .. figure:: images/images_3_nodi_test.jpg
 
 Figure: CFDHub hardware structure for user access.
