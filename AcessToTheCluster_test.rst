@@ -11,7 +11,7 @@ The cluster environment is Linux OS. If you need some information on how to work
 
 The cluster’s infrastructure can be explained as following. The master node is the machine that manages all the communications between the cluster resources and the login nodes. Login nodes (nodevg-0-x) are the nodes used to manage the interaction between users and graphical parts and the computing nodes. When you log into the cluster you actually log into the master and then to the login nodes. In order to access the master node the user should be connected to Politecnico’s network or, if connected from outside, the user must use the `PoliMi VPN <https://www.ict.polimi.it/network/vpn/?lang=en>`_. 
 
-.. figure:: images_test/images_3_nodi.jpg
+.. figure:: images_test/cluster_structure.jpg
 
 Figure: CFDHub hardware structure for user access. 
 
@@ -22,6 +22,58 @@ In order to use the computing resources you will have to log into nodevg-0-3 or 
 | **The user should be connected to the PoliMi VPN in order to access to the cluster!**
 | **Always check to be connected to the selected computing nodes before to launch the run!**
 | **All the processes running on the master or the login nodes will be killed without any advice if affecting the functionality of the whole system.**
+
+
+.. _dovrebbe essere capitolo 3.1:
+-----------------
+CONNECTION REQUIREMENTS 
+-----------------
+
+The CFDHub HPC can be accessed in two ways : 
+
+- directly from PoliMi network (e.g. polimi-protected/eduroam wifi networks or wired network); 
+- from VPN service; 
+
+The latter method is used when the user is outside the PoliMi network. Please refer to the `VPN guide <https://www.ict.polimi.it/network/vpn/?lang=en>`_ to set-up the VPN connection. 
+
+.. _dovrebbe essere capitolo 3.2:
+-----------------
+VPN SERVICE ACTIVATION
+-----------------
+
+To access the CFDHub HPC machines when the user is outside PoliMi network, you are required to ask your own Department IT staff the activation of VPN service for your PoliMi account. Some indications are reported at the following link: https://www.asict.polimi.it/en/network-services/vpn.html 
+
+.. _dovrebbe essere capitolo 3.3:
+-----------------
+STEPS FOR HPC ACCESS
+-----------------
+
+If you access the cluster from a Linux OS/MacOS, you can jump to next chapter SSH connection (LINUX/MacOS). 
+
+If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SSH CONNECTION (Windows)>`. 
+
+.. _dovrebbe essere capitolo 3.4:
+-----------------
+SSH CONNECTION (Windows)
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
