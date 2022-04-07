@@ -1,5 +1,33 @@
-require 'octokit'
-# prova commento
+.. PROVA COMMENTOOOOOO
+
+.. _AccessToTheCluster, dovrebbe essere capitolo 3:
+=====================
+ACCESS TO THE CLUSTER 
+=====================
+
+This section describes how to install and set-up the software needed to connect your terminal (workstation or laptop) to the cluster. 
+
+The cluster environment is Linux OS. If you need some information on how to work in a Linux environment you may check the `Ubuntu Help <https://help.ubuntu.com/community/UsingTheTerminal>`_ or a `UNIX Tutorial <http://www.ee.surrey.ac.uk/Teaching/Unix/index.html>`_. 
+
+The cluster’s infrastructure can be explained as following. The master node is the machine that manages all the communications between the cluster resources and the login nodes. Login nodes (nodevg-0-x) are the nodes used to manage the interaction between users and graphical parts and the computing nodes. When you log into the cluster you actually log into the master and then to the login nodes. In order to access the master node the user should be connected to Politecnico’s network or, if connected from outside, the user must use the `PoliMi VPN <https://www.ict.polimi.it/network/vpn/?lang=en>`_. 
+
+.. figure:: images_test/images_3_nodi.jpg
+
+Figure: CFDHub hardware structure for user access. 
+
+In order to use the computing resources you will have to log into nodevg-0-3 or nodevg-0-4 (depending on your Research Group) to successively use the computational resources. 
+
+| *Remember:*
+| **Never launch a computational run from the master!**
+| **The user should be connected to the PoliMi VPN in order to access to the cluster!**
+| **Always check to be connected to the selected computing nodes before to launch the run!**
+| **All the processes running on the master or the login nodes will be killed without any advice if affecting the functionality of the whole system.**
+
+
+
+
+
+
 
 .. _AccessToTheCluster:
 
