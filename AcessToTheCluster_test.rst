@@ -1,6 +1,8 @@
-.. PROVA COMMENTOOOOOO
+.. Questo è un commento
 
-.. _AccessToTheCluster, dovrebbe essere capitolo 3:
+.. dovrebbe essere capitolo 3:
+.. La seguente credo sia una reference:
+.. _AccessToTheCluster
 =====================
 ACCESS TO THE CLUSTER 
 =====================
@@ -9,13 +11,13 @@ This section describes how to install and set-up the software needed to connect 
 
 The cluster environment is Linux OS. If you need some information on how to work in a Linux environment you may check the `Ubuntu Help <https://help.ubuntu.com/community/UsingTheTerminal>`_ or a `UNIX Tutorial <http://www.ee.surrey.ac.uk/Teaching/Unix/index.html>`_. 
 
-The cluster’s infrastructure can be explained as following. The master node is the machine that manages all the communications between the cluster resources and the login nodes. Login nodes (nodevg-0-x) are the nodes used to manage the interaction between users and graphical parts and the computing nodes. When you log into the cluster you actually log into the master and then to the login nodes. In order to access the master node the user should be connected to Politecnico’s network or, if connected from outside, the user must use the `PoliMi VPN <https://www.ict.polimi.it/network/vpn/?lang=en>`_. 
+The cluster’s infrastructure can be explained as following. The master node is the machine that manages all the communications between the cluster resources and the login nodes. Login nodes (*nodevg-0-x*) are the nodes used to manage the interaction between users and graphical ports and the computing nodes. When you log into the cluster you actually log into the master and then to the login nodes. In order to access the master node the user should be connected to Politecnico’s network or, if connected from outside, the user must use the `PoliMi VPN <https://www.ict.polimi.it/network/vpn/?lang=en>`_. 
 
 .. figure:: images_test/cluster_structure.jpg
 
 Figure: CFDHub hardware structure for user access. 
 
-In order to use the computing resources you will have to log into nodevg-0-3 or nodevg-0-4 (depending on your Research Group) to successively use the computational resources. 
+In order to use the computing resources you will have to log into *nodevg-0-3* or *nodevg-0-4* (depending on your :ref:`Research Group<ResearchGroups>`) to successively use the computational resources. 
 
 | *Remember:*
 | **Never launch a computational run from the master!**
@@ -48,52 +50,59 @@ To access the CFDHub HPC machines when the user is outside PoliMi network, you a
 STEPS FOR HPC ACCESS
 -----------------
 
-If you access the cluster from a Linux OS/MacOS, you can jump to next chapter SSH connection (LINUX/MacOS). 
+If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SSH_CONNECTION_Windows>`. 
 
-If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SSH CONNECTION (Windows)>`. 
+If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (LINUX/MacOS)<SSH_CONNECTION_Linux_Mac-OS>`. 
 
 .. _dovrebbe essere capitolo 3.4:
+.. _SSH_CONNECTION_Windows:
 -----------------
 SSH CONNECTION (Windows)
 -----------------
 
 If you are accessing from a Windows machine, the steps to access the HPC machines (through both PoliMi network or VPN service) are:
 
-1. :ref:`installation of the software to access the cluster<>`; 
-2. :ref:`setting of SSH session to access the cluster<>`; 
-3. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<>`;
-4. :ref:`setting of a VNC session to graphically access and control the HPC machines<>`; 
-5. :ref:`settings to upload and download files to/from HPC machines to the local one<>`. 
+1. :ref:`installation of the software to access the cluster<SOFTWARE_REQUIREMENTS>`; 
+2. :ref:`setting of SSH session to access the cluster<DETAILED_SSH_CONNECTION_SETTINGS>`; 
+3. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<CREATION_OF_A_GRAPHICAL_PORT>`;
+4. :ref:`setting of a VNC session to graphically access and control the HPC machines<SETTING_OF_VNC_SESSION>`; 
+5. :ref:`settings to upload and download files to/from HPC machines to the local one<DATA_TRANSFER_WINDOWS>`. 
 
 .. _dovrebbe essere capitolo 3.4.1:
+.. _SOFTWARE_REQUIREMENTS:
 __________________________________
 SOFTWARE REQUIREMENTS
 __________________________________
 
-Download and install the software MobaXterm. The next guide is referred to this software. 
+Download and install the software MobaXterm_. The next guide is referred to this software. 
 
-An alternative and quick solution is Putty. The user should know how to configure this software. 
+An alternative and quick solution is Putty_. The user should know how to configure this software.
+
+.. _MobaXterm: https://mobaxterm.mobatek.net/download.html 
+.. _Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 .. _dovrebbe essere capitolo 3.4.2:
+.. _DETAILED_SSH_CONNECTION_SETTINGS:
 __________________________________
 DETAILED SSH CONNECTION SETTINGS 
 __________________________________
 
 Open MobaXterm software:
 
-1. Go to Sessions Tab –> New Session –> choose SSH and open the Network settings panel
+1. Go to *Sessions* Tab –> *New Session* –> choose *SSH* and open the *Network settings* panel
 
-2. Set up Basic SSH settings as described in Figure. Use your <username> and nodevg-0-x, where x = 3,4 based on your Research Group 
+2. Set up **Basic SSH settings** as described in Figure. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` 
 
 .. figure:: images_test/Network_setting_panel.png
 
-3. Set up the SSH session as described in next Figure for SSH gateway (jump host) voice. Use your <username> and nodevg-0-x, where x = 3,4 based on your Research Group. Click OK to save
+3. Set up the SSH session as described in next Figure for **SSH gateway (jump host)** voice. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>`. Click OK to save
 
 .. figure:: images_test/SSH_gateway_jump_host.png
 
 4. Click OK to save the session.
 
 .. _dovrebbe essere capitolo 3.4.3:
+.. _CREATION_OF_A_GRAPHICAL_PORT:
 __________________________________
 CREATION OF A GRAPHICAL PORT 
 __________________________________
@@ -102,31 +111,92 @@ Open the previously created SSH session from the left lateral bar:
 
 In the SSH terminal digit: 
 
+	``vncserver -name <username> -geometry 0000X0000 -depth 24``
+
 where: 
 
--
+- *0000x0000* is the resolution of the monitor you use to work, for example if the user wants to work with a *1920 x 1080* resolution, the command should be changed as follows:
 
-After launching the previous command, the following message is presented: 
+	``vncserver -name <username> -geometry 1920X1080 -depth 24``
 
-The graphical port assigned to the user is indicated by the system, in this example the assigned port is NN. 
+After launching the previous command, the following message is presented:
+
+	| ``New '<username>' desktop is nodevg-0-x:NN`` 
+	|
+	| ``Starting applications specified in /home/<research_group>/<username>/.vnc/xstartup`` 
+	|
+	| ``Log file is /home/<research_group>/<username>/.vnc/nodevg-0-x:NN.log`` 
+
+The graphical port assigned to the user is indicated by the system, in this example the assigned port is *NN*. 
 
 .. _dovrebbe essere capitolo 3.4.4:
+.. _SETTING_OF_VNC_SESSION:
 __________________________________
 SETTING OF VNC SESSION
 __________________________________
 
-1. Go to Sessions Tab –> New Session –> choose VNC and open the Network settings panel 
+1. Go to *Sessions* Tab –> *New Session* –> choose *VNC* and open the *Network settings* panel 
 
-2. Set up Basic VNC settings as described in Figure. Use your nodevg-0-x , where x = 3,4 based on your Research Group and the port number provided by the system in previous step putting it after the number 59 (e.g. if the assigned port is NN, put 59NN instead of 5900); 
+2. Set up **Basic VNC settings** as described in Figure. Use your *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` and the port number provided by the system in previous step putting it after the number *59* (e.g. if the assigned port is *NN*, put *59NN* instead of *5900*); 
 
 .. figure:: images_test/VNC_Network_setting_panel.png
 
-3. Set up the VNC session as described in next Figure for SSH gateway (jump host) voice. Use your <username> and nodevg-0-x , where x = 3,4 based on your Research Group. Click OK to save. 
+3. Set up the VNC session as described in next Figure for **SSH gateway (jump host)** voice. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>`. Click OK to save. 
 
 .. figure:: images_test/VNC_SSH_gateway_jump_host.png
 
 4. Click OK to save the session 
 
+.. _dovrebbe essere capitolo 3.5:
+.. _DATA_TRANSFER_WINDOWS:
+-----------------
+DATA TRANSFERRING FOR WINDOWS USERS
+-----------------
+
+To transfer data between the user local folders and cluster folders is necessary first to setup a tunnel and then to connect to the cluster through it. 
+
+.. _dovrebbe essere capitolo 3.5.1:
+__________________________________
+TUNNELLING SETUP
+__________________________________
+
+1.
+
+2.
+
+3.
+
+.. _dovrebbe essere capitolo 3.5.2:
+__________________________________
+DATA TRANSFER SETUP (MobaXterm) 
+__________________________________
+
+1. Open tab *Tunnelling* and run the symbol play of the previously created tunnel as can be seen in next Figure. 
+
+.. figure:: images_test/run_play.png 
+
+2. Close *MobaSSHTunnel* window.  
+
+3. Go to *Sessions* Tab –> *New Session* –> choose *SFTP* 
+
+4. Set up **Basic Sftp settings**: insert host 127.0.0.1, your ``<username>`` and port **22**. 
+
+5. Click OK to save the session. If asked insert your ``<password>``. 
+
+6. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
+
+.. _dovrebbe essere capitolo 3.5.3:
+__________________________________
+DATA TRANSFER SETUP (MobaXterm + FileZilla)
+__________________________________
+
+1.
+
+2.
+
+3.
+
+4.
 
 
 
@@ -144,7 +214,16 @@ __________________________________
 
 
 
-.. _AccessToTheCluster:
+
+
+
+
+
+
+
+
+
+.. _AccessToTheCluster2:
 
 =====================
 ACCESS TO THE CLUSTER V
@@ -212,7 +291,7 @@ If you are accessing from a non-Linux OS, the steps to access the HPC machines (
 
 - :ref:`settings to upload and download files to/from HPC machines to the local one<DataTransferring>`. 
 
-.. _AccessSoftwareInstallation:
+.. _AccessSoftwareInstallation2:
 
 -----------------------------
 ACCESS SOFTWARE INSTALLATION 
@@ -227,7 +306,7 @@ Possible quick solution is Putty_.
 .. _Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 
 
 
-.. _SSHConnection:
+.. _SSHConnection2:
 
 ---------------------
 SSH CONNECTION 
@@ -255,7 +334,7 @@ where *x = 1,2* depending on your :ref:`Research Group<ResearchGroups>`.
 Detailed information for non Linux OS is available in the following section.
 
 
-.. _DetailedSSHConnection:
+.. _DetailedSSHConnection2:
 
 __________________________________
 DETAILED SSH CONNECTION SETTINGS
@@ -275,7 +354,7 @@ __________________________________
 
 
 
-.. _GraphicalPort:
+.. _GraphicalPort2:
 
 ------------------------------
 CREATION OF A GRAPHICAL PORT
