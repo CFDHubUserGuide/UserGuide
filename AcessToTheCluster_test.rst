@@ -233,7 +233,7 @@ Open MobaXterm:
 
 Now the user has two alternatives to transfer data between local and cluster folders.
 
-.. _dovrebbe essere capitolo 3.7.2:
+.. dovrebbe essere capitolo 3.7.2:
 __________________________________
 DATA TRANSFER SETUP (MobaXterm) 
 __________________________________
@@ -254,7 +254,7 @@ __________________________________
 
 6. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
 
-.. _dovrebbe essere capitolo 3.7.3:
+.. dovrebbe essere capitolo 3.7.3:
 __________________________________
 DATA TRANSFER SETUP (MobaXterm + FileZilla)
 __________________________________
@@ -277,7 +277,7 @@ Open FileZilla:
 
 4. Click *“Quickconnect”*. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
 
-.. _dovrebbe essere capitolo 3.8:
+.. dovrebbe essere capitolo 3.8:
 .. _DATA_TRANSFER_Linux_Mac-OS:
 -----------------
 DATA TRANSFERRING FOR LINUX/Mac OS
