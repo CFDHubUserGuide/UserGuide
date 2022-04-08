@@ -201,6 +201,8 @@ Linux OS: installare turboVNC e poi???
 
 **MacOS**: Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
 
+.. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
+
 .. dovrebbe essere capitolo 3.6:
 .. _DATA_TRANSFER:
 -----------------
