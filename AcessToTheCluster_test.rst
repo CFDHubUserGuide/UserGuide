@@ -137,7 +137,7 @@ __________________________________
 
 1. Go to *Sessions* Tab –> *New Session* –> choose *VNC* and open the *Network settings* panel 
 
-2. Set up **Basic VNC settings** as described in Figure. Use your *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` and the port number provided by the system in previous step putting it after the number *59* (e.g. if the assigned port is *NN*, put *59NN* instead of *5900*); 
+2. Set up **Basic VNC settings** as described in Figure. Use your *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` and the port number provided by the system in :ref:`the previous step<CREATION_OF_A_GRAPHICAL_PORT>` putting it after the number *59* (e.g. if the assigned port is *NN*, put *59NN* instead of *5900*); 
 
 .. figure:: images_test/VNC_Network_setting_panel.png
 
