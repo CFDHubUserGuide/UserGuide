@@ -116,13 +116,13 @@ Open the previously created SSH session from the left lateral bar:
 
 In the SSH terminal digit: 
 
-	| ``vncserver -name <username> -geometry 0000X0000 -depth 24``
+	| ``vncserver -name <username> -geometry 0000x0000 -depth 24``
 
 where: 
 
 - *0000x0000* is the resolution of the monitor you use to work, for example if the user wants to work with a *1920 x 1080* resolution, the command should be changed as follows:
 
-	``vncserver -name <username> -geometry 1920X1080 -depth 24``
+	``vncserver -name <username> -geometry 1920x1080 -depth 24``
 
 After launching the previous command, the following message is presented:
 
