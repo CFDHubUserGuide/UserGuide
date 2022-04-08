@@ -25,7 +25,7 @@ In order to use the computing resources you will have to log into *nodevg-0-3* o
 | **Always check to be connected to the selected computing nodes before to launch the run!**
 | **All the processes running on the master or the login nodes will be killed without any advice if affecting the functionality of the whole system.**
 
-.. METTERE NOTA SU MIGRAZIONE DA NODE VG 02/01 E CHE NON SI VEDE PIU BIG-SCRATCH
+.. METTERE NOTA SU MIGRAZIONE DA NODE VG 02/01 E CHE NON SI VEDE PIU BIG-SCRATCH.
 
 .. dovrebbe essere capitolo 3.1:
 -----------------
