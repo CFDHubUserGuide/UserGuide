@@ -27,14 +27,14 @@ __________________________________
 PARALLEL AND SINGLE NODE SET-UP 
 __________________________________
 
-.. figure:: images_test/single_node.png
+.. figure:: images_test/single-node.png
 
 .. _PARALLEL_MULTIPLE_NODE:
 __________________________________
 PARALLEL AND MULTIPLE NODE SET-UP
 __________________________________
 
-.. figure:: images_test/multiple_node.png
+.. figure:: images_test/multiple-node.png
 
 .. _CPU_GPU:
 __________________________________
