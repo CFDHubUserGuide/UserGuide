@@ -26,7 +26,7 @@ In order to use the computing resources you will have to log into *nodevg-0-3* o
 | **All the processes running on the master or the login nodes will be killed without any advice if affecting the functionality of the whole system.**
 
 
-.. _dovrebbe essere capitolo 3.1:
+.. dovrebbe essere capitolo 3.1:
 -----------------
 CONNECTION REQUIREMENTS 
 -----------------
@@ -38,14 +38,14 @@ The CFDHub HPC can be accessed in two ways :
 
 The latter method is used when the user is outside the PoliMi network. Please refer to the `VPN guide <https://www.ict.polimi.it/network/vpn/?lang=en>`_ to set-up the VPN connection. 
 
-.. _dovrebbe essere capitolo 3.2:
+.. dovrebbe essere capitolo 3.2:
 -----------------
 VPN SERVICE ACTIVATION
 -----------------
 
 To access the CFDHub HPC machines when the user is outside PoliMi network, you are required to ask your own Department IT staff the activation of VPN service for your PoliMi account. Some indications are reported at the following link: https://www.asict.polimi.it/en/network-services/vpn.html 
 
-.. _dovrebbe essere capitolo 3.3:
+.. dovrebbe essere capitolo 3.3:
 -----------------
 STEPS FOR HPC ACCESS
 -----------------
@@ -54,7 +54,7 @@ If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH 
 
 If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (LINUX/MacOS)<SSH_CONNECTION_Linux_Mac-OS>`. 
 
-.. _dovrebbe essere capitolo 3.4:
+.. dovrebbe essere capitolo 3.4:
 .. _SSH_CONNECTION_Windows:
 -----------------
 SSH CONNECTION (Windows)
@@ -68,7 +68,7 @@ If you are accessing from a Windows machine, the steps to access the HPC machine
 4. :ref:`setting of a VNC session to graphically access and control the HPC machines<SETTING_OF_VNC_SESSION>`; 
 5. :ref:`settings to upload and download files to/from HPC machines to the local one<DATA_TRANSFER_WINDOWS>`. 
 
-.. _dovrebbe essere capitolo 3.4.1:
+.. dovrebbe essere capitolo 3.4.1:
 .. _SOFTWARE_REQUIREMENTS:
 __________________________________
 SOFTWARE REQUIREMENTS
@@ -81,7 +81,7 @@ An alternative and quick solution is Putty_. The user should know how to configu
 .. _MobaXterm: https://mobaxterm.mobatek.net/download.html 
 .. _Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
-.. _dovrebbe essere capitolo 3.4.2:
+.. dovrebbe essere capitolo 3.4.2:
 .. _DETAILED_SSH_CONNECTION_SETTINGS:
 __________________________________
 DETAILED SSH CONNECTION SETTINGS 
@@ -101,7 +101,7 @@ Open MobaXterm software:
 
 4. Click OK to save the session.
 
-.. _dovrebbe essere capitolo 3.4.3:
+.. dovrebbe essere capitolo 3.4.3:
 .. _CREATION_OF_A_GRAPHICAL_PORT:
 __________________________________
 CREATION OF A GRAPHICAL PORT 
@@ -111,7 +111,7 @@ Open the previously created SSH session from the left lateral bar:
 
 In the SSH terminal digit: 
 
-	``vncserver -name <username> -geometry 0000X0000 -depth 24``
+	| ``vncserver -name <username> -geometry 0000X0000 -depth 24``
 
 where: 
 
@@ -129,7 +129,7 @@ After launching the previous command, the following message is presented:
 
 The graphical port assigned to the user is indicated by the system, in this example the assigned port is *NN*. 
 
-.. _dovrebbe essere capitolo 3.4.4:
+.. dovrebbe essere capitolo 3.4.4:
 .. _SETTING_OF_VNC_SESSION:
 __________________________________
 SETTING OF VNC SESSION
@@ -145,9 +145,72 @@ __________________________________
 
 .. figure:: images_test/VNC_SSH_gateway_jump_host.png
 
-4. Click OK to save the session 
+4. Click OK to save the session
 
-.. _dovrebbe essere capitolo 3.5:
+.. dovrebbe essere capitolo 3.5:
+.. _SSH_CONNECTION_Linux_Mac-OS:
+-----------------
+SSH CONNECTION (Linux/Mac OS)
+-----------------
+
+First connect to SSH server *131.175.56.199* through Port *22*. Then to start working on the cluster, it is necessary also to connect to the login nodes *nodevg-0-3* or *nodevg-0-4*, depending on your Research Group. 
+
+.. verificare se i nodi sono cosi assegnati
+
+- *nodevg-0-3* (*10.0.0.121*) Research groups of Chemical, Mathematical and Mechanical Engineering Departments; 
+
+- *nodevg-0-4* (*10.0.0.122*) Research groups of Energy, Electronic-BioEngineering and not mentioned Departments. 
+
+.. dovrebbe essere capitolo 3.5.1:
+__________________________________
+Access from terminal
+__________________________________
+
+This method enables the user to access the cluster just from terminal, without graphical interface. For Linux/MacOS users the command, from terminal, to access the master node is: 
+
+	| ``ssh <username>@131.175.56.199``
+
+then to access your login node you may choose 
+
+	| ``ssh nodevg-0-x`` 
+
+where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. 
+
+For data transferring between cluster and your local machine, refer to chapter :ref:`Data transferring for Linux/MacOS<DATA_TRANSFER_Linux_Mac-OS>`. 
+
+.. dovrebbe essere capitolo 3.5.2:
+__________________________________
+Access with VNC remote desktop
+__________________________________
+
+This method enables the user to access the cluster with a VNC-based remote desktop window. 
+
+Note: if you are using Linux OS, TurboVNC utility is required. 
+
+Open a terminal and type: 
+
+	| ``ssh -L 59yy:nodevg-0-x:59yy -J <username>@131.175.56.199 <username>@nodevg-0-x`` 
+
+where *yy* is the the user-specific graphical port (ref. chapt 3.4.3), *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. Enter your login password when asked. 
+
+To access the VNC desktop follow these steps depending on your operating system: 
+
+.. FINIRE e testare
+Linux OS: installare turboVNC e poi??? 
+
+.. METTERE SOPRA LA REF al 3.4.3
+**MacOS**: Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the user-specific graphic port (ref. chapt 3.4.3). Enter your login password when asked. 
+
+
+.. dovrebbe essere capitolo 3.6:
+.. _DATA_TRANSFER:
+-----------------
+DATA TRANSFERRING
+-----------------
+
+Depending on the OS used by the user, the procedure change as follows. 
+
+.. dovrebbe essere capitolo 3.7:
 .. _DATA_TRANSFER_WINDOWS:
 -----------------
 DATA TRANSFERRING FOR WINDOWS USERS
@@ -155,18 +218,24 @@ DATA TRANSFERRING FOR WINDOWS USERS
 
 To transfer data between the user local folders and cluster folders is necessary first to setup a tunnel and then to connect to the cluster through it. 
 
-.. _dovrebbe essere capitolo 3.5.1:
+.. dovrebbe essere capitolo 3.7.1:
 __________________________________
 TUNNELLING SETUP
 __________________________________
 
-1.
+Open MobaXterm: 
 
-2.
+1. Go to *Tunneling* Tab –> *New SSH tunnel* –> *Local port forwarding* 
 
-3.
+2. Set-up *Local port forwarding* as indicated in the figure below. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>`. Click *“Save”* to close the setup window.
 
-.. _dovrebbe essere capitolo 3.5.2:
+.. figure:: images_test/file_transfer_moba_settings.png
+
+3. The tunnel setup is completed, click *“Exit”* to end the procedure.
+
+Now the user has two alternatives to transfer data between local and cluster folders.
+
+.. _dovrebbe essere capitolo 3.7.2:
 __________________________________
 DATA TRANSFER SETUP (MobaXterm) 
 __________________________________
@@ -185,23 +254,34 @@ __________________________________
 
 6. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
 
-.. _dovrebbe essere capitolo 3.5.3:
+.. _dovrebbe essere capitolo 3.7.3:
 __________________________________
 DATA TRANSFER SETUP (MobaXterm + FileZilla)
 __________________________________
 
-1.
+If the user prefers to use FileZilla, it is possible to establish the tunnel connection with MobaXterm and then to use FileZilla just for data transferring. 
 
-2.
+Open MobaXterm:
 
-3.
+1. Open tab *Tunnelling* and run the symbol play of the previously created tunnel as can be seen in next Figure. 
 
-4.
+.. figure:: images_test/run_play.png
 
+2. Close *MobaSSHTunnel* window. Do not close MobaXterm.
 
+Open FileZilla:
 
+3. Insert host *127.0.0.1*, your ``<username>``, your ``<password>`` and port *22*. 
 
+4. Click *“Quickconnect”*. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
 
+.. AGGIORNARE INDIRIZZO IP DELL'HOST 
+
+.. _dovrebbe essere capitolo 3.8:
+.. _DATA_TRANSFER_Linux_Mac-OS:
+-----------------
+DATA TRANSFERRING FOR WINDOWS USERS
+-----------------
 
 
 
