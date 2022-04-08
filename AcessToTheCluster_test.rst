@@ -25,7 +25,11 @@ In order to use the computing resources you will have to log into *nodevg-0-3* o
 | **Always check to be connected to the selected computing nodes before to launch the run!**
 | **All the processes running on the master or the login nodes will be killed without any advice if affecting the functionality of the whole system.**
 
-.. METTERE NOTA SU MIGRAZIONE DA NODE VG 02/01 E CHE NON SI VEDE PIU BIG-SCRATCH.
+
+| *Note for longstanding user:*
+Users that used to work in login nodes *nodevg-01* and *nodevg-02* should know that news login nodes **cannot "see" /big-scratch and /fast-scratch directories**.
+These users should migrate their working directory from */big-scratch* or */fast-scratch* to the new */global-scratch* which is available just from new login nodes (*nodevg-03* or *nodevg-04*).
+It could be useful to know that */ARCHIVIO* directory is available from old or new login nodes.
 
 .. dovrebbe essere capitolo 3.1:
 -----------------
@@ -201,9 +205,17 @@ Linux OS: installare turboVNC e poi???
 
 **MacOS**: Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
 
-.. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
 
+.. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
 .. dovrebbe essere capitolo 3.6:
+.. _DIRECTORY_MANAGEMENT:
+-----------------
+DIRECTORY MANAGEMENT
+-----------------
+
+The 
+
+.. dovrebbe essere capitolo 3.7:
 .. _DATA_TRANSFER:
 -----------------
 DATA TRANSFERRING
@@ -211,7 +223,7 @@ DATA TRANSFERRING
 
 Depending on the OS used by the user, the procedure change as follows. 
 
-.. dovrebbe essere capitolo 3.7:
+.. dovrebbe essere capitolo 3.8:
 .. _DATA_TRANSFER_WINDOWS:
 -----------------
 DATA TRANSFERRING FOR WINDOWS USERS
@@ -219,7 +231,7 @@ DATA TRANSFERRING FOR WINDOWS USERS
 
 To transfer data between the user local folders and cluster folders is necessary first to setup a tunnel and then to connect to the cluster through it. 
 
-.. dovrebbe essere capitolo 3.7.1:
+.. dovrebbe essere capitolo 3.8.1:
 __________________________________
 TUNNELLING SETUP
 __________________________________
@@ -236,7 +248,7 @@ Open MobaXterm:
 
 Now the user has two alternatives to transfer data between local and cluster folders.
 
-.. dovrebbe essere capitolo 3.7.2:
+.. dovrebbe essere capitolo 3.8.2:
 __________________________________
 DATA TRANSFER SETUP (MobaXterm) 
 __________________________________
@@ -257,7 +269,7 @@ __________________________________
 
 6. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
 
-.. dovrebbe essere capitolo 3.7.3:
+.. dovrebbe essere capitolo 3.8.3:
 __________________________________
 DATA TRANSFER SETUP (MobaXterm + FileZilla)
 __________________________________
@@ -280,7 +292,7 @@ Open FileZilla:
 
 4. Click *“Quickconnect”*. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
 
-.. dovrebbe essere capitolo 3.8:
+.. dovrebbe essere capitolo 3.9:
 .. _DATA_TRANSFER_Linux_Mac-OS:
 -----------------
 DATA TRANSFERRING FOR LINUX/Mac OS
@@ -294,7 +306,7 @@ In order to transfer files from your terminal to the cluster and vice versa, you
 	| ``scp -r <localDirectory> <username>@131.175.56.199:<remoteDirectory>``
 	| ``scp -r <username>@131.175.56.199:<remoteDirectory> <localDirectory>``
 
-.. _dovrebbe essere capitolo 3.8.1:
+.. _dovrebbe essere capitolo 3.9.1:
 __________________________________
 DATA TRANSFERRING (FileZilla)
 __________________________________
