@@ -72,8 +72,8 @@ When **Distributed Memory On a Cluster** is selected, new options appears. Selec
 .. figure:: images_test/multiple-node.png
 
 At the voice *Solver Processes* the user could also select how many cores wants to use.
-When not explicited, the cores will be equally distributed on the multiple node. 
-.. If the user want to select how to spread the cores, for example a total of 20 processors in two nodes, at the voice **Machine Names** the user should sostitute the *node-x-y, node-x-z* in figure with *node-x-y:10, node-x-z:10. 
+When not explicited, the cores will be equally distributed on the multiple node.
+The user can choose how to distribute the cores on the nodes changing from *node-x-y, node-x-z* in figure with *node-x-y:16, node-x-z:16.
 
 Parallel CPU+GPU run set-up
 --------------------------------
