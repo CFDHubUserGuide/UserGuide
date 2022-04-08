@@ -185,12 +185,13 @@ For data transferring between cluster and your local machine, refer to chapter :
 
 .. dovrebbe essere capitolo 3.5.2:
 __________________________________
-Access with VNC remote desktop
+Access with VNC remote desktop (MAC OS)
 __________________________________
 
 This method enables the user to access the cluster with a VNC-based remote desktop window. 
 
-Note: if you are using Linux OS, TurboVNC utility is required. 
+.. Note: if you are using Linux OS, TurboVNC utility is required.
+.. Note: if you are using Linux OS, Remmina utility is required. In user friendly Linux distribution Remmina comes pre-installed, however 
 
 Open a terminal and type: 
 
@@ -198,12 +199,29 @@ Open a terminal and type:
 
 where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`, *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. Enter your login password when asked. 
 
-To access the VNC desktop follow these steps depending on your operating system: 
+.. To access the VNC desktop follow these steps depending on your operating system: 
 
 .. FINIRE e testare
-Linux OS: installare turboVNC e poi??? 
+.. Linux OS: installare turboVNC e poi???
 
-**MacOS**: Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
+Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
+
+.. **MacOS**: Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
+
+.. dovrebbe essere capitolo 3.5.3:
+__________________________________
+Access with VNC remote desktop (LINUX)
+__________________________________
+
+For this method the Remmina utility is required. In user friendly Linux distribution as Ubuntu, Remmina could come pre-installed.
+However for Ubuntu it is possibile to follow this guide_ to install it.
+
+.. _guide: https://ubuntu.com/tutorials/access-remote-desktop#1-overview
+
+Open Remmina from the GUI or from the terminal by typing:
+
+	| ``remmina``
+
 
 
 .. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
