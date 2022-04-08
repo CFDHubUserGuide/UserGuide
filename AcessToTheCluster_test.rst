@@ -214,9 +214,10 @@ Access with VNC remote desktop (LINUX)
 __________________________________
 
 For this method the Remmina utility is required. In user friendly Linux distribution as Ubuntu, Remmina could come pre-installed.
-However for Ubuntu it is possibile to follow this guide_ to install it.
+However for Ubuntu it is possibile to follow this guide_ to install it. For other distributions follow this link_.
 
 .. _guide: https://ubuntu.com/tutorials/access-remote-desktop#1-overview
+.. _link: https://remmina.org/how-to-install-remmina/
 
 1. Open Remmina from the GUI or from the terminal by typing:
 
