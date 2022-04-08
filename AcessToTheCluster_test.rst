@@ -222,15 +222,15 @@ However for Ubuntu it is possibile to follow this guide_ to install it.
 
 	| ``remmina``
 
-2. Create a new session by selection the icon shown in next figure:
+2. Create a new session by selecting the icon as shown in next figure:
 
 .. figure:: images_test/remmina_create_new_arrow.png
 
-3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":22" as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instruction in next figure.
+3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":22" as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instructions in next figure.
 
 .. figure:: images_test/remmina_basic.png
 
-4. Select *SSH Tunnel* tab. Enable SSH Tunnel by click on it. Select Custom voice and complete with *131.175.56.199:22*. Put your ``<username>`` and ``<password>`` on their respective voices. In next figure the user could find an example:
+4. Select *SSH Tunnel* tab. Enable SSH Tunnel by click on it. Select *Custom* voice and complete with *131.175.56.199:22*. Put your ``<username>`` and ``<password>`` on their respective voices. In next figure the user could find an example:
 
 .. figure:: images_test/remmina_ssh_tunnel.png
 
