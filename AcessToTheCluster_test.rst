@@ -27,8 +27,8 @@ In order to use the computing resources you will have to log into *nodevg-0-3* o
 
 
 | *Note for longstanding user:*
-Users that used to work in login nodes *nodevg-01* and *nodevg-02* should know that news login nodes **cannot "see" /big-scratch and /fast-scratch directories**.
-These users should migrate their working directory from */big-scratch* or */fast-scratch* to the new */global-scratch* which is available just from new login nodes (*nodevg-03* or *nodevg-04*).
+Users that used to work in login nodes *nodevg-01* and *nodevg-02* should know that new login nodes **cannot "see" /big-scratch and /fast-scratch directories**.
+These users should migrate their working directory from */big-scratch* or */fast-scratch* to the new */global-scratch* which is only available from new login nodes *nodevg-03* or *nodevg-04*.
 It could be useful to know that */ARCHIVIO* directory is available from old or new login nodes.
 
 .. dovrebbe essere capitolo 3.1:
