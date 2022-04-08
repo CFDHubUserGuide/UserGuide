@@ -81,6 +81,13 @@ Parallel CPU+GPU run set-up
 Management of crashed processes
 --------------------------------
 
+When the user starts Ansys Fluent, in the working directory (by default the *path* where you are launching Ansys Fluent) a script named *cleanup-fluent`...`.sh* is created.
+If for various reasons Ansys Fluent crashes, typically giving an error message in red color, the Fluent processes could not stop or leave residual processes running. 
+You can check it with the *top* or *htop* command. 
+In order to clean this processes the user can use the .sh file previously created by launching:
+    ``sh cleanup-fluent`...`.sh``
+When Ansys Fluent is correctly stopped, the script *cleanup-fluent`...`.sh* is automatically deleted.
+This procedure is advised everytime that this script doesn't automatically disappear after closing Ansys Fluent.
 
 .. _Comsol:
 
