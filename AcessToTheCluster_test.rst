@@ -57,12 +57,75 @@ If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH 
 SSH CONNECTION (Windows)
 -----------------
 
+If you are accessing from a Windows machine, the steps to access the HPC machines (through both PoliMi network or VPN service) are:
 
+1. :ref:`installation of the software to access the cluster<>`; 
+2. :ref:`setting of SSH session to access the cluster<>`; 
+3. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<>`;
+4. :ref:`setting of a VNC session to graphically access and control the HPC machines<>`; 
+5. :ref:`settings to upload and download files to/from HPC machines to the local one<>`. 
 
+.. _dovrebbe essere capitolo 3.4.1:
+__________________________________
+SOFTWARE REQUIREMENTS
+__________________________________
 
+Download and install the software MobaXterm. The next guide is referred to this software. 
 
+An alternative and quick solution is Putty. The user should know how to configure this software. 
 
+.. _dovrebbe essere capitolo 3.4.2:
+__________________________________
+DETAILED SSH CONNECTION SETTINGS 
+__________________________________
 
+Open MobaXterm software:
+
+1. Go to Sessions Tab –> New Session –> choose SSH and open the Network settings panel
+
+2. Set up Basic SSH settings as described in Figure. Use your <username> and nodevg-0-x, where x = 3,4 based on your Research Group 
+
+.. figure:: images_test/Network_setting_panel.png
+
+3. Set up the SSH session as described in next Figure for SSH gateway (jump host) voice. Use your <username> and nodevg-0-x, where x = 3,4 based on your Research Group. Click OK to save
+
+.. figure:: images_test/SSH_gateway_jump_host.png
+
+4. Click OK to save the session.
+
+.. _dovrebbe essere capitolo 3.4.3:
+__________________________________
+CREATION OF A GRAPHICAL PORT 
+__________________________________
+
+Open the previously created SSH session from the left lateral bar: 
+
+In the SSH terminal digit: 
+
+where: 
+
+-
+
+After launching the previous command, the following message is presented: 
+
+The graphical port assigned to the user is indicated by the system, in this example the assigned port is NN. 
+
+.. _dovrebbe essere capitolo 3.4.4:
+__________________________________
+SETTING OF VNC SESSION
+__________________________________
+
+1. Go to Sessions Tab –> New Session –> choose VNC and open the Network settings panel 
+
+2. Set up Basic VNC settings as described in Figure. Use your nodevg-0-x , where x = 3,4 based on your Research Group and the port number provided by the system in previous step putting it after the number 59 (e.g. if the assigned port is NN, put 59NN instead of 5900); 
+
+.. figure:: images_test/VNC_Network_setting_panel.png
+
+3. Set up the VNC session as described in next Figure for SSH gateway (jump host) voice. Use your <username> and nodevg-0-x , where x = 3,4 based on your Research Group. Click OK to save. 
+
+.. figure:: images_test/VNC_SSH_gateway_jump_host.png
+
+4. Click OK to save the session 
 
 
 
