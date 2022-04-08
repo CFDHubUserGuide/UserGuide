@@ -55,7 +55,7 @@ After the user has logged from the terminal to the node, should go into the fold
 Parallel run on Single Node set-up 
 --------------------------------
 
-If the user wants to make a parallel run just with the processors of a single node, Fluent should be configurated as follows.
+If the user wants to make a parallel run just with the processors of a single node, Ansys Fluent should be configurated as follows.
 In *Parallel Settings* tab, the voice **Shared Memory On Local Machine** should be selected under the the voice *Run Types*, as can be seen in the following figure:
 
 .. figure:: images_test/single-node.png
@@ -63,7 +63,9 @@ In *Parallel Settings* tab, the voice **Shared Memory On Local Machine** should 
 Parallel run on Multiple Nodes set-up
 --------------------------------
 
-
+If the user wants to make a parallel run with the processors of multiple nodes, Ansys Fluent should be configurated as follows.
+In *Parallel Settings* tab, the voice **Distributed Memory On a Cluster** should be selected under the the voice *Run Types*, as can be seen in the next figure.
+When **Distributed Memory On a Cluster** is selected, new options appears. Selecting **Machine Names** it is possible to enlist the nodes that the user wants to use, as can be seen in the following figure:
 
 .. figure:: images_test/multiple-node.png
 
