@@ -60,6 +60,8 @@ In *Parallel Settings* tab, the voice **Shared Memory On Local Machine** should 
 
 .. figure:: images_test/single-node.png
 
+At the voice *Solver Processes* the user could also select how many cores wants to use.
+
 Parallel run on Multiple Nodes set-up
 --------------------------------
 
@@ -68,6 +70,10 @@ In *Parallel Settings* tab, the voice **Distributed Memory On a Cluster** should
 When **Distributed Memory On a Cluster** is selected, new options appears. Selecting **Machine Names** it is possible to enlist the nodes that the user wants to use, as can be seen in the following figure:
 
 .. figure:: images_test/multiple-node.png
+
+At the voice *Solver Processes* the user could also select how many cores wants to use.
+When not explicited, the cores will be equally distributed on the multiple node. 
+.. If the user want to select how to spread the cores, for example a total of 20 processors in two nodes, at the voice **Machine Names** the user should sostitute the *node-x-y, node-x-z* in figure with *node-x-y:10, node-x-z:10. 
 
 Parallel CPU+GPU run set-up
 --------------------------------
