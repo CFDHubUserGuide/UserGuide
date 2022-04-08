@@ -218,11 +218,23 @@ However for Ubuntu it is possibile to follow this guide_ to install it.
 
 .. _guide: https://ubuntu.com/tutorials/access-remote-desktop#1-overview
 
-Open Remmina from the GUI or from the terminal by typing:
+1. Open Remmina from the GUI or from the terminal by typing:
 
 	| ``remmina``
 
+2. Create a new session by selection the icon shown in next figure:
 
+.. figure:: images_test/remmina_create_new_arrow.png
+
+3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":22" as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instruction in next figure.
+
+.. figure:: images_test/remmina_basic.png
+
+4. Select *SSH Tunnel* tab. Enable SSH Tunnel by click on it. Select Custom voice and complete with *131.175.56.199:22*. Put your ``<username>`` and ``<password>`` on their respective voices. In next figure the user could find an example:
+
+.. figure:: images_test/remmina_ssh_tunnel.png
+
+5. Click on *Save*. The configuration is ended and saved, you should be able to enter to your graphical port just by clicking on the new created session. 
 
 .. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
 .. dovrebbe essere capitolo 3.6:
