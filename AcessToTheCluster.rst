@@ -243,7 +243,7 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 -----------------
 DIRECTORY MANAGEMENT
 -----------------
-
+.. Fare
 The 
 
 .. dovrebbe essere capitolo 3.7:
@@ -341,5 +341,7 @@ In order to transfer files from your terminal to the cluster and vice versa, you
 __________________________________
 DATA TRANSFERRING (FileZilla)
 __________________________________
+
+.. FARE
 
 
