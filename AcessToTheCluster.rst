@@ -13,7 +13,7 @@ The cluster environment is Linux OS. If you need some information on how to work
 
 The cluster’s infrastructure can be explained as following. The master node is the machine that manages all the communications between the cluster resources and the login nodes. Login nodes (*nodevg-0-x*) are the nodes used to manage the interaction between users and graphical ports and the computing nodes. When you log into the cluster you actually log into the master and then to the login nodes. In order to access the master node the user should be connected to Politecnico’s network or, if connected from outside, the user must use the `PoliMi VPN <https://www.ict.polimi.it/network/vpn/?lang=en>`_. 
 
-.. figure:: images_test/cluster_structure.jpg
+.. figure:: images/cluster_structure.jpg
 
 Figure: CFDHub hardware structure for user access. 
 
@@ -98,11 +98,11 @@ Open MobaXterm software:
 
 2. Set up **Basic SSH settings** as described in Figure. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` 
 
-.. figure:: images_test/Network_setting_panel.png
+.. figure:: images/Network_setting_panel.png
 
 3. Set up the SSH session as described in next Figure for **SSH gateway (jump host)** voice. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>`. Click OK to save
 
-.. figure:: images_test/SSH_gateway_jump_host.png
+.. figure:: images/SSH_gateway_jump_host.png
 
 4. Click OK to save the session.
 
@@ -148,7 +148,7 @@ __________________________________
 
 3. Set up the VNC session as described in next Figure for **SSH gateway (jump host)** voice. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>`. Click OK to save. 
 
-.. figure:: images_test/VNC_SSH_gateway_jump_host.png
+.. figure:: images/VNC_SSH_gateway_jump_host.png
 
 4. Click OK to save the session
 
@@ -225,15 +225,15 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 2. Create a new session by selecting the icon as shown in next figure:
 
-.. figure:: images_test/remmina_create_new_arrow.png
+.. figure:: images/remmina_create_new_arrow.png
 
 3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":22" as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instructions in next figure.
 
-.. figure:: images_test/remmina_basic.png
+.. figure:: images/remmina_basic.png
 
 4. Select *SSH Tunnel* tab. Enable SSH Tunnel by click on it. Select *Custom* voice and complete with *131.175.56.199:22*. Put your ``<username>`` and ``<password>`` on their respective voices. In next figure the user could find an example:
 
-.. figure:: images_test/remmina_ssh_tunnel.png
+.. figure:: images/remmina_ssh_tunnel.png
 
 5. Click on *Save*. The configuration is ended and saved, you should be able to enter to your graphical port just by clicking on the new created session. 
 
@@ -273,7 +273,7 @@ Open MobaXterm:
 
 2. Set-up *Local port forwarding* as indicated in the figure below. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>`. Click *“Save”* to close the setup window.
 
-.. figure:: images_test/file_transfer_moba_settings.png
+.. figure:: images/file_transfer_moba_settings.png
 
 3. The tunnel setup is completed, click *“Exit”* to end the procedure.
 
@@ -286,7 +286,7 @@ __________________________________
 
 1. Open tab *Tunnelling* and run the symbol play of the previously created tunnel as can be seen in next Figure. 
 
-.. figure:: images_test/run_play.png 
+.. figure:: images/run_play.png 
 
 2. Close *MobaSSHTunnel* window.  
 
@@ -311,7 +311,7 @@ Open MobaXterm:
 
 1. Open tab *Tunnelling* and run the symbol play of the previously created tunnel as can be seen in next Figure. 
 
-.. figure:: images_test/run_play.png
+.. figure:: images/run_play.png
 
 2. Close *MobaSSHTunnel* window. Do not close MobaXterm.
 
