@@ -19,7 +19,7 @@ Figure: CFDHub hardware structure for user access.
 
 In order to use the computing resources you will have to log into *nodevg-0-3* or *nodevg-0-4* (depending on your :ref:`Research Group<ResearchGroups>`) to successively use the computational resources. 
 
-:rubric:'*Remember:*'
+rubric:'*Remember:*'
 
 | **Never launch a computational run from the master!**
 | **The user should be connected to the PoliMi VPN in order to access to the cluster!**
