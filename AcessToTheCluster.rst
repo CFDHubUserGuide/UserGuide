@@ -27,8 +27,8 @@ In order to use the computing resources you will have to log into *nodevg-0-3* o
 
 |
 
-|*Note for long-term users:*|
-Users that used to work in login nodes *nodevg-0-1* and *nodevg-0-2* should know that new login nodes **cannot mount /big-scratch and /fast-scratch directories**.
+|*Note for long-term users:*
+|Users that used to work in login nodes *nodevg-0-1* and *nodevg-0-2* should know that new login nodes **cannot mount /big-scratch and /fast-scratch directories**.
 These users should migrate their working directory from */big-scratch* or */fast-scratch* to the new */global-scratch* which is only available from new login nodes *nodevg-0-3* or *nodevg-0-4*.
 It could be useful to know that */ARCHIVIO* directory is available from both old or new login nodes. It should just be noted that on new login nodes all the volumes in /ARCHIVIO are mounted on demand as soon as the user access the folders and unmounted after a certain time of inactivity.
 
