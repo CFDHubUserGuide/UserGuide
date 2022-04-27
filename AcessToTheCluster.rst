@@ -101,7 +101,7 @@ Open MobaXterm software:
 
 1. Go to *Sessions* Tab –> *New Session* –> choose *SSH* and open the *Network settings* panel
 
-2. Set up **Basic SSH settings** as described in Figure. Use your ``<username>`` and *nodevg-0-4* ..x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` 
+2. Set up **Basic SSH settings** as described in Figure. Use your ``<username>`` and *nodevg-0-4* .. x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` 
 
 .. figure:: images/Network_setting_panel.png
 
