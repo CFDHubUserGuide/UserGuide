@@ -246,7 +246,7 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 .. dovrebbe essere capitolo 3.6:
 .. _DIRECTORY_MANAGEMENT:
 -----------------
-DIRECTORY MANAGEMENT
+WORK AREAS
 -----------------
 .. Fare
 The 
