@@ -14,13 +14,13 @@ In the table below you find the list of groups of CFDHub, you may find your cont
 +------------------------------+-----------------------------+
 | CFDHub User Group            | Contact Person              |
 +==============================+=============================+
-| energia                      | boh                         |
+| energia                      | To be defined               |
 +------------------------------+-----------------------------+
-| energia 2                    | boh                         |
+| energia 2                    | To be defined               |
 +------------------------------+-----------------------------+
-| energia 3                    | boh                         |
+| energia 3                    | To be defined               |
 +------------------------------+-----------------------------+
-| chimica                      | boh                         |
+| chimica                      | To be defined               |
 +------------------------------+-----------------------------+
 |                              | Massimo Fossati             |
 | meccanica                    +-----------------------------+
