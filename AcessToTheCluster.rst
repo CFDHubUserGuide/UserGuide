@@ -13,7 +13,7 @@ The cluster environment is Linux OS. If you need some information on how to work
 
 The cluster’s infrastructure can be explained as following. The master node is the machine that manages all the communications between the cluster resources and the login nodes. Login nodes (*nodevg-0-x*) are the nodes used to manage the interaction between users and graphical ports and the computing nodes. When you log into the cluster you actually log into the master and then to the login nodes. In order to access the master node the user should be connected to Politecnico’s network or, if connected from outside, the user must use the `PoliMi VPN <https://www.ict.polimi.it/network/vpn/?lang=en>`_. 
 
-.. figure:: images/cluster_structure.jpg
+.. figure:: images/cluster_structure_new.png
 
 Figure: CFDHub hardware structure for user access. 
 
