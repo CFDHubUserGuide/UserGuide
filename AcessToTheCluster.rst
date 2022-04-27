@@ -17,7 +17,7 @@ The cluster’s infrastructure can be explained as following. The master node is
 
 Figure: CFDHub hardware structure for user access. 
 
-In order to use the computing resources you will have to log into *nodevg-0-3* or *nodevg-0-4* (depending on your :ref:`Research Group<ResearchGroups>`) to successively use the computational resources. 
+In order to use the computing resources you will have to log into *nodevg-0-3* or *nodevg-0-4* (depending on your :ref:`Research Group<ResearchGroups>`) to successively use the computational resources. *Please note that nodevg-0-3 is unavailable until further notice and every user should login through nodevg-0-4*
 
 *Remember:*
 
