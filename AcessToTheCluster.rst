@@ -101,11 +101,11 @@ Open MobaXterm software:
 
 1. Go to *Sessions* Tab –> *New Session* –> choose *SSH* and open the *Network settings* panel
 
-2. Set up **Basic SSH settings** as described in Figure. Use your ``<username>`` and *nodevg-0-x*, where *x = 3, 4* based on your :ref:`Research Group<ResearchGroups>` 
+2. Set up **Basic SSH settings** as described in Figure. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` 
 
 .. figure:: images/Network_setting_panel.png
 
-3. Set up the SSH session as described in next Figure for **SSH gateway (jump host)** voice. Use your ``<username>`` and *nodevg-0-x*, where *x = 3, 4* based on your :ref:`Research Group<ResearchGroups>`. Click OK to save
+3. Set up the SSH session as described in next Figure for **SSH gateway (jump host)** voice. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>`. Click OK to save
 
 .. figure:: images/SSH_gateway_jump_host.png
 
