@@ -17,7 +17,7 @@ The cluster’s infrastructure can be explained as following. The master node is
 
 Figure: CFDHub hardware structure for user access. 
 
-In order to use the computing resources you will have to log into *nodevg-0-3* or *nodevg-0-4* (depending on your :ref:`Research Group<ResearchGroups>`) to successively use the computational resources. *Please note that nodevg-0-3 is unavailable until further notice and every user should login through nodevg-0-4*
+In order to use the computing resources you will have to log into *nodevg-0-3* or *nodevg-0-4* (depending on your :ref:`Research Group<ResearchGroups>`) to successively use the computational resources. **Please note that nodevg-0-3 is unavailable until further notice and every user should login through nodevg-0-4.**
 
 *Remember:*
 
@@ -101,7 +101,7 @@ Open MobaXterm software:
 
 1. Go to *Sessions* Tab –> *New Session* –> choose *SSH* and open the *Network settings* panel
 
-2. Set up **Basic SSH settings** as described in Figure. Use your ``<username>`` and *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` 
+2. Set up **Basic SSH settings** as described in Figure. Use your ``<username>`` and *nodevg-0-4* ..x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` 
 
 .. figure:: images/Network_setting_panel.png
 
