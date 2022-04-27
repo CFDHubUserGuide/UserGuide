@@ -167,9 +167,9 @@ First connect to SSH server *131.175.56.199* through Port *22*. Then to start wo
 
 .. verificare se i nodi sono cosi assegnati, VERIFICARE GLI IP 
 
-- *nodevg-0-3* (*10.0.0.235*) Research groups of Chemical, Mathematical and Mechanical Engineering Departments; 
+.. - *nodevg-0-3* (*10.0.0.235*) Research groups of Chemical, Mathematical and Mechanical Engineering Departments; 
 
-- *nodevg-0-4* (*10.0.0.236*) Research groups of Energy, Electronic-BioEngineering and not mentioned Departments. 
+- *nodevg-0-4* (*10.0.0.236*) All research groups. 
 
 .. dovrebbe essere capitolo 3.5.1:
 __________________________________
