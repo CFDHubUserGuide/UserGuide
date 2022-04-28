@@ -53,7 +53,7 @@ In general this area is reserved to files that the user think should be backed u
 *Capacity:* Each user has an assigned quota of 20Gb.
 This limitation exits to avoid the filling up of the **/home** area. 
 To know the total quota and the actual available quota:
-	| (TBD)
+	| ``(TBD)``
 *Access:* from all nodes |br|
 *Backup:* YES
 
@@ -84,14 +84,32 @@ User Management
 -----------------
 In this section will be explained basic Linux OS concepts with the focus of teaching to the user how to manage the working area for personal work.
 After logging in a login node, the user is located in his *personal* home, which is a subdirectory of the **/home** partition. |br|
-The user can check where is located:
+The user can check in which path is located by typing in the terminal:
 
-|	pwd
+	| ``pwd``
 
 Something like this will be displayed:
 
-|	/home/<research group>/<username>
+	| ``/home/<research group>/<username>``
 
+If the user wants to work in the **/global-scratch/bulk_pool** partition, first is necessary to create a personal directory.
+In order to move to another path, the user should use the *"cd"* command followed by the path the user wants to reach:
+
+	| ``cd /global-scratch/bulk_pool``
+	
+Now the user can create a personal directory where the user could work, following the limitation previously exposed.
+In order to create a directory, the user should use the *"mkdir"* command followe by the name of the directory:
+
+	| ``mkdir <username>``
+	
+Now the user can go to the fresh new directory using the *"cd"* command. The creation of the personal directory on a partition is a one-time operation.
+Each user should work in his personal directory.
+If the user needs to come back to personal home, the *"cd"* command must be followed by nothing:
+
+	| ``cd``
+	
+If the user needs to work in other partitions (**/global-scratch/flash_pool**, **/ARCHIVIO**, others...), it is possibile to repeat this procedure to create a
+new personal directory.
 
 .. _TROUBLESHOOTING:
 -----------------
