@@ -53,7 +53,7 @@ In general this area is reserved to files that the user think should be backed u
 *Capacity:* Each user has an assigned quota of 20Gb.
 This limitation exits to avoid the filling up of the **/home** area. 
 To know the total quota and the actual available quota:
-	| “repquota –augs”
+	| (TBD)
 *Access:* from all nodes |br|
 *Backup:* YES
 
