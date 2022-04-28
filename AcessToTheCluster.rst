@@ -524,7 +524,7 @@ If this happens it is shown in the terminal:
 
 	| [<username>@master ~]$
 	
-Insted of:
+Instead of:
 
 	| [<username>@nodevg-0-4 <username>]$
 	
