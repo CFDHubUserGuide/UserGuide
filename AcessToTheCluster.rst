@@ -509,8 +509,25 @@ If you need to launch a programs, source an environment or library just do it fr
 
 It is possible that some process launched by the user crashes, but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
 First the user should identify the process by typing in the terminal:
+
 	| ``htop -u <username>``
+	
 All the process lanched by the user in the node are displayed. Then the user should identify the process to *kill* by the *PID* number displayed on the left column.
 To close the **htop** use the shortcut **ctrl+C**. |br|
 In order to kill that process:
+
 	| ``kill -9 <PID number>``
+	
+It is possible for various reasons, that the user cannot log in a login node after the jump in the master node.
+In this case the user is logged in the *master node* and not in a *login node* (for example nodevg-0-4). |br|
+If this happens it is shown in the terminal:
+
+	| [<username>@master ~]$
+	
+Insted of:
+
+	| [<username>@nodevg-0-4 <username>]$
+	
+If this happens, **DO NOT LAUNCH ANY PROCESS**. 
+	
+
