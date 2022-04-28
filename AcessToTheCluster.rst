@@ -254,6 +254,7 @@ The system is divided in different working areas in order to permit a more susta
 The main working areas are reported and descrbed in the following section. Please check the relus for each working area in otder to avoid the functionality of the whole system.
 
 **/home**
+
 *Purpose:* to save personal data such libraries, source code, compiled code, documents etc...
 In general this area is reserved to files that the user think should be backed up.
 *Capacity:* Each user has an assigned quota of 20Gb. 
@@ -266,6 +267,7 @@ To know the total quota and the actual available quota:
 *Backup:* YES
 
 **/global-scratch/bulk_pool**
+
 *Purpose:*  to launch production runs, data manipulation, elaboration, production etc... In order to preserve the purpose of this area and avoid a filling
 up of the area all data older than 50 days will be deleted from this area. Please be careful and move your data to **/ARCHIVIO** area when they are not on use anymore 
 *Capacity:* Each user has an assigned quota of 100Gb. 
@@ -274,6 +276,7 @@ up of the area all data older than 50 days will be deleted from this area. Pleas
 *Backup:* NO
 
 **/global-scratch/flash_pool**
+
 *Purpose:* to launch data manipulation, production, elaboration etc... when fast read/wirte speed is crucial for the task.  
 .. ri-chiedere a Luigi. Era qualcosa come una decina di giga per elaborare velocemente i data (tipo ML)
 *Capacity:*
@@ -281,6 +284,7 @@ up of the area all data older than 50 days will be deleted from this area. Pleas
 *Backup:* NO
 
 **/ARCHIVIO**
+
 *Purpose:* save the results and data you want to keep for long term. This area permits to store data without affecting the running processes in other working areas.
 *Capacity:* related to the amount of storage purchased by your :ref:`Research Group<ResearchGroups>`, divided into blocks of 8Tb.
 *Access:* from all nodes.
