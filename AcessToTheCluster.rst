@@ -68,7 +68,7 @@ up of the area all data older than 50 days will be deleted from this area. Pleas
 .. ri-chiedere a Luigi. Era qualcosa come una decina di giga per elaborare velocemente i data (tipo ML)
 **/global-scratch/flash_pool** |br|
 *Purpose:* to launch data manipulation, production, elaboration etc... when fast read/wirte speed is crucial for the task. |br|
-*Capacity:* |br|
+*Capacity:* **TBD** |br|
 *Access:* from all login nodes. |br|
 *Backup:* NO
 
