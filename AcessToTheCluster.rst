@@ -257,25 +257,23 @@ The main working areas are reported and descrbed in the following section. Pleas
 *Purpose:* to save personal data such libraries, source code, compiled code, documents etc...
 In general this area is reserved to files that the user think should be backed up. |br|
 *Capacity:* Each user has an assigned quota of 20Gb.
-.. the reserved quota per user is assigned by the user's :ref:`Research Group<ResearchGroups>`. 
 This limitation exits to avoid the filling up of the **/home** area. 
 To know the total quota and the actual available quota:
-.. aggiornare
 	| “repquota –augs”
 *Access:* from all nodes |br|
 *Backup:* YES
 
+.. approx. 6Tb to 30Tb on SSD (high speed) cache disk interfaces (normal) NLSAS disks to speed up data exchange processes.
 **/global-scratch/bulk_pool** |br|
 *Purpose:*  to launch production runs, data manipulation, elaboration, production etc... In order to preserve the purpose of this area and avoid a filling
 up of the area all data older than 50 days will be deleted from this area. Please be careful and move your data to **/ARCHIVIO** area when they are not on use anymore. |br| 
 *Capacity:* Each user has an assigned quota of 100Gb. 
-.. approx. 6Tb to 30Tb on SSD (high speed) cache disk interfaces (normal) NLSAS disks to speed up data exchange processes.
 *Access:* from all login nodes. |br|
 *Backup:* NO
 
+.. ri-chiedere a Luigi. Era qualcosa come una decina di giga per elaborare velocemente i data (tipo ML)
 **/global-scratch/flash_pool** |br|
 *Purpose:* to launch data manipulation, production, elaboration etc... when fast read/wirte speed is crucial for the task. |br|
-.. ri-chiedere a Luigi. Era qualcosa come una decina di giga per elaborare velocemente i data (tipo ML)
 *Capacity:* |br|
 *Access:* from all login nodes. |br|
 *Backup:* NO
