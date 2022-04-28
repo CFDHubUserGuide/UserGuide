@@ -528,6 +528,6 @@ Insted of:
 
 	| [<username>@nodevg-0-4 <username>]$
 	
-If this happens, **DO NOT LAUNCH ANY PROCESS**. 
+If this happens, **DO NOT LAUNCH ANY PROCESS**. The computational power of the master node is sufficient to manage all the cluster's users logins but not to launch any type of simulation, data manipulation or other tasks. 
 	
 
