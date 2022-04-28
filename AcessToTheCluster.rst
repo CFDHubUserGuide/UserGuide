@@ -115,7 +115,20 @@ new personal directory.
 -----------------
 Troubleshooting
 -----------------
+In this section some best practices will be presented, in order to avoid common problems. |br|
 
+In the *.bashrc* it is possible to launch commands in order to start some programs, source an environment or library, when the use logs to the cluester.
+However, this procedure is not recommended because could cause compatibility issues with some pre-loaded libraries. Keep your *.bashrc* more clean thant possible.
+If you need to launch a programs, source an environment or library just do it from the terminal. |br| 
+
+It is possible that some process launched by the user crashes, but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
+First the user should identify the process by typing in the terminal:
+	| htop -u <username>
+All the process lanched by the user in the node are displayed. Then the user should identify the process to *kill* by the *PID* number displayed on the left column.
+To close the **htop** use the shortcut **ctrl+C**. |br|
+In order to kill that process:
+	| kill -9 <PID number>
+	
 .. dovrebbe essere capitolo 3.1:
 -----------------
 CONNECTION REQUIREMENTS 
