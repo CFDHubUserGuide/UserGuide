@@ -83,10 +83,13 @@ up of the area all data older than 50 days will be deleted from this area. Pleas
 User Management
 -----------------
 In this section will be explained basic Linux OS concepts with the focus of teaching to the user how to manage the working area for personal work.
-After logging in a login node, the user is located in his *personal* home, which is a subdirectory of the **/home** partition. 
+After logging in a login node, the user is located in his *personal* home, which is a subdirectory of the **/home** partition. |br|
 The user can check where is located:
+
 |	pwd
+
 Something like this will be displayed:
+
 |	/home/<research group>/<username>
 
 
