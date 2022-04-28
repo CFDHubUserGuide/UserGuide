@@ -426,10 +426,10 @@ In order to use Filezilla for file transferring, the user needs to type the foll
 where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. This enable the local port 2200 for sftp protocol.
 
 Then, in Filezilla, connect to the cluster with the following settings:
-- *Host*: sftp://localhost
-- *Username*: <username>
-- *Password*: user password
-- *Port*: 2200
+- *Host*: sftp://localhost;
+- *Username*: <username>;
+- *Password*: user password;
+- *Port*: 2200.
 
 Click connect and you can now access the local directories on the left branch and the remote ones on the right one.
 
