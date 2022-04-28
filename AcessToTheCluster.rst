@@ -462,14 +462,22 @@ The *.bashrc* is a list of commands, variables and aliases that are launched whe
 It is possible to create a **variable** to avoid the typing of a long path. For example, if I want to move to my personal directory in 
 **/global-scratch/bulk_pool** partition I can create a *variable* to shorten it.
 To edit by a graphical window the bashrc the user can use *gedit* (an advanced user could use *vim* or another terminal editor):
+
 	| ``gedit .bashrc``
 At the end of the *.bashrc* file it is possible to write the name of the variable and the substituted path:
+
 	| EXAMPLE="/global-scratch/bulk_pool/<username>"
+	
 The the user should update the terminal:
+
 	| ``source .bashrc``
+	
 Now, in order to move to the personal directory in the **/global-scratch/bulk_pool** partition, instead of:
+
 	| ``cd /global-scratch/bulk_pool/<username>``
+	
 It is possible to use:
+
 	| ``cd $EXAMPLE``
 
 It is also possible to create an **alias** which could be used to launch a command with a long syntax. For example, it is possible to create an *alias*
@@ -494,8 +502,8 @@ If you need to launch a programs, source an environment or library just do it fr
 
 It is possible that some process launched by the user crashes, but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
 First the user should identify the process by typing in the terminal:
-	| htop -u <username>
+	| ``htop -u <username>``
 All the process lanched by the user in the node are displayed. Then the user should identify the process to *kill* by the *PID* number displayed on the left column.
 To close the **htop** use the shortcut **ctrl+C**. |br|
 In order to kill that process:
-	| kill -9 <PID number>
+	| ``kill -9 <PID number>``
