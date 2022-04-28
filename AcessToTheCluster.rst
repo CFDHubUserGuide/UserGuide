@@ -78,6 +78,16 @@ up of the area all data older than 50 days will be deleted from this area. Pleas
 *Access:* from all nodes. |br|
 *Backup:* NO, however considered reliable being residing on enterprise band hard-drives with multi-disk data redundancy.
 
+.. _USER_MANAGEMENT:
+-----------------
+User Management
+-----------------
+
+.. _TROUBLESHOOTING:
+-----------------
+Troubleshooting
+-----------------
+
 .. dovrebbe essere capitolo 3.1:
 -----------------
 CONNECTION REQUIREMENTS 
