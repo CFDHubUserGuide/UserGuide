@@ -503,7 +503,8 @@ Troubleshooting
 In this section some best practices will be presented, in order to avoid common problems. |br|
 
 In the *.bashrc* it is possible to launch commands in order to start some programs, source an environment or library, when the use logs to the cluester.
-However, this procedure is not recommended because could cause compatibility issues with some pre-loaded libraries. Keep your *.bashrc* more clean thant possible.
+However, this procedure is not recommended because could cause compatibility issues with some pre-loaded libraries.  |br|
+Keep your *.bashrc* as clean as possible.
 If you need to launch a programs, source an environment or library just do it from the terminal. |br| 
 
 It is possible that some process launched by the user crashes, but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
