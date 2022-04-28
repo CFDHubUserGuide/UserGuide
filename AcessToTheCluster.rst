@@ -254,8 +254,7 @@ The system is divided in different working areas in order to permit a more susta
 The main working areas are reported and descrbed in the following section. Please check the relus for each working area in otder to avoid the functionality of the whole system.
 
 **/home**
-
-*Purpose:* to save personal data such libraries, source code, compiled code, documents etc...
+| *Purpose:* to save personal data such libraries, source code, compiled code, documents etc...
 In general this area is reserved to files that the user think should be backed up.
 *Capacity:* Each user has an assigned quota of 20Gb. 
 .. the reserved quota per user is assigned by the user's :ref:`Research Group<ResearchGroups>`. 
