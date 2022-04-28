@@ -483,10 +483,15 @@ It is possible to use:
 It is also possible to create an **alias** which could be used to launch a command with a long syntax. For example, it is possible to create an *alias*
 to move to my personal directory in the **/global-scratch/bulk_pool** partition. |br|
 As previously showed, at the end of the *.bashrc* file I can write:
+
 	| alias EXAMPLE='cd /global-scratch/bulk_pool/<username>'
+	
 Now, after sourcing the bashrc, instead of:
+
 	| ``cd /global-scratch/bulk_pool/<username>``
+	
 It is possible to use:
+
 	| ``EXAMPLE``
 
 
