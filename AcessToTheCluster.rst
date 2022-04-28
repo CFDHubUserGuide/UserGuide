@@ -92,18 +92,18 @@ Something like this will be displayed:
 
 	| ``/home/<research group>/<username>``
 
-If the user wants to work in the **/global-scratch/bulk_pool** partition, first is necessary to create a personal directory.
+If the user wants to work in the **/global-scratch/bulk_pool** partition for example, it is first necessary to create a personal directory. |br|
 In order to move to another path, the user should use the *"cd"* command followed by the path the user wants to reach:
 
 	| ``cd /global-scratch/bulk_pool``
 	
-Now the user can create a personal directory where the user could work, following the limitation previously exposed.
+Now the user can create a personal directory where the user could work, following the limitation previously exposed. |br|
 In order to create a directory, the user should use the *"mkdir"* command followe by the name of the directory:
 
 	| ``mkdir <username>``
 	
 Now the user can go to the fresh new directory using the *"cd"* command. The creation of the personal directory on a partition is a one-time operation.
-Each user should work in his personal directory.
+Each user should work in his personal directory. |br|
 If the user needs to come back to personal home, the *"cd"* command must be followed by nothing:
 
 	| ``cd``
