@@ -494,6 +494,7 @@ It is possible to use:
 
 	| ``EXAMPLE``
 
+This command could be useful for example if the *executable file* of a program is collocated in a long path and the user wants to avoid typing the complete path each time this file is needed.
 
 .. _TROUBLESHOOTING:
 -----------------
