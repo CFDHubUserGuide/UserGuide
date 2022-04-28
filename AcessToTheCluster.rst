@@ -450,6 +450,16 @@ If the user needs to come back to personal home, the *"cd"* command must be foll
 If the user needs to work in other partitions (**/global-scratch/flash_pool**, **/ARCHIVIO**, others...), it is possibile to repeat this procedure to create a
 new personal directory.
 
+The user can create shortcuts in the *.bashrc* file in order to have a faster experience. This file is located in the *personal* home but is a *hidden* file.
+In order to see what is contained in a path the command *ls* is used:
+	| ``ls``
+However, this command doesn't show hidden files as *.bashrc*. The *ls* command should be used by adding a flag. |br|
+In the personal home, launch:
+	| ``ls -a``	
+All files are displayed and is possible to see the *.bashrc*.
+The *.bashrc* is a list of commands, variables and aliases that are launched when the user logs in a node.
+
+
 .. _TROUBLESHOOTING:
 -----------------
 Troubleshooting
