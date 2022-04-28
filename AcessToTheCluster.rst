@@ -457,7 +457,29 @@ However, this command doesn't show hidden files as *.bashrc*. The *ls* command s
 In the personal home, launch:
 	| ``ls -a``	
 All files are displayed and is possible to see the *.bashrc*.
-The *.bashrc* is a list of commands, variables and aliases that are launched when the user logs in a node.
+The *.bashrc* is a list of commands, variables and aliases that are launched when the user logs in a node. |br|
+
+It is possible to create a **variable** to avoid the typing of a long path. For example, if I want to move to my personal directory in 
+**/global-scratch/bulk_pool** partition I can create a *variable* to shorten it.
+To edit by a graphical window the bashrc the user can use *gedit* (an advanced user could use *vim* or another terminal editor):
+	| ``gedit .bashrc``
+At the end of the *.bashrc* file it is possible to write the name of the variable and the substituted path:
+	| EXAMPLE="/global-scratch/bulk_pool/<username>"
+The the user should update the terminal:
+	| ``source .bashrc``
+Now, in order to move to the personal directory in the **/global-scratch/bulk_pool** partition, instead of:
+	| ``cd /global-scratch/bulk_pool/<username>``
+It is possible to use:
+	| ``cd $EXAMPLE``
+
+It is also possible to create an **alias** which could be used to launch a command with a long syntax. For example, it is possible to create an *alias*
+to move to my personal directory in the **/global-scratch/bulk_pool** partition. |br|
+As previously showed, at the end of the *.bashrc* file I can write:
+	| alias EXAMPLE='cd /global-scratch/bulk_pool/<username>'
+Now, after sourcing the bashrc, instead of:
+	| ``cd /global-scratch/bulk_pool/<username>``
+It is possible to use:
+	| ``EXAMPLE``
 
 
 .. _TROUBLESHOOTING:
