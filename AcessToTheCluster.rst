@@ -244,12 +244,36 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 .. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
 .. dovrebbe essere capitolo 3.6:
-.. _DIRECTORY_MANAGEMENT:
+.. _WORKING_AREAS:
 -----------------
-WORK AREAS
+WORKING AREAS
 -----------------
-.. Fare
-The 
+The system is divided in different working areas in order to permit a more sustainable and efficient use of the
+available resources. The main working areas are reported and described here, please check the rules for using each
+working area in order to avoid affecting the whole system functionality:
+/home
+Purpose: to save personal data such as libraries, sources, compiled code, documents etc. In general, this area is
+reserved to files that you think should be backed up.
+Capacity: a quota for each group is assigned, this limitation permits to avoid the filling up of the /home area affecting
+other groups or users. To know the total quota and the actual occupancy of the available space type
+“repquota –augs”
+Access: all nodes
+Backup: YES
+/fast-scratch & /big-scratch
+Purpose: launch runs and put data actually on use. In order to preserve the purpose of this area and avoid a filling
+up of the area all data older than 50 days will be deleted from this area. Please be careful and move your data to
+/ARCHIVIO area when they are not on use anymore
+Capacity: approx. 6Tb to 30Tb on SSD (high speed) cache disk interfaces (normal) NLSAS disks to speed up data
+exchange processes.
+Access: all nodes
+Backup: NO
+/ARCHIVIO
+Purpose: save the results and data you want to keep for long term. This area permits to store data without affecting
+the running processes in other working areas.
+Capacity: related to the amount of storage purchased as a group, divided into blocks of 8Tb.
+Access: all nodes
+Backup: NO, however considered reliable being residing on enterprise band hard-drives with multi-disk data
+redundancy
 
 .. dovrebbe essere capitolo 3.7:
 .. _DATA_TRANSFER:
