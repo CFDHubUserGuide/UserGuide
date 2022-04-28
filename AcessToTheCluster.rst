@@ -77,57 +77,6 @@ up of the area all data older than 50 days will be deleted from this area. Pleas
 *Capacity:* related to the amount of storage purchased by your :ref:`Research Group<ResearchGroups>`, divided into blocks of 8Tb. |br|
 *Access:* from all nodes. |br|
 *Backup:* NO, however considered reliable being residing on enterprise band hard-drives with multi-disk data redundancy.
-
-.. _USER_MANAGEMENT:
------------------
-User Management
------------------
-In this section will be explained basic Linux OS concepts with the focus of teaching to the user how to manage the working area for personal work.
-After logging in a login node, the user is located in his *personal* home, which is a subdirectory of the **/home** partition. |br|
-The user can check in which path is located by typing in the terminal:
-
-	| ``pwd``
-
-Something like this will be displayed:
-
-	| ``/home/<research group>/<username>``
-
-If the user wants to work in the **/global-scratch/bulk_pool** partition for example, it is first necessary to create a personal directory. |br|
-In order to move to another path, the user should use the *"cd"* command followed by the path the user wants to reach:
-
-	| ``cd /global-scratch/bulk_pool``
-	
-Now the user can create a personal directory where the user could work, following the limitation previously exposed. |br|
-In order to create a directory, the user should use the *"mkdir"* command followe by the name of the directory:
-
-	| ``mkdir <username>``
-	
-Now the user can go to the fresh new directory using the *"cd"* command. The creation of the personal directory on a partition is a one-time operation.
-Each user should work in his personal directory. |br|
-If the user needs to come back to personal home, the *"cd"* command must be followed by nothing:
-
-	| ``cd``
-	
-If the user needs to work in other partitions (**/global-scratch/flash_pool**, **/ARCHIVIO**, others...), it is possibile to repeat this procedure to create a
-new personal directory.
-
-.. _TROUBLESHOOTING:
------------------
-Troubleshooting
------------------
-In this section some best practices will be presented, in order to avoid common problems. |br|
-
-In the *.bashrc* it is possible to launch commands in order to start some programs, source an environment or library, when the use logs to the cluester.
-However, this procedure is not recommended because could cause compatibility issues with some pre-loaded libraries. Keep your *.bashrc* more clean thant possible.
-If you need to launch a programs, source an environment or library just do it from the terminal. |br| 
-
-It is possible that some process launched by the user crashes, but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
-First the user should identify the process by typing in the terminal:
-	| htop -u <username>
-All the process lanched by the user in the node are displayed. Then the user should identify the process to *kill* by the *PID* number displayed on the left column.
-To close the **htop** use the shortcut **ctrl+C**. |br|
-In order to kill that process:
-	| kill -9 <PID number>
 	
 .. dovrebbe essere capitolo 3.1:
 -----------------
@@ -454,3 +403,67 @@ Click connect and you can now access the local directories on the left branch an
 .. |br| raw:: html
 
       <br>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+.. _USER_MANAGEMENT:
+-----------------
+User Management
+-----------------
+In this section will be explained basic Linux OS concepts with the focus of teaching to the user how to manage the working area for personal work.
+After logging in a login node, the user is located in his *personal* home, which is a subdirectory of the **/home** partition. |br|
+The user can check in which path is located by typing in the terminal:
+
+	| ``pwd``
+
+Something like this will be displayed:
+
+	| ``/home/<research group>/<username>``
+
+If the user wants to work in the **/global-scratch/bulk_pool** partition for example, it is first necessary to create a personal directory. |br|
+In order to move to another path, the user should use the *"cd"* command followed by the path the user wants to reach:
+
+	| ``cd /global-scratch/bulk_pool``
+	
+Now the user can create a personal directory where the user could work, following the limitation previously exposed. |br|
+In order to create a directory, the user should use the *"mkdir"* command followe by the name of the directory:
+
+	| ``mkdir <username>``
+	
+Now the user can go to the fresh new directory using the *"cd"* command. The creation of the personal directory on a partition is a one-time operation.
+Each user should work in his personal directory. |br|
+If the user needs to come back to personal home, the *"cd"* command must be followed by nothing:
+
+	| ``cd``
+	
+If the user needs to work in other partitions (**/global-scratch/flash_pool**, **/ARCHIVIO**, others...), it is possibile to repeat this procedure to create a
+new personal directory.
+
+.. _TROUBLESHOOTING:
+-----------------
+Troubleshooting
+-----------------
+In this section some best practices will be presented, in order to avoid common problems. |br|
+
+In the *.bashrc* it is possible to launch commands in order to start some programs, source an environment or library, when the use logs to the cluester.
+However, this procedure is not recommended because could cause compatibility issues with some pre-loaded libraries. Keep your *.bashrc* more clean thant possible.
+If you need to launch a programs, source an environment or library just do it from the terminal. |br| 
+
+It is possible that some process launched by the user crashes, but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
+First the user should identify the process by typing in the terminal:
+	| htop -u <username>
+All the process lanched by the user in the node are displayed. Then the user should identify the process to *kill* by the *PID* number displayed on the left column.
+To close the **htop** use the shortcut **ctrl+C**. |br|
+In order to kill that process:
+	| kill -9 <PID number>
