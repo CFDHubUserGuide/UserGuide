@@ -404,7 +404,9 @@ Open FileZilla:
 -----------------
 DATA TRANSFERRING FOR LINUX/Mac OS
 -----------------
-
+__________________________________
+Direct data transferring form terminal
+__________________________________
 In order to transfer files from your terminal to the cluster and vice versa, you may use the scp command from Linus OS. 
 
 	| ``scp <sourceDir> <targetDir>``
@@ -415,10 +417,21 @@ In order to transfer files from your terminal to the cluster and vice versa, you
 
 .. _dovrebbe essere capitolo 3.9.1:
 __________________________________
-DATA TRANSFERRING (FileZilla)
+Filezilla
 __________________________________
+In order to use Filezilla for file transferring, the user needs to type the following command in the terminal:
 
-.. FARE
+	| ``ssh -L 2200:nodevg-0-x:22 -J <username>@131.175.56.199 <username>@nodevg-0-x`` 
+	
+where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. This enable the local port 2200 for sftp protocol.
+
+Then, in Filezilla, connect to the cluster with the following settings:
+- *Host*: sftp://localhost
+- *Username*: <username>
+- *Password*: user password
+- *Port*: 2200
+
+Click connect and you can now access the local directories on the left branch and the remote ones on the right one.
 
 .. per fare i break volontari:
 .. |br| raw:: html
