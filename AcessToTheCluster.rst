@@ -553,7 +553,7 @@ Giving a new check, just the desired graphical window should be displayed:
 
 	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/<research_group>/<username>/.Xauthority etc...
 
-It could happen that the graphical windows are closed for several reasons as cluster shutdown, maintenance or other porblems.
+It could happen that the graphical windows are closed for several reasons as cluster shutdown, maintenance or other problems.
 If the user is using MobaXTerm, an error like the following one could be displayed:
 
 .. figure:: images/errore_VNC_moba.png
