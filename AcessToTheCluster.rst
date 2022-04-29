@@ -460,7 +460,7 @@ All files are displayed and is possible to see the *.bashrc*.
 The *.bashrc* is a list of commands, variables and aliases that are launched when the user logs in to a node and opens a terminal window. |br|
 
 It is possible to create a **variable** to avoid the typing of a long path. For example, if the user wants to move to its personal directory in 
-**/global-scratch/bulk_pool** partition, it is possible to create a *variable* to directly accessing it without typing all the path in the terminal.
+**/global-scratch/bulk_pool** partition, it is possible to create a *variable* to directly access it without typing the entire path in the terminal.
 To edit with a graphical text editor the bashrc the user can use *gedit* (an advanced user could use *vim* or another terminal editor):
 
 	| ``gedit .bashrc``
