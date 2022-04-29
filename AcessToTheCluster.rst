@@ -539,8 +539,8 @@ In the terminal type:
 	
 The list of all running graphical windows will be displayed, in this example the user has two running graphical port:
 	
-	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/energia/hyauri/.Xauthority etc...
-	| PID2 <username>   /usr/bin/Xvnc :NM -auth /home/energia/hyauri/.Xauthority etc...
+	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/<research_group>/<username>/.Xauthority etc...
+	| PID2 <username>   /usr/bin/Xvnc :NM -auth /home/<research_group>/<username>/.Xauthority etc...
 
 For each graphical port, the corresponding PID is displayed in the first column. |br|
 After *"/usr/bin/Xvnc"* the number of the graphical port is listed. |br|
@@ -551,7 +551,7 @@ If the user is working in the **NN** graphical window and has opened by accident
 	
 Giving a new check, just the desired graphical window should be displayed:
 
-	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/energia/hyauri/.Xauthority etc...
+	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/<research_group>/<username>/.Xauthority etc...
 	
 
 
