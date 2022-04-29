@@ -502,10 +502,10 @@ Troubleshooting
 -----------------
 In this section some best practices will be presented, in order to avoid common problems. |br|
 
-In the *.bashrc* it is possible to launch commands in order to start some programs, source an environment or library, when the use logs to the cluester.
+In the *.bashrc* it is possible to launch commands in order to start some softwares or source an environment or library, for example, directly when the use logs in to the cluster.
 However, this procedure is not recommended because could cause compatibility issues with some pre-loaded libraries.  |br|
-Keep your *.bashrc* as clean as possible.
-If you need to launch a programs, source an environment or library just do it from the terminal. |br| 
+**Keep your .bashrc file as clean as possible**.
+If you need to launch a software, source an environment or library just do it from the terminal or create a separate file (*.aliases* as an example) to be sourced after login. |br| 
 
 It is possible that some process launched by the user crashes, but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
 First the user should identify the process by typing in the terminal:
@@ -518,7 +518,7 @@ In order to kill that process:
 
 	| ``kill -9 <PID number>``
 	
-It is possible for various reasons, that the user cannot log in a login node after the jump in the master node.
+It is possible for various reasons, that the user cannot log in a login node after the jump from master node.
 In this case the user is logged in the *master node* and not in a *login node* (for example nodevg-0-4). |br|
 If this happens it is shown in the terminal:
 
@@ -528,6 +528,6 @@ Instead of:
 
 	| [<username>@nodevg-0-4 <username>]$
 	
-If this happens, **DO NOT LAUNCH ANY PROCESS**. The computational power of the master node is sufficient to manage all the cluster's users logins but not to launch any type of simulation, data manipulation or other tasks. 
+If this happens, **DO NOT LAUNCH ANY PROCESS**. The computational power of the master node is sufficient to manage all the cluster's users logins but not to launch any type of simulation, data manipulation or other tasks.  
 	
 
