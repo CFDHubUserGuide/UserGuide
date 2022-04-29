@@ -507,7 +507,7 @@ However, this procedure is not recommended because could cause compatibility iss
 **Keep your .bashrc file as clean as possible**.
 If you need to launch a software, source an environment or library just do it from the terminal or create a separate file (*.aliases* as an example) to be sourced after login. |br| 
 
-It is possible that some process launched by the user crashes, but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
+It is possible that a process launched by the user crashes but continues to run in background. When this happens, the user could *kill* the process from the terminal. |br| 
 First the user should identify the process by typing in the terminal:
 
 	| ``htop -u <username>``
