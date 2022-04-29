@@ -421,9 +421,9 @@ Click connect and you can now access the local directories on the left branch an
 -----------------
 User Management
 -----------------
-In this section will be explained basic Linux OS concepts with the focus of teaching to the user how to manage the working area for personal work.
-After logging in a login node, the user is located in his *personal* home, which is a subdirectory of the **/home** partition. |br|
-The user can check in which path is located by typing in the terminal:
+In this section some basic Linux OS concepts will be explained with the aim of teaching to the user how to manage the working area for personal work.
+After logging in to a login node, the user is directed to his *personal* home directory, which is a subdirectory of the **/home** partition. |br|
+The user can check which path he is located in by typing in the terminal:
 
 	| ``pwd``
 
@@ -442,7 +442,7 @@ In order to create a directory, the user should use the *"mkdir"* command follow
 	| ``mkdir <username>``
 	
 Now the user can go to the fresh new directory using the *"cd"* command. The creation of the personal directory on a partition is a one-time operation.
-Each user should work in his personal directory. |br|
+Each user should work in his own personal directory. |br|
 If the user needs to come back to personal home, the *"cd"* command must be followed by nothing:
 
 	| ``cd``
@@ -457,11 +457,11 @@ However, this command doesn't show hidden files as *.bashrc*. The *ls* command s
 In the personal home, launch:
 	| ``ls -a``	
 All files are displayed and is possible to see the *.bashrc*.
-The *.bashrc* is a list of commands, variables and aliases that are launched when the user logs in a node. |br|
+The *.bashrc* is a list of commands, variables and aliases that are launched when the user logs in to a node and opens a terminal window. |br|
 
-It is possible to create a **variable** to avoid the typing of a long path. For example, if I want to move to my personal directory in 
-**/global-scratch/bulk_pool** partition I can create a *variable* to shorten it.
-To edit by a graphical window the bashrc the user can use *gedit* (an advanced user could use *vim* or another terminal editor):
+It is possible to create a **variable** to avoid the typing of a long path. For example, if the user wants to move to its personal directory in 
+**/global-scratch/bulk_pool** partition, it is possible to create a *variable* to directly accessing it without typing all the path in the terminal.
+To edit with a graphical text editor the bashrc the user can use *gedit* (an advanced user could use *vim* or another terminal editor):
 
 	| ``gedit .bashrc``
 At the end of the *.bashrc* file it is possible to write the name of the variable and the substituted path:
@@ -494,7 +494,7 @@ It is possible to use:
 
 	| ``EXAMPLE``
 
-This command could be useful for example if the *executable file* of a program is collocated in a long path and the user wants to avoid typing the complete path each time this file is needed.
+This command could be useful for example if the *executable file* of a program is located in a directory whose path is very long and the user wants to avoid typing the complete path each time this file is needed.
 
 .. _TROUBLESHOOTING:
 -----------------
