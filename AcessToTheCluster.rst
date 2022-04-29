@@ -530,7 +530,7 @@ Instead of:
 	
 If this happens, **DO NOT LAUNCH ANY PROCESS**. The computational power of the master node is sufficient to manage all the cluster's users logins but not to launch any type of simulation, data manipulation or other tasks.
 
-The user should use **just one graphical window** at time, if more than one window is used the system admin could choose to close all the graphical post.
+The user should use **just one graphical window** at time, if more than one window is used the system admin could choose to close all the graphical ports.
 This could lead to losing all the work in progress in graphical windows.
 Next it will be explained how to check if and how many graphical port are running. |br|
 In the terminal type:
