@@ -552,8 +552,13 @@ If the user is working in the **NN** graphical window and has opened by accident
 Giving a new check, just the desired graphical window should be displayed:
 
 	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/<research_group>/<username>/.Xauthority etc...
-	
 
+It could happen that the graphical windows are closed for several reasons as cluster shutdown, maintenance or other porblems.
+If the user is using MobaXTerm, an error like the following one could be displayed:
+
+.. figure:: images/errore_VNC_moba.png
+
+In this case the user should check, following the previous indications, if the graphical port is running. If no PID and port number is displayed, the user should repeat :ref:`the creation of the graphical port<CREATION_OF_A_GRAPHICAL_PORT>`.
 
 
 .. per fare i break volontari con |br| a fine linea, lasciare in fondo al file:
