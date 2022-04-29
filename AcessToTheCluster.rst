@@ -542,8 +542,8 @@ The list of all running graphical windows will be displayed, in this example the
 	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/energia/hyauri/.Xauthority etc...
 	| PID2 <username>   /usr/bin/Xvnc :NM -auth /home/energia/hyauri/.Xauthority etc...
 
-For each graphical port in the first column, the PID of the graphical port is displayed.
-After *"/usr/bin/Xvnc"* the number of the corresponding graphical port is listed. |br|
+For each graphical port, the corresponding PID is displayed in the first column. |br|
+After *"/usr/bin/Xvnc"* the number of the graphical port is listed. |br|
 In this example the user has two graphical port: **NN** and **NM**.
 If the user is working in the **NN** graphical window and has opened by accident the **NM** port, the corresponding process should be killed:
 
