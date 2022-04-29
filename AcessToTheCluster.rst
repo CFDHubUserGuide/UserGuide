@@ -399,24 +399,24 @@ Then, in Filezilla, connect to the cluster with the following settings:
 
 Click connect and you can now access the local directories on the left branch and the remote ones on the right one.
 
-.. per fare i break volontari:
-.. |br| raw:: html
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
-      <br>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
 .. _USER_MANAGEMENT:
 -----------------
 User Management
@@ -528,6 +528,35 @@ Instead of:
 
 	| [<username>@nodevg-0-4 <username>]$
 	
-If this happens, **DO NOT LAUNCH ANY PROCESS**. The computational power of the master node is sufficient to manage all the cluster's users logins but not to launch any type of simulation, data manipulation or other tasks.  
+If this happens, **DO NOT LAUNCH ANY PROCESS**. The computational power of the master node is sufficient to manage all the cluster's users logins but not to launch any type of simulation, data manipulation or other tasks.
+
+The user should use **just one graphical window** at time, if more than one window is used the system admin could choose to close all the graphical post.
+This could lead to losing all the work in progress in graphical windows.
+Next it will be explained how to check if and how many graphical port are running. |br|
+In the terminal type:
+
+	| ``ps -eo pid,ruser=RealUser -o cmd | grep <username> | grep /bin/Xvnc | grep -v "grep"``
+	
+The list of all running graphical windows will be displayed, in this example the user has two running graphical port:
+	
+	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/energia/hyauri/.Xauthority etc...
+	| PID2 <username>   /usr/bin/Xvnc :NM -auth /home/energia/hyauri/.Xauthority etc...
+
+For each graphical port in the first column, the PID of the graphical port is displayed.
+After *"/usr/bin/Xvnc"* the number of the corresponding graphical port is listed. |br|
+In this example the user has two graphical port: **NN** and **NM**.
+If the user is working in the **NN** graphical window and has opened by accident the **NM** port, the corresponding process should be killed:
+
+	| ``kill -9 PID2``
+	
+Giving a new check, just the desired graphical window should be displayed:
+
+	| PID1 <username>   /usr/bin/Xvnc :NN -auth /home/energia/hyauri/.Xauthority etc...
 	
 
+
+
+.. per fare i break volontari con |br| a fine linea, lasciare in fondo al file:
+.. |br| raw:: html
+
+      <br>
