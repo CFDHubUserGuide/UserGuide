@@ -4,7 +4,7 @@ HOW TO SUBMIT A JOB
 
 To perform a calculation on CFDHub there are some information that need to be addressed.
 
-- :ref:`Access to CFDHub<SSHConnection>`
+- :ref:`Access to CFDHub<SSH_CONNECTION_Windows>`
 - :ref:`Data Transfer on the cluster<DATA_TRANSFER>`
 - :ref:`Follow the workflow of a hpc facility<Workflow>`
 - :ref:`Launch your job<LaunchYourJob>`
