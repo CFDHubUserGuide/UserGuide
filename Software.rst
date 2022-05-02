@@ -35,8 +35,59 @@ TBD
 Ansys Fluent
 -------------------------
 
-TBD
+This section presents how to start and configure Ansys Fluent on the cluster. The user is expected to have some experience with this CFD code since this user guide covers how to access Ansys Fluent on a single or multiple nodes. 
 
+Launch Fluent from Terminal
+--------------------------------
+
+Before launching Ansys Fluent is necessary to enter in the node where the user want to run the simulation.
+
+.. ( nella vecchia guida aggiungeva un “ , as explained in section 4.1 and 4.2”; rimetterlo? Se si, aggiornare a che capitoli a cui fa riferimento)
+
+After the user has logged from the terminal to the node, should go into the folder where the case to be run is located. From this folder the user should launch the command:
+
+    ``/software/ansys_inc/v212/fluent/bin/fluent``
+    
+    .. ``/fluent``
+    
+.. ( se si userà l’approccio dei moduli stile cineca, aggiornare mettendo il solo comando e non il path del comando, verificare che sia questo il comando ) 
+
+Parallel run on Single Node set-up 
+--------------------------------
+
+If the user wants to make a parallel run just with the processors of a single node, Ansys Fluent should be configurated as follows.
+In *Parallel Settings* tab, the voice **Shared Memory On Local Machine** should be selected under the the voice *Run Types*, as can be seen in the following figure:
+
+.. figure:: images_test/single-node.png
+
+At the voice *Solver Processes* the user could also select how many cores wants to use.
+
+Parallel run on Multiple Nodes set-up
+--------------------------------
+
+If the user wants to make a parallel run with the processors of multiple nodes, Ansys Fluent should be configurated as follows.
+In *Parallel Settings* tab, the voice **Distributed Memory On a Cluster** should be selected under the the voice *Run Types*, as can be seen in the next figure.
+When **Distributed Memory On a Cluster** is selected, new options appears. Selecting **Machine Names** it is possible to enlist the nodes that the user wants to use, as can be seen in the following figure:
+
+.. figure:: images_test/multiple-node.png
+
+At the voice *Solver Processes* the user could also select how many cores wants to use.
+When not explicited, the cores will be equally distributed on the multiple node.
+The user can choose how to distribute the cores on the nodes changing from *node-x-y, node-x-z* in figure with *node-x-y:16, node-x-z:16* assunming that the user is working with a total of *32* processors.
+
+Parallel CPU+GPU run set-up
+--------------------------------
+
+Management of crashed processes
+--------------------------------
+
+When the user starts Ansys Fluent, in the working directory (by default the *path* where you are launching Ansys Fluent) a script named *cleanup-fluent`...`.sh* is created.
+If for various reasons Ansys Fluent crashes, typically giving an error message in red color, the Fluent processes could not stop or leave residual processes running. 
+You can check it with the *top* or *htop* command. 
+In order to clean this processes the user can use the .sh file previously created by launching:
+    ``sh cleanup-fluent`...`.sh``
+When Ansys Fluent is correctly stopped, the script *cleanup-fluent`...`.sh* is automatically deleted.
+This procedure is advised everytime that this script doesn't automatically disappear after closing Ansys Fluent.
 
 .. _Comsol:
 
