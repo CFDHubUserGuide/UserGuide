@@ -98,6 +98,7 @@ VPN SERVICE ACTIVATION
 To access the CFDHub HPC machines when the user is outside PoliMi network, you are required to ask your own Department IT staff the activation of VPN service for your PoliMi account. Some indications are reported at the following link: https://www.asict.polimi.it/en/network-services/vpn.html 
 
 .. dovrebbe essere capitolo 3.3:
+.. _SSH_CONNECTION_ALL:
 -----------------
 STEPS FOR HPC ACCESS
 -----------------
