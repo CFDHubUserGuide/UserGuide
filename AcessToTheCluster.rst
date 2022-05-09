@@ -287,11 +287,11 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 .. dovrebbe essere capitolo 3.7:
 .. _DATA_TRANSFER:
-..-----------------
-..DATA TRANSFERRING
-..-----------------
+.. -----------------
+.. DATA TRANSFERRING
+.. -----------------
 
-..Depending on the OS used by the user, the procedure change as follows. 
+.. Depending on the OS used by the user, the procedure change as follows. 
 
 .. dovrebbe essere capitolo 3.8:
 .. _DATA_TRANSFER_WINDOWS:
