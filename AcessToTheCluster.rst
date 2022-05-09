@@ -233,7 +233,7 @@ For data transferring between cluster and your local machine, refer to chapter :
 
 .. dovrebbe essere capitolo 3.5.2:
 __________________________________
-Access with VNC remote desktop (MAC OS)
+Access with VNC remote desktop (Mac OS)
 __________________________________
 
 This method enables the user to access the cluster with a VNC-based remote desktop window. 
@@ -258,7 +258,7 @@ Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy*
 
 .. dovrebbe essere capitolo 3.5.3:
 __________________________________
-Access with VNC remote desktop (LINUX)
+Access with VNC remote desktop (Linux)
 __________________________________
 
 For this method the Remmina utility is required. In user friendly Linux distribution as Ubuntu, Remmina could come pre-installed.
@@ -287,16 +287,16 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 .. dovrebbe essere capitolo 3.7:
 .. _DATA_TRANSFER:
------------------
-DATA TRANSFERRING
------------------
+..-----------------
+..DATA TRANSFERRING
+..-----------------
 
-Depending on the OS used by the user, the procedure change as follows. 
+..Depending on the OS used by the user, the procedure change as follows. 
 
 .. dovrebbe essere capitolo 3.8:
 .. _DATA_TRANSFER_WINDOWS:
 -----------------
-DATA TRANSFERRING FOR WINDOWS USERS
+DATA TRANSFERRING (Windows)
 -----------------
 
 To transfer data between the user local folders and cluster folders is necessary first to setup a tunnel and then to connect to the cluster through it. 
@@ -365,7 +365,7 @@ Open FileZilla:
 .. dovrebbe essere capitolo 3.9:
 .. _DATA_TRANSFER_Linux_Mac-OS:
 -----------------
-DATA TRANSFERRING FOR LINUX/Mac OS
+DATA TRANSFERRING (Linux/Mac OS)
 -----------------
 __________________________________
 Direct data transferring form terminal
