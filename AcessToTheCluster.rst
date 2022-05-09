@@ -275,7 +275,7 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 .. figure:: images/remmina_create_new_arrow.png
 
-3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":22" as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instructions in next figure.
+3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":59NN", where *NN* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`, as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instructions in next figure.
 
 .. figure:: images/remmina_basic.png
 
