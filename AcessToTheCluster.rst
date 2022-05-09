@@ -420,7 +420,7 @@ Click connect and you can now access the local directories on the left branch an
 
 .. _USER_MANAGEMENT:
 -----------------
-User Management
+USER MANAGEMENT
 -----------------
 In this section some basic Linux OS concepts will be explained with the aim of teaching to the user how to manage the working area for personal work.
 After logging in to a login node, the user is directed to his *personal* home directory, which is a subdirectory of the **/home** partition. |br|
@@ -499,7 +499,7 @@ This command could be useful for example if the *executable file* of a program i
 
 .. _TROUBLESHOOTING:
 -----------------
-Troubleshooting
+TROUBLESHOOTING
 -----------------
 In this section some best practices will be presented, in order to avoid common problems. |br|
 
