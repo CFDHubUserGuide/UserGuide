@@ -19,7 +19,15 @@ The cluster’s infrastructure can be explained as following. The master node is
 
 Figure: CFDHub hardware structure for user access. 
 
-In order to use the computing resources you will have to log into *nodevg-0-3* or *nodevg-0-4* (depending on your :ref:`Research Group<ResearchGroups>`) to successively use the computational resources. **Please note that nodevg-0-3 is unavailable until further notice and every user should login through nodevg-0-4.**
+In order to use the computing resources the user must log in to *nodevg-0-3* or *nodevg-0-4* depending on your Research Group. The login nodes are distributed as following:
+
+.. _ResearchGroups:
+
+- *nodevg-0-3*: To be defined; 
+
+- *nodevg-0-4*: All research groups. 
+
+**Please note that nodevg-0-3 is unavailable until further notice and every user should login through nodevg-0-4.**
 
 *Remember:*
 
@@ -224,11 +232,8 @@ __________________________________
 SSH CONNECTION (Linux/MacOS)
 -----------------
 
-First connect to SSH server *131.175.56.199* through Port *22*. Then to start working on the cluster, it is necessary also to connect to the login nodes *nodevg-0-3* or *nodevg-0-4*, depending on your Research Group. 
+First connect to SSH server *131.175.56.199* through Port *22*. Then to start working on the cluster, it is necessary to connect to the login nodes *nodevg-0-3* or *nodevg-0-4*, depending on your :ref:`Research Group<ResearchGroups>`. 
 
-- *nodevg-0-3*: To be defined; 
-
-- *nodevg-0-4*: All research groups. 
 
 .. dovrebbe essere capitolo 3.5.1:
 __________________________________
