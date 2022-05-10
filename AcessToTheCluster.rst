@@ -86,7 +86,7 @@ up of the area all data older than 50 days will be deleted from this area. Pleas
 
 **/ARCHIVIO** |br|
 *Purpose:* save the results and data you want to keep for long term. This area permits to store data without affecting the running processes in other working areas. |br|
-*Capacity:* related to the amount of storage purchased by your :ref:`Research Group<ResearchGroups>`, divided into blocks of 8Tb. |br|
+*Capacity:* related to the amount of storage purchased by your Research Group, divided into blocks of 8Tb. |br|
 *Access:* from all nodes. |br|
 *Backup:* NO, however considered reliable being residing on enterprise band hard-drives with multi-disk data redundancy.
 	
