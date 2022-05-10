@@ -2,7 +2,9 @@
 
 .. dovrebbe essere capitolo 3:
 .. La seguente credo sia una reference:
-.. _AccessToTheCluster
+
+.. _AccessToTheCluster:
+
 =====================
 ACCESS TO THE CLUSTER 
 =====================
@@ -38,7 +40,9 @@ It could be also useful to know that */ARCHIVIO* directory is available from bot
 
 .. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
 .. dovrebbe essere capitolo 3.6:
-.. _WORKING_AREAS:
+
+.. _WorkingAreas:
+
 -----------------
 WORKING AREAS
 -----------------
@@ -98,7 +102,9 @@ VPN SERVICE ACTIVATION
 To access the CFDHub HPC machines when the user is outside PoliMi network, you are required to ask your own Department IT staff the activation of VPN service for your PoliMi account. Some indications are reported at the following link: https://www.asict.polimi.it/en/network-services/vpn.html 
 
 .. dovrebbe essere capitolo 3.3:
-.. _SSH_CONNECTION_ALL:
+
+.. _SshConnectionAll:
+
 -----------------
 STEPS FOR HPC ACCESS
 -----------------
@@ -108,7 +114,9 @@ If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH 
 If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (LINUX/MacOS)<SSH_CONNECTION_Linux_Mac-OS>`. 
 
 .. dovrebbe essere capitolo 3.4:
-.. _SSH_CONNECTION_Windows:
+
+.. _SshConnectionWindows:
+
 -----------------
 SSH CONNECTION (Windows)
 -----------------
@@ -122,7 +130,9 @@ If you are accessing from a Windows machine, the steps to access the HPC machine
 5. :ref:`settings to upload and download files to/from HPC machines to the local one<DATA_TRANSFER_WINDOWS>`. 
 
 .. dovrebbe essere capitolo 3.4.1:
-.. _SOFTWARE_REQUIREMENTS:
+
+.. _SoftwareRequirements:
+
 __________________________________
 SOFTWARE REQUIREMENTS
 __________________________________
@@ -135,7 +145,9 @@ An alternative and quick solution is Putty_. The user should know how to configu
 .. _Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 .. dovrebbe essere capitolo 3.4.2:
-.. _DETAILED_SSH_CONNECTION_SETTINGS:
+
+.. _DetailedSshConnctionSettings:
+
 __________________________________
 DETAILED SSH CONNECTION SETTINGS 
 __________________________________
@@ -155,7 +167,9 @@ Open MobaXterm software:
 4. Click OK to save the session.
 
 .. dovrebbe essere capitolo 3.4.3:
-.. _CREATION_OF_A_GRAPHICAL_PORT:
+
+.. _CreationOfAGraphicalPort:
+
 __________________________________
 CREATION OF A GRAPHICAL PORT 
 __________________________________
@@ -183,7 +197,9 @@ After launching the previous command, the following message is presented:
 The graphical port assigned to the user is indicated by the system, in this example the assigned port is *NN*. 
 
 .. dovrebbe essere capitolo 3.4.4:
-.. _SETTING_OF_VNC_SESSION:
+
+.. _SettingOfVncSession:
+
 __________________________________
 SETTING OF VNC SESSION
 __________________________________
@@ -201,7 +217,9 @@ __________________________________
 4. Click OK to save the session
 
 .. dovrebbe essere capitolo 3.5:
-.. _SSH_CONNECTION_Linux_Mac-OS:
+
+.. _SshConnectionLinuxMacOs:
+
 -----------------
 SSH CONNECTION (Linux/Mac OS)
 -----------------
@@ -286,7 +304,9 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 5. Click on *Save*. The configuration is ended and saved, you should be able to enter to your graphical port just by clicking on the new created session. 
 
 .. dovrebbe essere capitolo 3.7:
-.. _DATA_TRANSFER:
+
+.. _DataTransfer:
+
 .. -----------------
 .. DATA TRANSFERRING
 .. -----------------
@@ -294,7 +314,9 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 .. Depending on the OS used by the user, the procedure change as follows. 
 
 .. dovrebbe essere capitolo 3.8:
-.. _DATA_TRANSFER_WINDOWS:
+
+.. _DataTransferWindows:
+
 -----------------
 DATA TRANSFERRING (Windows)
 -----------------
@@ -363,7 +385,9 @@ Open FileZilla:
 4. Click *“Quickconnect”*. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
 
 .. dovrebbe essere capitolo 3.9:
-.. _DATA_TRANSFER_Linux_Mac-OS:
+
+.. _DataTransferLinuxMacOs:
+
 -----------------
 DATA TRANSFERRING (Linux/Mac OS)
 -----------------
@@ -417,8 +441,8 @@ Click connect and you can now access the local directories on the left branch an
 
 
 
+.. _UserManagement:
 
-.. _USER_MANAGEMENT:
 -----------------
 USER MANAGEMENT
 -----------------
@@ -497,7 +521,8 @@ It is possible to use:
 
 This command could be useful for example if the *executable file* of a program is located in a directory whose path is very long and the user wants to avoid typing the complete path each time this file is needed.
 
-.. _TROUBLESHOOTING:
+.. _TroubleShooting:
+
 -----------------
 TROUBLESHOOTING
 -----------------
