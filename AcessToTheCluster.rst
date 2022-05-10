@@ -123,11 +123,11 @@ SSH CONNECTION (Windows)
 
 If you are accessing from a Windows machine, the steps to access the HPC machines (through both PoliMi network or VPN service) are:
 
-1. :ref:`installation of the software to access the cluster<SOFTWARE_REQUIREMENTS>`; 
-2. :ref:`setting of SSH session to access the cluster<DETAILED_SSH_CONNECTION_SETTINGS>`; 
-3. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<CREATION_OF_A_GRAPHICAL_PORT>`;
-4. :ref:`setting of a VNC session to graphically access and control the HPC machines<SETTING_OF_VNC_SESSION>`; 
-5. :ref:`settings to upload and download files to/from HPC machines to the local one<DATA_TRANSFER_WINDOWS>`. 
+1. :ref:`installation of the software to access the cluster<SoftwareRequirements>`; 
+2. :ref:`setting of SSH session to access the cluster<DetailedSshConnctionSettings>`; 
+3. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<CreationOfAGraphicalPort>`;
+4. :ref:`setting of a VNC session to graphically access and control the HPC machines<SettingOfVncSession>`; 
+5. :ref:`settings to upload and download files to/from HPC machines to the local one<DataTransferWindows>`. 
 
 .. dovrebbe essere capitolo 3.4.1:
 
@@ -206,7 +206,7 @@ __________________________________
 
 1. Go to *Sessions* Tab –> *New Session* –> choose *VNC* and open the *Network settings* panel 
 
-2. Set up **Basic VNC settings** as described in Figure. Use your *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` and the port number provided by the system in :ref:`the previous step<CREATION_OF_A_GRAPHICAL_PORT>` putting it after the number *59* (e.g. if the assigned port is *NN*, put *59NN* instead of *5900*); 
+2. Set up **Basic VNC settings** as described in Figure. Use your *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` and the port number provided by the system in :ref:`the previous step<CreationOfAGraphicalPort>` putting it after the number *59* (e.g. if the assigned port is *NN*, put *59NN* instead of *5900*); 
 
 .. figure:: images/VNC_Network_setting_panel.png
 
@@ -263,14 +263,14 @@ Open a terminal and type:
 
 	| ``ssh -L 59yy:nodevg-0-x:59yy -J <username>@131.175.56.199 <username>@nodevg-0-x`` 
 
-where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`, *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. Enter your login password when asked. 
+where *yy* is the the :ref:`user-specific graphic port<CreationOfAGraphicalPort>`, *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. Enter your login password when asked. 
 
 .. To access the VNC desktop follow these steps depending on your operating system: 
 
 .. FINIRE e testare
 .. Linux OS: installare turboVNC e poi???
 
-Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
+Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CreationOfAGraphicalPort>`. Enter your login password when asked. 
 
 .. **MacOS**: Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
 
@@ -293,7 +293,7 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 .. figure:: images/remmina_create_new_arrow.png
 
-3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":59NN", where *NN* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`, as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instructions in next figure.
+3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":59NN", where *NN* is the the :ref:`user-specific graphic port<CreationOfAGraphicalPort>`, as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instructions in next figure.
 
 .. figure:: images/remmina_basic.png
 
@@ -584,7 +584,7 @@ If the user is using MobaXTerm, an error like the following one could be display
 
 .. figure:: images/errore_VNC_moba.png
 
-In this case the user should check, following the previous indications, if the graphical port is running. If no PID and port number is displayed, the user should repeat :ref:`the creation of the graphical port<CREATION_OF_A_GRAPHICAL_PORT>`.
+In this case the user should check, following the previous indications, if the graphical port is running. If no PID and port number is displayed, the user should repeat :ref:`the creation of the graphical port<CreationOfAGraphicalPort>`.
 
 
 .. per fare i break volontari con |br| a fine linea, lasciare in fondo al file:
