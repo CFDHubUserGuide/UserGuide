@@ -111,7 +111,7 @@ STEPS FOR HPC ACCESS
 
 If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SshConnectionWindows>`. 
 
-If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (LINUX/MacOS)<SshConnectionLinuxMacOs>`. 
+If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (Linux/MacOS)<SshConnectionLinuxMacOs>`. 
 
 .. dovrebbe essere capitolo 3.4:
 
@@ -221,12 +221,10 @@ __________________________________
 .. _SshConnectionLinuxMacOs:
 
 -----------------
-SSH CONNECTION (Linux/Mac OS)
+SSH CONNECTION (Linux/MacOS)
 -----------------
 
 First connect to SSH server *131.175.56.199* through Port *22*. Then to start working on the cluster, it is necessary also to connect to the login nodes *nodevg-0-3* or *nodevg-0-4*, depending on your Research Group. 
-
-.. verificare se i nodi sono cosi assegnati, VERIFICARE GLI IP 
 
 - *nodevg-0-3*: To be defined; 
 
@@ -247,11 +245,11 @@ then to access your login node you may choose
 
 where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. 
 
-For data transferring between cluster and your local machine, refer to chapter :ref:`Data transferring for Linux/MacOS<DATA_TRANSFER_Linux_Mac-OS>`. 
+For data transferring between cluster and your local machine, refer to chapter :ref:`Data transferring for Linux/MacOS<DataTransferLinuxMacOs>`. 
 
 .. dovrebbe essere capitolo 3.5.2:
 __________________________________
-Access with VNC remote desktop (Mac OS)
+Access with VNC remote desktop (MacOS)
 __________________________________
 
 This method enables the user to access the cluster with a VNC-based remote desktop window. 
@@ -267,8 +265,6 @@ where *yy* is the the :ref:`user-specific graphic port<CreationOfAGraphicalPort>
 
 .. To access the VNC desktop follow these steps depending on your operating system: 
 
-.. FINIRE e testare
-.. Linux OS: installare turboVNC e poi???
 
 Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CreationOfAGraphicalPort>`. Enter your login password when asked. 
 
