@@ -109,9 +109,9 @@ To access the CFDHub HPC machines when the user is outside PoliMi network, you a
 STEPS FOR HPC ACCESS
 -----------------
 
-If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SSH_CONNECTION_Windows>`. 
+If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SshConnectionWindows>`. 
 
-If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (LINUX/MacOS)<SSH_CONNECTION_Linux_Mac-OS>`. 
+If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (LINUX/MacOS)<SshConnectionLinuxMacOs>`. 
 
 .. dovrebbe essere capitolo 3.4:
 
