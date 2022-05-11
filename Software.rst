@@ -58,7 +58,7 @@ Parallel run on Single Node set-up
 If the user wants to make a parallel run just with the processors of a single node, Ansys Fluent should be configurated as follows.
 In *Parallel Settings* tab, the voice **Shared Memory On Local Machine** should be selected under the the voice *Run Types*, as can be seen in the following figure:
 
-.. figure:: images_test/single-node.png
+.. figure:: images/single-node.png
 
 At the voice *Solver Processes* the user could also select how many cores wants to use.
 
@@ -69,7 +69,7 @@ If the user wants to make a parallel run with the processors of multiple nodes, 
 In *Parallel Settings* tab, the voice **Distributed Memory On a Cluster** should be selected under the the voice *Run Types*, as can be seen in the next figure.
 When **Distributed Memory On a Cluster** is selected, new options appears. Selecting **Machine Names** it is possible to enlist the nodes that the user wants to use, as can be seen in the following figure:
 
-.. figure:: images_test/multiple-node.png
+.. figure:: images/multiple-node.png
 
 At the voice *Solver Processes* the user could also select how many cores wants to use.
 When not explicited, the cores will be equally distributed on the multiple node.

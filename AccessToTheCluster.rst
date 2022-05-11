@@ -2,7 +2,9 @@
 
 .. dovrebbe essere capitolo 3:
 .. La seguente credo sia una reference:
-.. _AccessToTheCluster
+
+.. _AccessToTheCluster:
+
 =====================
 ACCESS TO THE CLUSTER 
 =====================
@@ -17,7 +19,15 @@ The cluster’s infrastructure can be explained as following. The master node is
 
 Figure: CFDHub hardware structure for user access. 
 
-In order to use the computing resources you will have to log into *nodevg-0-3* or *nodevg-0-4* (depending on your :ref:`Research Group<ResearchGroups>`) to successively use the computational resources. **Please note that nodevg-0-3 is unavailable until further notice and every user should login through nodevg-0-4.**
+In order to use the computing resources the user must log in to *nodevg-0-3* or *nodevg-0-4* depending on your Research Group. The login nodes are distributed as following:
+
+.. _ResearchGroups:
+
+- *nodevg-0-3*: To be defined; 
+
+- *nodevg-0-4*: All research groups. 
+
+**Please note that nodevg-0-3 is unavailable until further notice and every user should login through nodevg-0-4.**
 
 *Remember:*
 
@@ -38,7 +48,9 @@ It could be also useful to know that */ARCHIVIO* directory is available from bot
 
 .. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
 .. dovrebbe essere capitolo 3.6:
-.. _WORKING_AREAS:
+
+.. _WorkingAreas:
+
 -----------------
 WORKING AREAS
 -----------------
@@ -74,7 +86,7 @@ up of the area all data older than 50 days will be deleted from this area. Pleas
 
 **/ARCHIVIO** |br|
 *Purpose:* save the results and data you want to keep for long term. This area permits to store data without affecting the running processes in other working areas. |br|
-*Capacity:* related to the amount of storage purchased by your :ref:`Research Group<ResearchGroups>`, divided into blocks of 8Tb. |br|
+*Capacity:* related to the amount of storage purchased by your Research Group, divided into blocks of 8Tb. |br|
 *Access:* from all nodes. |br|
 *Backup:* NO, however considered reliable being residing on enterprise band hard-drives with multi-disk data redundancy.
 	
@@ -98,30 +110,37 @@ VPN SERVICE ACTIVATION
 To access the CFDHub HPC machines when the user is outside PoliMi network, you are required to ask your own Department IT staff the activation of VPN service for your PoliMi account. Some indications are reported at the following link: https://www.asict.polimi.it/en/network-services/vpn.html 
 
 .. dovrebbe essere capitolo 3.3:
+
+.. _SshConnectionAll:
+
 -----------------
 STEPS FOR HPC ACCESS
 -----------------
 
-If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SSH_CONNECTION_Windows>`. 
+If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SshConnectionWindows>`. 
 
-If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (LINUX/MacOS)<SSH_CONNECTION_Linux_Mac-OS>`. 
+If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (Linux/MacOS)<SshConnectionLinuxMacOs>`. 
 
 .. dovrebbe essere capitolo 3.4:
-.. _SSH_CONNECTION_Windows:
+
+.. _SshConnectionWindows:
+
 -----------------
 SSH CONNECTION (Windows)
 -----------------
 
 If you are accessing from a Windows machine, the steps to access the HPC machines (through both PoliMi network or VPN service) are:
 
-1. :ref:`installation of the software to access the cluster<SOFTWARE_REQUIREMENTS>`; 
-2. :ref:`setting of SSH session to access the cluster<DETAILED_SSH_CONNECTION_SETTINGS>`; 
-3. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<CREATION_OF_A_GRAPHICAL_PORT>`;
-4. :ref:`setting of a VNC session to graphically access and control the HPC machines<SETTING_OF_VNC_SESSION>`; 
-5. :ref:`settings to upload and download files to/from HPC machines to the local one<DATA_TRANSFER_WINDOWS>`. 
+1. :ref:`installation of the software to access the cluster<SoftwareRequirements>`; 
+2. :ref:`setting of SSH session to access the cluster<DetailedSshConnctionSettings>`; 
+3. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<CreationOfAGraphicalPort>`;
+4. :ref:`setting of a VNC session to graphically access and control the HPC machines<SettingOfVncSession>`; 
+5. :ref:`settings to upload and download files to/from HPC machines to the local one<DataTransferWindows>`. 
 
 .. dovrebbe essere capitolo 3.4.1:
-.. _SOFTWARE_REQUIREMENTS:
+
+.. _SoftwareRequirements:
+
 __________________________________
 SOFTWARE REQUIREMENTS
 __________________________________
@@ -134,7 +153,9 @@ An alternative and quick solution is Putty_. The user should know how to configu
 .. _Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 .. dovrebbe essere capitolo 3.4.2:
-.. _DETAILED_SSH_CONNECTION_SETTINGS:
+
+.. _DetailedSshConnctionSettings:
+
 __________________________________
 DETAILED SSH CONNECTION SETTINGS 
 __________________________________
@@ -154,7 +175,9 @@ Open MobaXterm software:
 4. Click OK to save the session.
 
 .. dovrebbe essere capitolo 3.4.3:
-.. _CREATION_OF_A_GRAPHICAL_PORT:
+
+.. _CreationOfAGraphicalPort:
+
 __________________________________
 CREATION OF A GRAPHICAL PORT 
 __________________________________
@@ -182,14 +205,16 @@ After launching the previous command, the following message is presented:
 The graphical port assigned to the user is indicated by the system, in this example the assigned port is *NN*. 
 
 .. dovrebbe essere capitolo 3.4.4:
-.. _SETTING_OF_VNC_SESSION:
+
+.. _SettingOfVncSession:
+
 __________________________________
 SETTING OF VNC SESSION
 __________________________________
 
 1. Go to *Sessions* Tab –> *New Session* –> choose *VNC* and open the *Network settings* panel 
 
-2. Set up **Basic VNC settings** as described in Figure. Use your *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` and the port number provided by the system in :ref:`the previous step<CREATION_OF_A_GRAPHICAL_PORT>` putting it after the number *59* (e.g. if the assigned port is *NN*, put *59NN* instead of *5900*); 
+2. Set up **Basic VNC settings** as described in Figure. Use your *nodevg-0-x*, where *x = 3,4* based on your :ref:`Research Group<ResearchGroups>` and the port number provided by the system in :ref:`the previous step<CreationOfAGraphicalPort>` putting it after the number *59* (e.g. if the assigned port is *NN*, put *59NN* instead of *5900*); 
 
 .. figure:: images/VNC_Network_setting_panel.png
 
@@ -200,18 +225,15 @@ __________________________________
 4. Click OK to save the session
 
 .. dovrebbe essere capitolo 3.5:
-.. _SSH_CONNECTION_Linux_Mac-OS:
+
+.. _SshConnectionLinuxMacOs:
+
 -----------------
-SSH CONNECTION (Linux/Mac OS)
+SSH CONNECTION (Linux/MacOS)
 -----------------
 
-First connect to SSH server *131.175.56.199* through Port *22*. Then to start working on the cluster, it is necessary also to connect to the login nodes *nodevg-0-3* or *nodevg-0-4*, depending on your Research Group. 
+First connect to SSH server *131.175.56.199* through Port *22*. Then to start working on the cluster, it is necessary to connect to the login nodes *nodevg-0-3* or *nodevg-0-4*, depending on your :ref:`Research Group<ResearchGroups>`. 
 
-.. verificare se i nodi sono cosi assegnati, VERIFICARE GLI IP 
-
-- *nodevg-0-3*: To be defined; 
-
-- *nodevg-0-4*: All research groups. 
 
 .. dovrebbe essere capitolo 3.5.1:
 __________________________________
@@ -228,11 +250,11 @@ then to access your login node you may choose
 
 where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. 
 
-For data transferring between cluster and your local machine, refer to chapter :ref:`Data transferring for Linux/MacOS<DATA_TRANSFER_Linux_Mac-OS>`. 
+For data transferring between cluster and your local machine, refer to chapter :ref:`Data transferring for Linux/MacOS<DataTransferLinuxMacOs>`. 
 
 .. dovrebbe essere capitolo 3.5.2:
 __________________________________
-Access with VNC remote desktop (MAC OS)
+Access with VNC remote desktop (MacOS)
 __________________________________
 
 This method enables the user to access the cluster with a VNC-based remote desktop window. 
@@ -244,20 +266,18 @@ Open a terminal and type:
 
 	| ``ssh -L 59yy:nodevg-0-x:59yy -J <username>@131.175.56.199 <username>@nodevg-0-x`` 
 
-where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`, *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. Enter your login password when asked. 
+where *yy* is the the :ref:`user-specific graphic port<CreationOfAGraphicalPort>`, *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`. Enter your login password when asked. 
 
 .. To access the VNC desktop follow these steps depending on your operating system: 
 
-.. FINIRE e testare
-.. Linux OS: installare turboVNC e poi???
 
-Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
+Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CreationOfAGraphicalPort>`. Enter your login password when asked. 
 
 .. **MacOS**: Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
 
 .. dovrebbe essere capitolo 3.5.3:
 __________________________________
-Access with VNC remote desktop (LINUX)
+Access with VNC remote desktop (Linux)
 __________________________________
 
 For this method the Remmina utility is required. In user friendly Linux distribution as Ubuntu, Remmina could come pre-installed.
@@ -274,7 +294,7 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 .. figure:: images/remmina_create_new_arrow.png
 
-3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":22" as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instructions in next figure.
+3. Select form the *Protocol* drop down menu the voice **Remmina VNC Plugin**. Select *Basic* tab. In *Server* voice put your login node, where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`, followed by ":59NN", where *NN* is the the :ref:`user-specific graphic port<CreationOfAGraphicalPort>`, as can be seen in next figure. Complete with your ``<username>`` and ``<password>``. For the *Color depth* and *Quality* follow the instructions in next figure.
 
 .. figure:: images/remmina_basic.png
 
@@ -285,17 +305,21 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 5. Click on *Save*. The configuration is ended and saved, you should be able to enter to your graphical port just by clicking on the new created session. 
 
 .. dovrebbe essere capitolo 3.7:
-.. _DATA_TRANSFER:
------------------
-DATA TRANSFERRING
------------------
 
-Depending on the OS used by the user, the procedure change as follows. 
+.. _DataTransfer:
+
+.. -----------------
+.. DATA TRANSFERRING
+.. -----------------
+
+.. Depending on the OS used by the user, the procedure change as follows. 
 
 .. dovrebbe essere capitolo 3.8:
-.. _DATA_TRANSFER_WINDOWS:
+
+.. _DataTransferWindows:
+
 -----------------
-DATA TRANSFERRING FOR WINDOWS USERS
+DATA TRANSFERRING (Windows)
 -----------------
 
 To transfer data between the user local folders and cluster folders is necessary first to setup a tunnel and then to connect to the cluster through it. 
@@ -362,9 +386,11 @@ Open FileZilla:
 4. Click *“Quickconnect”*. Once you inserted your user data and accessed to the cluster, you will see in the left side your local folders and in the right side the cluster folders. To transfer (copy) data just drag files from one side to the other. 
 
 .. dovrebbe essere capitolo 3.9:
-.. _DATA_TRANSFER_Linux_Mac-OS:
+
+.. _DataTransferLinuxMacOs:
+
 -----------------
-DATA TRANSFERRING FOR LINUX/Mac OS
+DATA TRANSFERRING (Linux/Mac OS)
 -----------------
 __________________________________
 Direct data transferring form terminal
@@ -416,10 +442,10 @@ Click connect and you can now access the local directories on the left branch an
 
 
 
+.. _UserManagement:
 
-.. _USER_MANAGEMENT:
 -----------------
-User Management
+USER MANAGEMENT
 -----------------
 In this section some basic Linux OS concepts will be explained with the aim of teaching to the user how to manage the working area for personal work.
 After logging in to a login node, the user is directed to his *personal* home directory, which is a subdirectory of the **/home** partition. |br|
@@ -496,9 +522,10 @@ It is possible to use:
 
 This command could be useful for example if the *executable file* of a program is located in a directory whose path is very long and the user wants to avoid typing the complete path each time this file is needed.
 
-.. _TROUBLESHOOTING:
+.. _TroubleShooting:
+
 -----------------
-Troubleshooting
+TROUBLESHOOTING
 -----------------
 In this section some best practices will be presented, in order to avoid common problems. |br|
 
@@ -558,7 +585,7 @@ If the user is using MobaXTerm, an error like the following one could be display
 
 .. figure:: images/errore_VNC_moba.png
 
-In this case the user should check, following the previous indications, if the graphical port is running. If no PID and port number is displayed, the user should repeat :ref:`the creation of the graphical port<CREATION_OF_A_GRAPHICAL_PORT>`.
+In this case the user should check, following the previous indications, if the graphical port is running. If no PID and port number is displayed, the user should repeat :ref:`the creation of the graphical port<CreationOfAGraphicalPort>`.
 
 
 .. per fare i break volontari con |br| a fine linea, lasciare in fondo al file:
