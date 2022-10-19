@@ -161,13 +161,13 @@ The result of the computation will be written on file (please make sure to save 
     ### 
     ### Change R2018a with your desired version
 
-    /software/MATLAB/R2018a/bin/matlab -noDesktop -nosplash -r "script"
-    # /software/MATLAB/R2018a/bin/matlab -noDesktop -nosplash -r "script" >& myMatlabOutput
+    /software/MATLAB/R2018a/bin/matlab -nodesktop -nosplash -r "script"
+    # /software/MATLAB/R2018a/bin/matlab -nodesktop -nosplash -r "script" >& myMatlabOutput
     
     ### You may run also a second script
     ### or another software in the same job.
     
-    /software/MATLAB/R2018a/bin/matlab -noDesktop -nosplash -r "script2"
+    /software/MATLAB/R2018a/bin/matlab -nodesktop -nosplash -r "script2"
     
     echo End Parallel Run
 
@@ -213,8 +213,8 @@ You will be then redirected on a node, ready to start your computation:
     [<username>@<node> ~]$
     ... node assigned
     [<username>@<node> ~]$ cd myScriptDir
-    [<username>@<node> myScriptDir]$ /software/MATLAB/R2018a/bin/matlab -noDesktop -nosplash -r "script"
-    [<username>@<node> myScriptDir]$ /software/MATLAB/R2018a/bin/matlab -noDesktop -nosplash -r "script" >& myMatlabOutput &
+    [<username>@<node> myScriptDir]$ /software/MATLAB/R2018a/bin/matlab -nodesktop -nosplash -r "script"
+    [<username>@<node> myScriptDir]$ /software/MATLAB/R2018a/bin/matlab -nodesktop -nosplash -r "script" >& myMatlabOutput &
 
 You will be running the script "script.m" using Matlab R2018a.
 
@@ -240,7 +240,7 @@ Once you logged in a node, you may run your script:
 
     [<username>@nodevg-0-1 ~]$ ssh <node>
     [<username>@nodevg-0-1 ~]$ cd myFolder
-    [<username>@<node> myFolder]$ /software/MATLAB/R2018a/bin/matlab -noDesktop -nosplash -r "script"``
+    [<username>@<node> myFolder]$ /software/MATLAB/R2018a/bin/matlab -nodesktop -nosplash -r "script"``
 
 
 
