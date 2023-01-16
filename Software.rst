@@ -327,8 +327,8 @@ Here an example of launch file:
     module use /software/modulefiles/CFD
     module load openfoam-v2106
     
-    #module use /software/modulefiles/parallel/     # if necessary
-    #module load openmpi-4.1.3-gcc.7.3.0            # if necessary
+    # module use /software/modulefiles/parallel/     # if necessary
+    # module load openmpi-4.1.3-gcc.7.3.0            # if necessary
     
     #---------------------------------------------------------
     
