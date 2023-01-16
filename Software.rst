@@ -261,26 +261,21 @@ All three OpenFOAM versions are available:
 - `FOAM-Extend Project <https://foam-extend.sourceforge.io>`_;
 - `OpenFOAM-Foundation <https://openfoam.org>`_;
 
-The software is installed in ``/software/OpenFOAM``. With ``ls`` in the folder is possible to check which versions are available.
+The software is available through modules. 
+To make the system aware of OpenFOAM modules using the relevant module (``module use ...``), looking for the relevant version (``module avail``) and loading the choosen version (``module load ...``):
 
 ::
 
-    [<username>@nodevg-0-1 ~]$ cd /software/OpenFOAM
-    [<username>@nodevg-0-1 OpenFOAM]$ ls
+    module use /software/modulefiles/CFD
+    module avail
+    module load openfoam-v2106
 
-To load a version of OpenFOAM, it is necessary to source the ``bashrc`` file of the chosen version (or to include its sourcing in your ``~/.bashrc`` file as you would do on your personal pc) in order to load the OpenFOAM environment.
-
-::
-
-    [<username>@nodevg-0-1 ~]$ source /software/OpenFOAM/OpenFOAM-8/etc/bashrc
-
-It is also possibile to use OpenFOAM through modules, using the relevant module (``module use ...``), looking for the relevant version (``module avail``) and loading the choosen version (``module load ...``):
+Sometimes you may find an issue to run OpenFOAM in parallel (*bash: mpirun: command not found...*). To solve the problem, yo need to load openmpi using:
 
 ::
 
-    [<username>@nodevg-0-1 ~]$ module use /big-scratch/software/modules/mecc4/CFD
-    [<username>@nodevg-0-1 ~]$ module avail
-    [<username>@nodevg-0-1 ~]$ module load openfoam-v2106
+    module use /software/modulefiles/parallel/
+    module load openmpi-4.1.3-gcc.7.3.0
 
 To check that you correctly loaded OpenFOAM, you can run the following command, verifying that the system recognizes the solver (*simpleFOAM* is available for all OpenFOAM versions) and it will tell you where it is located (to check that the correct version of OpenFOAM is loaded, *OpenFOAM-8* in this case):
 
@@ -329,10 +324,11 @@ Here an example of launch file:
     #---------------------------------------------------------
     
     ### LOAD THE OPENFOAM ENVIRONMENT
-    source /software/OpenFOAM/OpenFOAM-8/etc/bashrc
+    module use /software/modulefiles/CFD
+    module load openfoam-v2106
     
-    #module use /big-scratch/software/modules/mecc4/CFD
-    #module load openfoam-v2106
+    #module use /software/modulefiles/parallel/     # if necessary
+    #module load openmpi-4.1.3-gcc.7.3.0            # if necessary
     
     #---------------------------------------------------------
     
@@ -348,7 +344,7 @@ Here an example of launch file:
 
     echo End Parallel Run
 
-as you may see you can either choose to load the OpenFOAM environment using modules or sourcing the *bashrc* file. Just add/remove *hashtags* [#] to comment/uncomment the lines. To execute the commands, you may either include an executable file (``Allrun`` in this case), or list all relevant commands.
+Just add/remove *hashtags* [#] to comment/uncomment the lines. To execute the commands, you may either include an executable file (``Allrun`` in this case), or list all relevant commands.
 
 To launch your ``OpenFOAMJob.sh`` file from the *login node*, from the ``jobDirectory`` you may execute:
 
@@ -390,9 +386,10 @@ To make an interactive OpenFOAM job you will need to ask some computational reso
     ... wait for node assigment
     [<username>@<node> ~]$
     ... node assigned
-    [<username>@<node> ~]$ source /software/OpenFOAM/OpenFOAM-8/etc/bashrc
-    # [<username>@<node> ~]$ module use /big-scratch/software/modules/mecc4/CFD
-    # [<username>@<node> ~]$ module load openfoam-v2106
+    [<username>@<node> ~]$ module use /software/modulefiles/CFD
+    [<username>@<node> ~]$ module load openfoam-v8
+    # [<username>@<node> ~]$ module use /software/modulefiles/parallel/     # if necessary
+    # [<username>@<node> ~]$ module load openmpi-4.1.3-gcc.7.3.0            # if necessary
     [<username>@<node> ~]$ which simpleFoam
     /software/OpenFOAM/OpenFOAM-8/platforms/linux64GccDPInt32Opt/bin/simpleFoam
     [<username>@<node> ~]$ cd myJobFolder
@@ -422,9 +419,10 @@ Once you logged in a node, load the OpenFOAM environment sourcing the bashrc or 
 ::
 
     [<username>@nodevg-0-1 ~]$ ssh <node>
-    [<username>@<node> ~]$ source /software/OpenFOAM/OpenFOAM-8/etc/bashrc
-    # [<username>@<node> ~]$ module use /big-scratch/software/modules/mecc4/CFD
-    # [<username>@<node> ~]$ module load openfoam-v2106
+    [<username>@<node> ~]$ module use /software/modulefiles/CFD
+    [<username>@<node> ~]$ module load openfoam-v8
+    # [<username>@<node> ~]$ module use /software/modulefiles/parallel/     # if necessary
+    # [<username>@<node> ~]$ module load openmpi-4.1.3-gcc.7.3.0            # if necessary
     [<username>@<node> ~]$ which simpleFoam
     /software/OpenFOAM/OpenFOAM-8/platforms/linux64GccDPInt32Opt/bin/simpleFoam
     [<username>@<node> ~]$ cd myJobFolder
