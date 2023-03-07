@@ -337,8 +337,8 @@ Here an example of launch file:
     
     blockMesh >& log.blockMesh
     decomposePar >& log.decomposePar
-    mpirun snappyHexMesh -parallel >& log.snappyHexMesh
-    mpirun simpleFoam -parallel >& log.simpleFoam
+    mpirun --hostfile machine.$JOB_ID snappyHexMesh -parallel >& log.snappyHexMesh
+    mpirun --hostfile machine.$JOB_ID simpleFoam -parallel >& log.simpleFoam
     reconstructPar -latestTime >& log.reconstructPar
     sample -latestTime >& log.sample
 
