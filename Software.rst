@@ -15,6 +15,7 @@ A not-comprehensive list of available software is:
 - :ref:`Matlab<Matlab>`
 - :ref:`OpenFOAM<OpenFOAM>`
 - :ref:`Python<PythonSection>`
+- :ref:`Spack<SpackSection>`
 
 Other software and software versions may be found through *modules* or in the directory ``/software``.
 
@@ -552,3 +553,11 @@ To make an interactive Python job you will need to ask some computational resour
 
 
 Two ways of running are reported: in the first you are running your *myPythonScript*; in the second you are writing the instructions to python.
+
+
+.. _SpackSection:
+
+-------------------------
+Spack
+-------------------------
+
