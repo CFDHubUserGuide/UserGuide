@@ -130,7 +130,7 @@ You can use the software in different ways:
 - :ref:`batch job on queues<MatlabBatch>`;
 - :ref:`interactive job on queues<MatlabInteractive>`;
 - :ref:`interactive job on node<MatlabNode>`;
-- :ref:`interactive job on multiple nodes<MatlabMultipleNodes>`;
+- :ref:`batch job on multiple nodes<MatlabMultipleNodes>`;
 
 
 .. _MatlabBatch:
@@ -247,7 +247,7 @@ Once you logged in a node, you may run your script:
 
 .. _MatlabMultipleNodes:
 
-Interactive job on multiple nodes
+Batch job on multiple nodes
 -------------------------------
 
 This guide is intended to guide the user through the submission of a Matlab job on multiple nodes.
