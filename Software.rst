@@ -285,8 +285,8 @@ The whole procedure could be performed both using the Matlab GUI or working dire
 
 Of course, when starting the parpool it will be mandatory to specify that now we want to use the newly created Generic Profile, followed by the number of workers that we want to use.
 
-i.e.: 	| ``parpool(‘GenericProfile’,80)``
-i.e.:	
+i.e.: 	``parpool(‘GenericProfile’,80)``
+
 ::
 
     p = gcp('nocreate');
