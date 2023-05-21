@@ -260,14 +260,21 @@ The solution to this problem is to create a new Matlab Cluster configuration.
 To do so, it is necessary to: 
 
 1.	Go in the Home tab, click on Parallel -> Create and Manage Clusters (under Environment);
+
 .. figure:: images/MatlabParallel1.png
+
 2.	In the Cluster Profile Manager, click on Add Cluster Profile -> Generic;
+
 .. figure:: images/MatlabParallel2.png
+
 3.	In the Cluster Profile Manager, select the newly created Generic Profile and select Edit (down on the right of the Cluster Profile Manager windows);
 4.	Now you can insert a description of the Cluster, specify the NumWorkers property by setting it to 320 (max number of workers that can be required by the user) and fill the Plugin Scripts Location query. Select browse to specify the folder where you have the matlab plugin script for sun grid engine (i.e.: ‘/global-scratch/bulk-pool/USER_XX/matlab-parallel-gridengine-plugin’). Fill the Additional Properties query by indicating as Value for the Name “Queue” the corresponding queue where you want to submit the job (i.e.: mecc4.q, mecc2.q, cfdguest.q, all.q, hub.q, etc…). By default, if no queue is indicated, the job will run on “mecc4.q”. Click Done (down on the right of the Cluster Profile Manager window);
 **T.B.N.: The ad-hoc version of the matlab-parallel-gridengine-plugin folder has to be requested to the system administrator of your section (the version that you can find online had to be changed to ensure compatibility with the CFDHUB cluster).**
+
 .. figure:: images/MatlabParallel3.png
+
 5.	Now it is possible to perform the validation of the newly created Generic Profile. Select the Validation tab in the Cluster Profile Manager, deselect SPMD job test, choose the number of workers to use for the validation (of course, select a number of workers-cores big enough so as to have two or more nodes working) and click on Validate to test the profile (down on the right of the Cluster Profile Manager window). If one of the tests failed, please contact the system administrator.
+
 .. figure:: images/MatlabParallel4.png
 
 If everything went fine, you are now able to launch Matlab jobs on multiple nodes.
@@ -277,12 +284,15 @@ The whole procedure could be performed both using the Matlab GUI or working dire
 Of course, when starting the parpool it will be mandatory to specify that now we want to use the newly created Generic Profile, followed by the number of workers that we want to use.
 
 i.e.: 	| ``parpool(‘GenericProfile’,80)``
-i.e.:	| ``p = gcp('nocreate');``
-        | ``if isempty(p)``
-          ``     myPC = parcluster('Gen1');``
-          ``     myPC.AdditionalProperties.Queue = 'mecc4.q';``
-          ``     parpool(myPC,80);``
-        | ``end``
+i.e.:	
+::
+
+    p = gcp('nocreate');
+    if isempty(p)
+        myPC = parcluster('Gen1');
+        myPC.AdditionalProperties.Queue = 'mecc4.q';
+        parpool(myPC,80);
+    end
         
 Moreover, if the script/function that we intend to run in parallel on multiple nodes relies on other scripts/functions created by the user, it is necessary to specify such files and paths in the “Attached Files” and “Additional Paths” quey in the Cluster Profile Manager (of course, the same could be done programmatically).
 
