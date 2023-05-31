@@ -606,9 +606,143 @@ To make an interactive Python job you will need to ask some computational resour
 Two ways of running are reported: in the first you are running your *myPythonScript*; in the second you are writing the instructions to python.
 
 
+
 .. _SpackSection:
 
 -------------------------
 Spack
 -------------------------
 
+
+`Spack <https://spack.readthedocs.io/en/latest/>`_  is a package management tool designed to support multiple versions and configurations of software on a wide variety of platforms and environments: it is non-destructive, therefore installing a new version does not break existing installations, so many configurations can coexist on the same system.
+
+You can download and setup Spack by cloning it from the Github repository (it is suggested that you do it in your /global-scratch/bulk_pool/<username> folder, as it may fill up your $HOME folder rather quickly):
+
+.. code-block:: console
+
+   $ git clone -c feature.manyFiles=true https://github.com/spack/spack.git
+   
+This will create a directory called spack; in order to use it, you need to add the following command to your .bashrc file, and the source it:
+
+.. code-block:: none
+
+   . /global-scratch/bulk_pool/<username>/spack/share/spack/setup-env.sh
+   
+Spack, by default, will store test, cache and source files outside of your scratch folder, which might fill up all the available space; it is suggested that you create a folder in your main spack directory, and then edit the config.yaml file found in /spack/etc/spack/defaults, so that it will save those files inside of the folder you made:
+
+.. code-block:: none
+
+   build_stage:
+    - $spack/<new_folder>/spack-stage
+    - $spack/var/spack/stage
+   test_stage: $spack/<new_folder>/test
+   misc_cache: $spack/<new_folder>/cache
+   
+When installing a software, a compiler must be loaded into Spack; by default, CentOS 7 uses gcc 4.8.5, which is quite outdated, therefore it is suggested to load your preferred version of gcc (for the following tutorial, we'll use 9.3.0):
+
+.. code-block:: console
+
+   $ module use /software/modulefiles/compilers
+   $ module avail
+   $ module load gcc-9.3.0
+   $ spack compiler find
+
+You could also install gcc:
+
+.. code-block:: console
+
+   $ spack install gcc
+   $ spack compiler find
+   
+To list all the compilers:
+
+.. code-block:: console
+   
+   $ spack compilers
+
+
+.. _SpackTutorial:
+
+Tutorial
+---------------------------
+
+
+The main functionalities of Spack will be explained through the installation of `AmgX <https://github.com/NVIDIA/AMGX>`_, which is a GPU accelerated core solver library that speeds up computationally intense linear solver portion of simulations made by NVIDIA.
+
+Before starting, AmgX requires CUDA, which is a parallel computing platform and programming model developed by NVIDIA for general computing on GPUs; CUDA is already installed on CFD-HUB, and can be used by editing and sourcing your .bashrc file:
+
+.. code-block:: none
+
+   export PATH="/usr/local/cuda/bin:$PATH"
+   export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+   
+You can check the current version of CUDA by:
+
+.. code-block:: console
+
+   $ nvcc --version
+
+A useful command to check installation options and information about a certain software is:
+
+.. code-block:: console
+
+   $ spack info --all amgx
+   
+To see a list of all the dependencies which will be installed, along with information about the version and which compilers will be used, you can type:
+
+.. code-block:: console
+
+   $ spack spec amgx
+   
+Here, by checking the list of dependencies, we can see that spack will try to install a newer version of CUDA, which is however incompatible with the NVIDIA drivers installed on the cluster, therefore we'll have to specify to spack that we want to use the version of CUDA which is already installed on the system, which can be done by editing the packages.yaml file at /spack/etc/spack/defaults:
+
+.. code-block:: none
+
+   packages:
+    cuda:
+     externals:
+     - spec: cuda@11.2%gcc@9.3.0
+       prefix: /usr/local/cuda
+     buildable: false
+
+Also, unfortunately, Spack will try to install an outdated version of AmgX, which is incompatible with CUDA 11.2, so we'll have to edit the package.py file found at /spack/var/spack/repos/builtin/packages/amgx; it should look like this (edit just the url and add the new version):
+
+.. code-block:: none
+
+   url = "https://github.com/NVIDIA/AMGX/archive/refs/tags/v2.3.0.tar.gz"
+   version("2.3.0", url="https://github.com/NVIDIA/AMGX/archive/refs/tags/v2.3.0.tar.gz")
+   
+Now we are ready to install AmgX: we want to specify that we want version 2.3.0, compiled with gcc version 9.3.0, which can be done by typing amgx@2.3.0%gcc@9.3.0 (@ specifies the version, % specifies the compiler).
+
+Spack however requires that, for each package built with CUDA (including dependencies), you specify which architecture the GPU is built on, and this can be done by typing cuda_arch=70.
+
+If we want to use AmgX with MPI, we also need to specify that both OpenMPI and HWLOC use CUDA, which can be done by typing ^openmpi@4.1.5+cuda (spack might try to install an older version of OpenMPI, so we'll specify the newer one) and ^hwloc+cuda (^ specifies which dependency you want to install, + indicates which additional installation options you want to add).
+
+Additional options about the installation process must be added: in our case, because we're downloading the source from a link we provided ourselves, we need to add --no-checksum; also, AmgX source files must be kept in our spack-stage folder (wherever you specified it), so we'll add --keep-stage.
+
+The command should look like this:
+
+.. code-block:: console
+
+   $ spack install --no-checksum --keep-stage amgx@2.3.0%gcc@9.3.0 cuda_arch=70 ^openmpi@4.1.5+cuda cuda_arch=70 ^hwloc+cuda cuda_arch=70 
+   
+To verify that the installation works, copy the file matrix.mtx located in /spack-stage/<amgx-stage>/spack-src/examples (your source folder) to the folder spack/opt/spack/linux-centos7-cascadelake/gcc-9.3.0/<amgx>/lib/examples, then move to folder spack/opt/spack/linux-centos7-cascadelake/gcc-9.3.0/<amgx>/lib (your installation folder) and type:
+
+.. code-block:: console
+   
+   $  examples/amgx_capi -m examples/matrix.mtx -c configs/core/CG_DILU.json
+   
+Below, a list of useful commands:
+
+.. code-block:: console
+
+   $ spack uninstall <package_name> # uninstalls package
+   $ spack load <package_name> # you might need to load a software before using it
+   $ spack env create <env_name> # creates environment, useful when dealing with a large number of installations with multiple compilers
+   $ spack env list # lists all environments
+   $ spacktivate <env_name> # activates environment
+   $ spack env status # shows current environment
+   $ despacktivate # deactivates environment
+   $ spack add <package_name> # adds package to current environment, must be done before installation
+   $ spack remove <package_name> # removes package from current environment, must be done before uninstallation
+   $ spack find -ldf # lists all the installed packages, showing how the dependencies are linked
