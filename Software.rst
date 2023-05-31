@@ -616,7 +616,7 @@ Spack
 
 `Spack <https://spack.readthedocs.io/en/latest/>`_  is a package management tool designed to support multiple versions and configurations of software on a wide variety of platforms and environments: it is non-destructive, therefore installing a new version does not break existing installations, so many configurations can coexist on the same system.
 
-You can download and setup Spack by cloning it from the Github repository (it is suggested that you do it in your /global-scratch/bulk_pool/$USER folder, as it may fill up your $HOME folder rather quickly):
+You can download and setup Spack by cloning it from the Github repository (it is suggested that you do it in your ``/global-scratch/bulk_pool/$USER`` folder, as it may fill up your ``$HOME`` folder rather quickly):
 
 .. code-block:: console
 
