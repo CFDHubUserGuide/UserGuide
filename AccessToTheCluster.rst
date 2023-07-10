@@ -485,7 +485,7 @@ In the personal home, launch:
 All files are displayed and is possible to see the *.bashrc*.
 The *.bashrc* is a list of commands, variables and aliases that are launched when the user logs in to a node and opens a terminal window. |br|
 
-To check the space used in the **/global-scratch/bulk_pool** partition, it is possible to use the following command:
+To check the space used in the **/global-scratch/** partition, it is possible to use the following command:
 
 	| ``beegfs-ctl --getquota --uid $USER``
 
