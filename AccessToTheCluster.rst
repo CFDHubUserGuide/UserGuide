@@ -19,15 +19,17 @@ The cluster’s infrastructure can be explained as following. The master node is
 
 Figure: CFDHub hardware structure for user access. 
 
-In order to use the computing resources the user must log in to *nodevg-0-3* or *nodevg-0-4* depending on your Research Group. The login nodes are distributed as following:
+In order to use the computing resources the user must log in to *nodevg-0-1*, *nodevg-0-2*, *nodevg-0-3* or *nodevg-0-4* depending on your Research Group. The login nodes are distributed as following:
 
 .. _ResearchGroups:
 
-- *nodevg-0-3*: To be defined; 
+- *nodevg-0-1*: All research groups; 
+
+- *nodevg-0-2*: Temporary access to old */big-scratch*;
+
+- *nodevg-0-3*: All research groups; 
 
 - *nodevg-0-4*: All research groups. 
-
-**Please note that nodevg-0-3 is unavailable until further notice and every user should login through nodevg-0-4.**
 
 *Remember:*
 
@@ -40,8 +42,8 @@ In order to use the computing resources the user must log in to *nodevg-0-3* or 
 
 *Note for long-term users:*
 
-Users that used to work in login nodes *nodevg-0-1* and *nodevg-0-2* should know that new login nodes **can not mount /big-scratch and /fast-scratch directories**.
-These users should migrate their working directory from */big-scratch* or */fast-scratch* to the new */global-scratch* which is only available from new login nodes *nodevg-0-3* or *nodevg-0-4*. To do so, it is advised to use *scp* command.
+Users that used to work in login node *nodevg-0-2* should know that new login nodes **can not mount /big-scratch and /fast-scratch directories**.
+These users should migrate their working directory from */big-scratch* or */fast-scratch* to the new */global-scratch* which is only available from new login nodes *nodevg-0-1*, *nodevg-0-3* or *nodevg-0-4*. To do so, it is advised to use *scp* command.
 
 
 It could be also useful to know that */ARCHIVIO* directory is available from both old or new login nodes. It should just be noted that on new login nodes all the volumes in */ARCHIVIO* are mounted on demand as soon as the user access the folders and unmounted after a certain inactivity time.
