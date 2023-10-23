@@ -104,7 +104,7 @@ At the password change prompt request, insert the temporary password provided by
 
 **Be carefull because the password characters inserted are not shown at all, so be shure that the string you filled or copied is correct. If you are not sure, close the terminal and open it again. Remenber that three wrong password change attempts will lock your user.**
 
-If the password change is not needed, you will than get the bash prompt.
+If the password change is needed nomore, you will than get the bash prompt.
         
 Then to access your login node you may choose 
 
