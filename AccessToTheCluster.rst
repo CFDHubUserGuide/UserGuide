@@ -102,7 +102,7 @@ For Linux users the command to access the CFDHub is:
 **IMPORTANT: During the very first access, the system will ask you to change your password.
 At the change password prompt request, insert the temporary password provided by the administrator, and than the new password (which must be fillet two times for verification purpose)**
 
-**Be carefull because the password characters inserted are not shown at all, so be shure that the string filled or copied are correct. If you are not sure, close the terminal and open it again. Remenber that three wrong password change attempts will lock your user.**
+**Be carefull because the password characters inserted are not shown at all, so be shure that the string you filled or copied is correct. If you are not sure, close the terminal and open it again. Remenber that three wrong password change attempts will lock your user.**
 
 If the password change is not needed, you will than get the bash prompt.
         
