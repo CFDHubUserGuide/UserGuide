@@ -29,53 +29,18 @@ Abaqus
 
 `Abaqus software <https://www.3ds.com/>`_ is available on CFDHub.
 
-The software is installed in ``/software/Abaqus20xx`` (where xx is the year version 20''19'' or 20''21'' ecc.)
+The software is installed in ``/software/Abaqus20xx`` (where xx is the year version 2019 or 2021 etc.)
 
-With ``ls`` in the ``/software/``folder it is possible to check which versions are available.
+With ``ls`` in the ``/software/`` folder it is possible to check which versions are available.
 
 ::
 
     [<username>@nodevg-0-1 ~]$ cd /software
     [<username>@nodevg-0-1 software]$ ls
 
-To submit an Abqus job, prepare the launch file, for example: ``AbaqusJob.sh``, that will be used to run your script. Please check with your :ref:`CFDHub Contact Person<ContactPerson>` what are the ``queues`` you have access to.
+To submit an Abqus job, prepare the launch file, for example: ``AbaqusJob.sh``, that will be used to run your script. Please check with your :ref:`CFDHub Contact Person<ContactPerson>` what are the resources and the *queues* you have access to.
 
 The result of the computation will be written on file (please make sure to save all relevant variables). The output will be written on the *jobOutput* file. 
-
-::
-
-    #!/bin.bash             # use bash as command interpreter
-    #$ -cwd                 # currentWorkingDirectory
-    #$ -N myAbaqusJob       # jobName
-    #$ -j y                 # merges output and errors
-    #$ -S /bin/bash         # scripting language
-    #$ -l walltime=1:00:00  # jobDuration hh:mm:ss
-    #$ -q hub.q             # queueName
-    #$ -pe mpi 10           # cpuNumber
-    #________________________________________________________
-    
-    ### Runs the Matlab "JobInpName.inp" file.
-    ### You may change it to launch your script.
-    ### 
-    ### Change R2021 with your desired version
-
-    /software/Abaqus2021/DassaultSystemes/SIMULIA/Commands/abaqus j=JobInpName cpus=10 int 
-   
-    
-    ### You may run also a second script
-    ### or another software in the same job.
-    
-    /software/Abaqus2021/DassaultSystemes/SIMULIA/Commands/abaqus j=JobInpName2 cpus=10 int 
-    
-    echo "End Parallel Run"
-
-
-To launch your ``AbaqusJob.sh`` file you may execute:
-
-``[<username>@nodevg-0-1 jobDirectory]$ qsub AbaqusJob.sh``
-
-In case of abaqus, the ``int`` command is mandatory in order to avoid the script to run the lines after the submission command line, 
-for example if I need to submit more than one simulation one after the other.
 
 ::
 
@@ -99,8 +64,8 @@ for example if I need to submit more than one simulation one after the other.
     echo "End Parallel Run"
 
 
+**ATTENTION: if you do not use the ``int`` command, all the simulations are submitted in the same time, OVERLOADING the node or the nodes.**
 
-*ATTENTION: if you do not use the ``int`` command, all the simulations are submitted in the same time, OVERLOADING the node or the nodes.*
 The administrator can take actions as well if the script is not well configured.
 
 
