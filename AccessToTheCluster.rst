@@ -98,8 +98,15 @@ To start working on the cluster, it is necessary also to connect to the login no
 For Linux users the command to access the CFDHub is:
 
         ``ssh <username>@131.175.56.199``
+
+During the very first access, the system will ask you to change your password.
+At the change password prompt request, insert the temporary password provided by the administrator, and than the new password (that must be fillet to times as verification purpose)
+
+**Be carefull because the password characters inserted are not shown at all, so be shure that the string filled or copied are correct. If you are not sure, close the terminal and open it again. Remenber that three wrong password change attempts will lock your user.**
+
+If the password change is not needed, you will than get the bash prompt.
         
-then to access your login node you may choose 
+Then to access your login node you may choose 
 
         ``ssh nodevg-0-x`` or ``ssh 10.0.0.12x``
 
