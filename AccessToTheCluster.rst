@@ -100,9 +100,9 @@ For Linux users the command to access the CFDHub is:
         ``ssh <username>@131.175.56.199``
 
 **IMPORTANT: During the very first access, the system will ask you to change your password.
-At the password change prompt request, insert the temporary password provided by the administrator, and than the new password (which must be fillet two times for verification purpose)**
+At the password change prompt request, insert the temporary password provided by the administrator and than the new password (which must be fillet two times for verification purpose)**
 
-**Be carefull because the password characters inserted are not shown at all, so be shure that the string you filled or copied is correct. If you are not sure, close the terminal and open it again. Remenber that three wrong password change attempts will lock your user.**
+**Be carefull because the password characters inserted are not shown at all, so be sure that the string you filled or copied is correct. If you are not sure, close the terminal and open it again. Remenber that three wrong password change attempts will lock your user.**
 
 If the password change is needed nomore, you will than get the bash prompt.
         
