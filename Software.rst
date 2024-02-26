@@ -93,6 +93,41 @@ After the user has logged from the terminal to the node, should go into the fold
     
 .. ( se si userà l’approccio dei moduli stile cineca, aggiornare mettendo il solo comando e non il path del comando, verificare che sia questo il comando ) 
 
+Batch job using queues
+--------------------------------
+
+To submit a Fluent job using queues, prepare the launch file ``fluentJob.sh`` that will be used to run your script. Please check with your :ref:`CFDHub Contact Person<ContactPerson>` what are the ``queues`` you have access to.
+
+The result of the computation will be written on file (please make sure to save all relevant variables). The output will be written on the *outputfile.txt* file.
+
+*If you are asking for more than one cpu, please make sure your script will use all requested cpus.*
+
+::
+
+    #!/bin.bash		# use bash as command interpreter
+    #$ -cwd                 # currentWorkingDirectory
+    #$ -N jobName       	# jobName
+    #$ -j y                 # merges output and errors
+    #$ -S /bin/bash         # scripting language
+    #$ -l h_rt=1:00:00      # jobDuration hh:mm:ss
+    #$ -q hub.q             # queueName
+    #$ -pe mpi 4            # cpuNumber
+    #________________________________________________________
+
+    # -t4 --> 4 must be equal to cpuNumber
+    /software/ansys2023R2/v232/fluent/bin/fluent 3ddp -t4 -cnf=machinefile.$JOB_ID -g < inputfile.txt > outputfile.txt
+
+    echo End Parallel Run
+
+To launch your ``fluentJob.sh`` file you may execute:
+
+``[<username>@nodevg-0-1 jobDirectory]$ qsub fluentJob.sh``
+
+To check how the job is proceeding from the login node, reading the output, you may use:
+
+``[<username>@nodevg-0-1 jobDirectory]$ tail -f outputfile.txt``
+
+
 Parallel run on Single Node set-up 
 --------------------------------
 
