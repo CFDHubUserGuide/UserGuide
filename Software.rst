@@ -104,9 +104,9 @@ The result of the computation will be written on file (please make sure to save 
 
 ::
 
-    #!/bin.bash		# use bash as command interpreter
+    #!/bin.bash             # use bash as command interpreter
     #$ -cwd                 # currentWorkingDirectory
-    #$ -N jobName       	# jobName
+    #$ -N jobName           # jobName
     #$ -j y                 # merges output and errors
     #$ -S /bin/bash         # scripting language
     #$ -l h_rt=1:00:00      # jobDuration hh:mm:ss
