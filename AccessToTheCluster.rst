@@ -537,7 +537,7 @@ This command could be useful for example if the *executable file* of a program i
 
 For people of User Group "meccanica" it is possible to source some useful aliases, by sourcing *bash_dmec* in the */software/environment/dmec* folder. You may add
 
-	| ``source /software/environment/dmec``
+	| ``source /software/environment/dmec/bash_dmec``
 
 to your *.bashrc* in the *$HOME* folder.
 
