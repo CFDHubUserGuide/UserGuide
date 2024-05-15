@@ -535,6 +535,12 @@ It is possible to use:
 
 This command could be useful for example if the *executable file* of a program is located in a directory whose path is very long and the user wants to avoid typing the complete path each time this file is needed.
 
+For people of User Group "meccanica" it is possible to source some useful aliases, by sourcing *bash_dmec* in the */software/environment/dmec* folder. You may add
+
+	| ``source /software/environment/dmec``
+
+to your *.bashrc* in the *$HOME* folder.
+
 .. _TroubleShooting:
 
 -----------------
