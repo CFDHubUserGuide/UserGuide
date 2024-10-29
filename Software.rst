@@ -419,7 +419,14 @@ You can use the software in different ways:
 - :ref:`interactive job on queues<OpenFOAMInteractive>`;
 - :ref:`interactive job on node<OpenFOAMNode>`.
 
+List of OpenFOAM installations:
 
++------------------------------+---------------------------------------------------------------------------------------------+---------------------------+
+| Openfoam Version             | modules to be loaded                                                                        | processor architecture    |
++==============================+=============================================================================================+===========================+
+| OpenFOAM 2306                |  ''module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake/'' | mecc4.q                   |
+|                              |  ''module load openfoam/2306-gcc-9.2.0-mfpm3lk''                                            | cascadelake               |
++------------------------------+---------------------------------------------------------------------------------------------+---------------------------+
 
 
 
