@@ -119,7 +119,7 @@ To access the CFDHub HPC machines when the user is outside PoliMi network, you a
 STEPS FOR HPC ACCESS
 -----------------
 
-**The very first time you access to the cluster you should follow the instructions reported in chapter :ref:`SSH connection (Linux/MacOS)<SshConnectionLinuxMacOs>`.**
+**The very first time you access to the cluster** you should follow the instructions reported in chapter :ref:`SSH connection (Linux/MacOS)<SshConnectionLinuxMacOs>`.
 Then you need to wait 15 minutes for the propagation of the password through the system.
 
 If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SshConnectionWindows>`. 
