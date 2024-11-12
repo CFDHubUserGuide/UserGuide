@@ -595,7 +595,7 @@ You can use the software in different ways:
 
 .. _PVServerClientSection:
 
-ParaView in server-client mode
+ParaView in server-client mode using queues
 -------------------------
  
 This ParaView setup allows you to use your local client to manage the pipeline and filters, while processing data on computation nodes. Rendering is managed either on the cluster node or on your machine, depending on the load. This setup allows you to visualize simulation content and perform pre- and post-processing more quickly.
@@ -665,14 +665,15 @@ The program will then allocate resources on a node, select a server port for the
     Connection URL: cs://node-m-12:23332
     Accepting connection(s): node-m-12:23332
  
-Afterward, start a specific SSH tunnel on a local terminal. Enter the command printed by ``LaunchPVserver``. In this case, that would be:
+Afterwards, start a specific SSH tunnel on a local terminal. Enter the command printed by ``LaunchPVserver``. In this case, that would be:
 
 ``ssh -L 11111:node-m-12:23332 username@131.175.56.199``
 
 You can do this in your command prompt or in mobaXterm.  
 **BEWARE: The terminal must remain active while using ParaView.**
  
-Now, open your ParaView client, access the Server Configuration Menu, and connect to the server. Once connected, ``pvserver`` will print ``Client connected...`` You can now access data on CFDhub by opening files directly from your client, as the SSH tunnel allows direct browsing. To close the session, simply close Paraview.  
+Now, open your ParaView client, access the Server Configuration Menu, and connect to the server. Once connected, ``pvserver`` will print ``Client connected...`` You can now access data on CFDhub by opening files directly from your client, as the SSH tunnel allows direct browsing. To close the session, simply close Paraview.
+
 **BEWARE: Closing the terminal in which you ran ``LaunchPVserver`` will also close the session.**
  
 Best Practices
