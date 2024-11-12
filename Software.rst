@@ -628,7 +628,7 @@ Define the alias LaunchPVserver
  
 To operate ParaView in server-client mode, it is necessary to start the server in *headless* mode using the ``pvserver`` command. To manage this through the queue system, a bash script has been set up. Add an alias in your ``.bash_profile`` or in your ``.bashrc``:
 
-``alias LaunchPVserver='/software/environment/dmec/launch_pvserver.sh' ``
+``alias LaunchPVserver='/software/environment/dmec/launch_pvserver.sh'``
 
 
 
