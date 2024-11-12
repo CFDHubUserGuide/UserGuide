@@ -14,6 +14,7 @@ A not-comprehensive list of available software is:
 - :ref:`FDS<FDS>`
 - :ref:`Matlab<Matlab>`
 - :ref:`OpenFOAM<OpenFOAM>`
+- :ref:`ParaView<ParaViewSection>`
 - :ref:`Python<PythonSection>`
 - :ref:`Spack<SpackSection>`
 
@@ -567,6 +568,121 @@ Once you logged in a node, load the OpenFOAM environment sourcing the bashrc or 
 You will be running *blockMesh* using *OpenFOAM-8*.
 
 Two ways of running are reported: in the first you will see what the solver is foreground; in the second the solver will run in background (see tailing ``&``) writing to file the output.
+
+
+
+
+
+
+.. _ParaViewSection:
+
+-------------------------
+ParaView
+-------------------------
+
+
+`ParaView <https://www.paraview.org>`_ is available on CFDHub.
+
+The software is available in Linux OS.
+
+You can use the software in different ways:
+
+.. - :ref:`interactive job on node<PythonNode>`.
+- ParaView on node with remote visualization [TBD];
+- :ref:`ParaView in server-client mode<PVServerClientSection>`;
+.. - :ref:`interactive job on queues<PythonInteractive>`;
+
+
+.. _PVServerClientSection:
+
+ParaView in server-client mode
+-------------------------
+ 
+This ParaView setup allows you to use your local client to manage the pipeline and filters, while processing data on computation nodes. Rendering is managed either on the cluster node or on your machine, depending on the load. This setup allows you to visualize simulation content and perform pre- and post-processing more quickly.
+ 
+Install ParaView client
+^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+To use ParaView in server-client configuration, the versions installed on both the cluster and your client should match. Download and install Paraview 5.10.1 on your local workstation. Sources and installers for various operating systems are available here: 
+`https://www.paraview.org/download <https://www.paraview.org/download>`_
+ 
+Configure the server on the ParaView client
+^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+1. Start ParaView.
+2. Select the *connect* icon in the top left, as shown in Figure P1. This opens the Server Configuration menu. Click on "Add Server."
+3. In the "Edit Server Configuration" window, leave all values at default. Substitute the name with CFDhub, as shown in Figure P2.
+ 
+.. figure:: images/paraview_connect.PNG
+ 
+Figure P1: *connect* button 
+ 
+.. figure:: images/paraview_server.PNG
+
+Figure P2: "Edit Server Configuration" window
+ 
+From now on, to connect your client to CFDhub, simply select the server and click connect, as long as ParaView has been started on the server side and the SSH tunnel created.
+ 
+Define the alias LaunchPVserver
+^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+To operate ParaView in server-client mode, it is necessary to start the server in *headless* mode using the ``pvserver`` command. To manage this through the queue system, a bash script has been set up. Add an alias in your ``.bash_profile`` or in your ``.bashrc``:
+
+``alias LaunchPVserver='/software/environment/dmec/launch_pvserver.sh' ``
+
+
+
+Start the pvserver and create the SSH tunnel
+^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+When you want to launch a ParaView session, run ``LaunchPVserver``.
+ 
+The program will ask for:
+ 
+1. The queue name (please check with your advisor which queues you can use).
+2. Number of hours needed for the instance (please select 1 if you do not intend to do long renderings).
+3. The amount of RAM (in GB) needed to be allocated.
+4. The number of parallel processes.
+ 
+The program will then allocate resources on a node, select a server port for the user, and start the pvserver in parallel, printing something similar to:
+ 
+..
+ 
+    [username@nodevg-0-3 username]$ LaunchPVserver
+    Enter queue name: nmec.q
+    Enter number of hours needed: 1
+    Enter amount of RAM needed (in GB): 16
+    Enter number of parallel processes (NCPU): 4
+    Running on node: node-m-12
+    =====================================================================
+    Node name: node-m-12
+    Port: 23332
+    Starting pvserver on allocated node...
+    To create a tunnel, run the following command in your local terminal:
+    ssh -L 11111:node-m-12:23332 username@131.175.56.199
+    =====================================================================
+    Waiting for client...
+    Connection URL: cs://node-m-12:23332
+    Accepting connection(s): node-m-12:23332
+ 
+Afterward, start a specific SSH tunnel on a local terminal. Enter the command printed by ``LaunchPVserver``. In this case, that would be:
+
+``ssh -L 11111:node-m-12:23332 username@131.175.56.199``
+
+You can do this in your command prompt or in mobaXterm.  
+**BEWARE: The terminal must remain active while using ParaView.**
+ 
+Now, open your ParaView client, access the Server Configuration Menu, and connect to the server. Once connected, ``pvserver`` will print ``Client connected...`` You can now access data on CFDhub by opening files directly from your client, as the SSH tunnel allows direct browsing. To close the session, simply close Paraview.  
+**BEWARE: Closing the terminal in which you ran ``LaunchPVserver`` will also close the session.**
+ 
+Best Practices
+^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+- If you don’t need long rendering, select 1 hour. Always close ParaView after finishing post-processing.
+- **How much RAM do you need?** It depends on several factors: mesh size, data values per cell, and applied filters. A good rule of thumb is 2–4 GB per processor. Track memory usage by enabling *Memory Inspector* in the *View* menu.
+- For heavy OpenFOAM results, it is advisable to keep the case decomposed; otherwise, data manipulation will be single-core. For structured data, use 1 core per 5M mesh elements; for unstructured data, use approximately 1 core per 500k elements. Note that some filters transform data from structured to unstructured.
+- If opening a non-decomposed OpenFOAM case, only select a single CPU, as selecting more won’t speed up data manipulation; it will only speed up rendering.
+
 
 
 
