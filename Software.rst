@@ -646,8 +646,8 @@ The program will ask for:
  
 The program will then allocate resources on a node, select a server port for the user, and start the pvserver in parallel, printing something similar to:
  
-..
- 
+::
+
     [username@nodevg-0-3 username]$ LaunchPVserver
     Enter queue name: nmec.q
     Enter number of hours needed: 1
