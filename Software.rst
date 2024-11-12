@@ -670,10 +670,10 @@ Afterwards, start a specific SSH tunnel on a local terminal. Enter the command p
 ``ssh -L 11111:node-m-12:23332 username@131.175.56.199``
 
 You can do this in your command prompt or in mobaXterm.
-| **BEWARE: The terminal must remain active while using ParaView.**
+**BEWARE: The terminal must remain active while using ParaView.**
  
 Now, open your ParaView client, access the Server Configuration Menu, and connect to the server. Once connected, ``pvserver`` will print ``Client connected...`` You can now access data on CFDhub by opening files directly from your client, as the SSH tunnel allows direct browsing. To close the session, simply close Paraview.
-| **BEWARE: Closing the terminal in which you ran ``LaunchPVserver`` will also close the session.**
+**BEWARE: Closing the terminal in which you ran** ``LaunchPVserver`` **will also close the session.**
  
 Best Practices
 ^^^^^^^^^^^^^^^^^^^^^^^^^
