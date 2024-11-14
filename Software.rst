@@ -443,11 +443,13 @@ OpenFOAM 2112
 
 **broadwell architecture** (mecc2.q)
 
+OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
     module load openfoam/2306-gcc-9.1.0-jyrxdkf
 
 **ivybridge architecture** (mecc.q)
+
  OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
