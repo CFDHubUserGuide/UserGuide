@@ -425,21 +425,33 @@ List of OpenFOAM installations
 
 **zen2 architecture** (nmec.q)
 
+OpenFoam 2306
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
+    module load openfoam/2306-gcc-9.1.0-a4lldmf
+
 **cascadelake architecture** (mecc4.q)
 
-OpenFOAM 2112
-::
-    module use /software/modulefiles/CFD/
-    module load openfoam-v2112
 OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
     module load openfoam/2306-gcc-9.2.0-mfpm3lk
+OpenFOAM 2112
+::
+    module use /software/modulefiles/CFD/
+    module load openfoam-v2112
 
 **broadwell architecture** (mecc2.q)
 
-**ivyubridge architecture** (mecc.q)
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
+    module load openfoam/2306-gcc-9.1.0-jyrxdkf
 
+**ivybridge architecture** (mecc.q)
+ OpenFOAM 2306
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
+    module load openfoam/2306-gcc-9.1.0-jcy5gwz
 
 .. _OpenFOAMBatch:
 
