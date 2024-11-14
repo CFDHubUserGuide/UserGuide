@@ -424,11 +424,15 @@ List of OpenFOAM installations
 ---------------------------
 
 **cascadelake architecture** (mecc4.q)
+
 OpenFOAM 2112
 ::
     module use /software/modulefiles/CFD/
     module load openfoam-v2112
-
+OpenFOAM 2306
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
+    module load openfoam/2306-gcc-9.2.0-mfpm3lk
 
 
 
