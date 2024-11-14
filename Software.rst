@@ -450,7 +450,7 @@ OpenFOAM 2306
 
 **ivybridge architecture** (mecc.q)
 
- OpenFOAM 2306
+OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam/2306-gcc-9.1.0-jcy5gwz
