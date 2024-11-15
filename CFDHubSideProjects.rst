@@ -4,7 +4,15 @@
 CFDHub side projects
 =====================
 
-This section describes how to install and set-up the software needed to connect your terminal (workstation or laptop) to the cluster. 
+There are some projects that are related to CFDHub, but dedicated to didactic purposes.
+
+.. _Calimero:
+
+-----------------
+CALIMERO
+-----------------
+
+Calimero is a cluster that is used for teaching activity. it is composed by 3 nodes *Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz* with sandybridge architecture and *Rocky Linux 8*.
 
 The cluster environment is Linux OS. If you need some information on how to work in a Linux environment you may check the `Ubuntu Help <https://help.ubuntu.com/community/UsingTheTerminal>`_ or a `UNIX Tutorial <http://www.ee.surrey.ac.uk/Teaching/Unix/index.html>`_. 
 
