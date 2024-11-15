@@ -66,8 +66,8 @@ The main working areas are reported and descrbed in the following section. Pleas
 In general this area is reserved to files that the user think should be backed up. |br|
 *Capacity:* Each user has an assigned quota of 20Gb.
 This limitation exits to avoid the filling up of the **/home** area. 
-To know the total quota and the actual available quota:
-	| ``(TBD)``
+To know the used space:
+	| ``du -hs $HOME``
 *Access:* from all nodes |br|
 *Backup:* YES
 
