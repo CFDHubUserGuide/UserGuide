@@ -21,6 +21,20 @@ CONNECTION REQUIREMENTS
 Calimero can be accessed through VPN service and VPN should be used when the user is inside or outside the PoliMi network. Please refer to the `VPN guide <https://www.ict.polimi.it/network/vpn/?lang=en>`_ to set-up the VPN connection.
 
 
+VPN Installation
+^^^^^^^^^^^^^^^^^
+
+Follow the three points for the installation:
+- Personal Polimi Certificate installation
+- Download and installation of the GlobalProtect VPN client
+- Connection to Polimi network
+
+Procedure:
+1. Connect to the `VPN portal <https://www.ict.polimi.it/network/vpn/?lang=en>`_
+2. The "*Portal Address*" is: gp-deng.vpn.polimi.it (Energy Department)
+
+
+
 .. dovrebbe essere capitolo 3.2:
 -----------------
 VPN SERVICE ACTIVATION
