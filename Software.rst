@@ -429,6 +429,10 @@ OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
     module load openfoam/2306-gcc-9.1.0-a4lldmf
+OpenFOAM 11
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2/
+    module load openfoam-org/11-gcc-10.2.0-5gzg4ht
 OpenFOAM 10
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
