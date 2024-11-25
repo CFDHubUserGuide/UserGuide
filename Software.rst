@@ -445,6 +445,10 @@ OpenFOAM 2112
 ::
     module use /software/modulefiles/CFD/
     module load openfoam-v2112
+OpenFOAM 11
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake/
+    module load openfoam-org/11-gcc-10.3.0-fhsnhie
 OpenFOAM 10
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
