@@ -16,6 +16,7 @@ CFDHub User Guide
    AccessToTheCluster
    HowToSubmitAJob
    Software
+   CFDHubSideProjects
 
 
 ..
