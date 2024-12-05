@@ -98,3 +98,57 @@ Linux users may copy files or folders from command line using:
     scp -r localFolder username@131.175.11.133:/remotefolder
     scp -r username@131.175.11.133:/remotefolder localFolder
 
+
+HOW TO LAUNCH JOBS
+-----------------
+
+To submit a OpenFOAM job using queues, prepare the launch file ``OpenFOAMJob.sh`` that will be used to run your script. Please check with your Professor what are the ``queues`` you have access to.
+
+The result of the computation will be written on file according to what you specified in your ``system/controlDict`` file. The output will be written on the *jobOutput* file. if you wish you may redirect in another file (typically ``log.$solver``).
+
+*If you are asking for more than one cpu, please make sure your requested cpus and the number of *processors* are coincident, so you will use all requested cpus.*
+
+Here an example of launch file:
+
+::
+
+    #!/bin.bash             # use bash as command interpreter
+    #$ -cwd                 # currentWorkingDirectory
+    #$ -N myOpenFOAMJob     # jobName
+    #$ -j y                 # merges output and errors
+    #$ -S /bin/bash         # scripting language
+    #$ -l h_rt=3:00:00      # jobDuration hh:mm:ss
+    #$ -q all.q             # queueName
+    #$ -pe mpi 4            # cpuNumber
+    #---------------------------------------------------------
+    
+    ### LOAD THE OPENFOAM ENVIRONMENT
+    module use module use /software/spack/spack/share/spack/modules/linux-rocky8-sandybridge/
+    module load openfoam/2306-gcc-13.2.0-tnytlfv
+    
+    #---------------------------------------------------------
+    
+    ### EXECUTE COMMANDS
+    #./Allrun
+    
+    blockMesh >& log.blockMesh
+    decomposePar >& log.decomposePar
+    mpirun --hostfile machinefile.$JOB_ID snappyHexMesh -parallel >& log.snappyHexMesh
+    mpirun --hostfile machinefile.$JOB_ID simpleFoam -parallel >& log.simpleFoam
+    reconstructPar -latestTime >& log.reconstructPar
+    sample -latestTime >& log.sample
+
+    echo End Parallel Run
+
+Just add/remove *hashtags* [#] to comment/uncomment the lines. To execute the commands, you may either include an executable file (``Allrun`` in this case), or list all relevant commands.
+
+To launch your ``OpenFOAMJob.sh`` file from the *master node*, from the ``jobDirectory`` you may execute:
+
+``[<username>@nodevg-0-x jobDirectory]$ qsub OpenFOAMJob.sh``
+
+To check the status of the job you may use the ``qstat -u <username>`` command to see if the job started. To check how the job is proceeding from the login node, reading the output, you may use:
+
+``[<username>@nodevg-0-1 jobDirectory]$ tail -f log.simpleFoam``
+
+
+
