@@ -86,7 +86,7 @@ Insert your username
 
 Connect to the SFTP session, you will have a column on the left with your local files and a column on the right with the server files. You can move items from one to the other by simply dragging them from one side to the other.
 
-.. figure:: images/calimero_fileAccess.png
+.. figure:: images/calimero_fileTransfer.png
 
 You can access different folders of the system by copying the absolute path.
 
