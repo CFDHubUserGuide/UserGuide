@@ -59,6 +59,7 @@ Open the session just created: you are now in the Master environment
 **Important**: do not launch anything from here. Everything launched from here is stopped by default.
 
 The very first time you access to Calimero you wil be asked to change your password.
+
 After changing password you need to configure your environment by copying the configuration files:
 ::
     cp /etc/skel/.* ~/.
@@ -92,6 +93,8 @@ You can access different folders of the system by copying the absolute path.
 
 Linux users may copy files or folders from command line using:
 ::
-    scp -r localFolder username@131.175.11.133:remotefolder
-    scp -r username@131.175.11.133:remotefolder localFolder
+    scp localFile username@131.175.11.133:/remotefolder
+    scp username@131.175.11.133:/remotefolder/remoteFile  localFolder
+    scp -r localFolder username@131.175.11.133:/remotefolder
+    scp -r username@131.175.11.133:/remotefolder localFolder
 
