@@ -423,7 +423,7 @@ You can use the software in different ways:
 List of OpenFOAM installations
 ---------------------------
 
-**zen2 architecture** (nmec.q)
+**zen2 architecture** (meccsys1.q)
 
 OpenFOAM 2306
 ::
