@@ -423,6 +423,8 @@ You can use the software in different ways:
 List of OpenFOAM installations
 ---------------------------
 
+<a href="mailto:jdoe@example.com">For any question on OpenFOAM installations please contact Paolo Schito</a>.
+
 **x86_64_v4 architecture** (meccsys2.q)
 
 OpenFOAM 2412
