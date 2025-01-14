@@ -423,6 +423,30 @@ You can use the software in different ways:
 List of OpenFOAM installations
 ---------------------------
 
+**x86_64_v4 architecture** (meccsys2.q)
+
+OpenFOAM 2412
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
+    module load openfoam/2412-gcc-9.1.0-zilnpkw
+OpenFOAM 2306
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
+    module load openfoam/2306-gcc-9.1.0-ppy3of4
+OpenFOAM 12
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
+    module load openfoam-org/12-gcc-9.1.0-wfcs6c4
+OpenFOAM 11
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
+    module load openfoam-org/11-gcc-9.1.0-hy3jfx7
+OpenFOAM 10
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
+    module load openfoam-org/10-gcc-10.2.0-euwkm23
+
+
 **zen2 architecture** (meccsys1.q)
 
 OpenFOAM 2306
