@@ -503,10 +503,22 @@ OpenFOAM 10
 
 **broadwell architecture** (mecc2.q)
 
+OpenFOAM 2412
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
+    module load openfoam/2412-gcc-9.1.0-kpjnmco
 OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
     module load openfoam/2306-gcc-9.1.0-jyrxdkf
+OpenFOAM 12
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
+    module load openfoam-org/12-gcc-9.1.0-ph6nxle
+OpenFOAM 11
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
+    module load openfoam-org/11-gcc-9.1.0-drbzxto
 OpenFOAM 10
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
@@ -515,10 +527,22 @@ OpenFOAM 10
 
 **ivybridge architecture** (mecc.q)
 
+OpenFOAM 2412
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
+    module load openfoam/2412-gcc-9.1.0-pkrygox
 OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam/2306-gcc-9.1.0-jcy5gwz
+OpenFOAM 12
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
+    module load openfoam-org/12-gcc-10.2.0-v4kiqsz
+OpenFOAM 11
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
+    module load openfoam-org/11-gcc-10.2.0-t7q4wif
 OpenFOAM 10
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
