@@ -451,10 +451,18 @@ OpenFOAM 10
 
 **zen2 architecture** (meccsys1.q)
 
+OpenFOAM 2412
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
+    module load openfoam/2412-gcc-9.1.0-l6ptveh
 OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
     module load openfoam/2306-gcc-9.1.0-a4lldmf
+OpenFOAM 12
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2/
+    module load openfoam-org/12-gcc-9.1.0-3oaflrd
 OpenFOAM 11
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2/
@@ -467,6 +475,10 @@ OpenFOAM 10
 
 **cascadelake architecture** (mecc4.q)
 
+OpenFOAM 2412
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
+    module load openfoam/2412-gcc-9.1.0-tsbl4gm
 OpenFOAM 2306
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
@@ -475,6 +487,10 @@ OpenFOAM 2112
 ::
     module use /software/modulefiles/CFD/
     module load openfoam-v2112
+OpenFOAM 12
+::
+    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake/
+    module load openfoam-org/12-gcc-9.1.0-aj7gt6l
 OpenFOAM 11
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake/
