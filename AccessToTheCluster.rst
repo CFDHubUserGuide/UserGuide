@@ -180,6 +180,7 @@ Once the system accepts the new password it is possibile to proceed to the :ref:
 .. figure:: images/sshConnectionError.png
 
 In case this error appears on the screen, please check:
+
 1. your internet connection;
 2. if your VPN connection works properly;
 3. verify if the access to the cluster works by typing ``ssh <username>@131.175.56.199``. In this case please check any information on the terminal: usually a password change is required. In less usual conditions,the user may be locked or disabled: in this case please contact your :ref:`Contact Person<ContactPerson>` and wait for instructions.
