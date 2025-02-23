@@ -190,6 +190,7 @@ In case this error appears on the screen, please check:
 **NOTE:**
 
 *- if you fail to insert the correct password for 3 times, the user of the user will be locked and remain locked for 30 minutes.*
+
 *- after a password change, the system takes up to 1 hour to propagate the password to all nodes.*
 
 
