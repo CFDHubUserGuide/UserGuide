@@ -124,6 +124,8 @@ STEPS FOR HPC ACCESS
 **The very first time you access to the cluster** you should follow the instructions reported in chapter :ref:`SSH connection (Linux/MacOS)<SshConnectionLinuxMacOs>`.
 Then you need to wait 15 minutes for the propagation of the password through the system.
 
+You may access the first time also using Windows, you may follow the :ref:`first SSH connection instructions<firstSSHConnection>`.
+
 If you access the cluster from a Windows machine, jump to the chapter :ref:`SSH connection (Windows users) <SshConnectionWindows>`. 
 
 If you access the cluster from a Linux OS/MacOS, you can jump to next chapter :ref:`SSH connection (Linux/MacOS)<SshConnectionLinuxMacOs>`. 
@@ -189,7 +191,7 @@ In case this error appears on the screen, please check:
 
 | **NOTE:**
 | *- if you fail to insert the correct password for 3 times, the user of the user will be locked and remain locked for 30 minutes.*
-| *- after a password change, the system takes up to 1 hour to propagate the password to all nodes.*
+| *- after a password change, the system takes 15 minutes to propagate the password to all nodes.*
 
 
 .. _DetailedSshConnctionSettings:
