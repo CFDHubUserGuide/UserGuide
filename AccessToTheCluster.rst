@@ -175,7 +175,7 @@ Open a shell in MobaXterm or in Putty and type:
 and follow the instruction on the terminal.
 
 During the password typing process, the characters are not shown.
-It is possible to copy the password, but to paste it on the terminal please use the right mouse button.
+It is possible to copy the password, to paste it on the terminal please use the right mouse button.
 
 Once the system accepts the new password it is possibile to proceed to the :ref:`SSH connection settings<DetailedSshConnctionSettings>`.
 
@@ -187,11 +187,11 @@ In case this error appears on the screen, please check:
 2. if your VPN connection works properly;
 3. verify if the access to the cluster works by typing ``ssh <username>@131.175.56.199``. In this case please check any information on the terminal: usually a password change is required. In less usual conditions,the user may be locked or disabled: in this case please contact your :ref:`Contact Person<ContactPerson>` and wait for instructions.
 
-**NOTE:**
+|**NOTE:**
 
-*- if you fail to insert the correct password for 3 times, the user of the user will be locked and remain locked for 30 minutes.*
+|*- if you fail to insert the correct password for 3 times, the user of the user will be locked and remain locked for 30 minutes.*
 
-*- after a password change, the system takes up to 1 hour to propagate the password to all nodes.*
+|*- after a password change, the system takes up to 1 hour to propagate the password to all nodes.*
 
 
 .. _DetailedSshConnctionSettings:
