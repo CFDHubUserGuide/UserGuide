@@ -138,13 +138,13 @@ SSH CONNECTION (Windows)
 
 If you are accessing from a Windows machine, the steps to access the HPC machines (through both PoliMi network or VPN service) are:
 
-1. :ref:`installation of the software to access the cluster<SoftwareRequirements>`; 
-2. :ref:`setting of SSH session to access the cluster<DetailedSshConnctionSettings>`; 
-3. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<CreationOfAGraphicalPort>`;
-4. :ref:`setting of a VNC session to graphically access and control the HPC machines<SettingOfVncSession>`; 
-5. :ref:`settings to upload and download files to/from HPC machines to the local one<DataTransferWindows>`. 
+1. :ref:`installation of the software to access the cluster<SoftwareRequirements>`;
+2. :ref:`first SSH connection<firstSSHConnection>`;
+3. :ref:`setting of SSH session to access the cluster<DetailedSshConnctionSettings>`; 
+4. :ref:`creation of the graphical port for remote control of the cluster and use of VNC tool<CreationOfAGraphicalPort>`;
+5. :ref:`setting of a VNC session to graphically access and control the HPC machines<SettingOfVncSession>`; 
+6. :ref:`settings to upload and download files to/from HPC machines to the local one<DataTransferWindows>`. 
 
-.. dovrebbe essere capitolo 3.4.1:
 
 .. _SoftwareRequirements:
 
@@ -159,7 +159,35 @@ An alternative and quick solution is Putty_. The user should know how to configu
 .. _MobaXterm: https://mobaxterm.mobatek.net/download.html 
 .. _Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
-.. dovrebbe essere capitolo 3.4.2:
+
+.. _firstSSHConnection:
+
+__________________________________
+First SSH connection
+__________________________________
+
+During the first connection, the system asks the user to change the ‘first access’ password provided by the administrator.
+
+Open a shell in MobaXterm or in Putty and type:
+
+	| ``ssh <username>@131.175.56.199``
+
+and follow the instruction on the terminal.
+During the password typing process, the characters are not shown.
+It is possible to copy the password, but to paste it on the terminal please use the right mouse button.
+Once the system accepts the new password it is possibile to proceed to the :ref:`SSH connection settings<DetailedSshConnctionSettings>`.
+
+.. figure:: images/sshConnectionError.png
+
+In case this error appears on the screen, please check:
+1. your internet connection;
+2. if your VPN connection works properly;
+3. verify if the access to the cluster works by typing ``ssh <username>@131.175.56.199``. In this case please check any information on the terminal: usually a password change is required. In less usual conditions,the user may be locked or disabled: in this case please contact your :ref:`Contact Person<ContactPerson>` and wait for instructions.
+
+**NOTE:**
+| - if you fail to insert the correct password for 3 times, the user of the user will be locked and remain locked for 30 minutes.
+| - after a password change, the system takes up to 1 hour to propagate the password to all nodes.
+
 
 .. _DetailedSshConnctionSettings:
 
