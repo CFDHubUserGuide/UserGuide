@@ -52,6 +52,6 @@ In the following sections we will often refer to some keywords that are user spe
 
 Vocabulary:
 
-- ``alias``               this is the name of the computing node you would like to use;
+- ``alias``                is a command which enables a replacement of a word by another string. It is mainly used for abbreviating a system command, or for adding default arguments to a regularly used command;
 
 - ``bashrc``              this is a file that contain instructions that are executed each time a terminal is opened or each time you log into a machine through ssh.
