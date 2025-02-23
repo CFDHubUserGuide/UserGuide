@@ -173,8 +173,10 @@ Open a shell in MobaXterm or in Putty and type:
 	| ``ssh <username>@131.175.56.199``
 
 and follow the instruction on the terminal.
+
 During the password typing process, the characters are not shown.
 It is possible to copy the password, but to paste it on the terminal please use the right mouse button.
+
 Once the system accepts the new password it is possibile to proceed to the :ref:`SSH connection settings<DetailedSshConnctionSettings>`.
 
 .. figure:: images/sshConnectionError.png
