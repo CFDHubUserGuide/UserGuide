@@ -25,8 +25,11 @@ VPN Installation
 ^^^^^^^^^^^^^^^^^
 
 Follow the three points for the installation:
+
 - Personal Polimi Certificate installation
+
 - Download and installation of the GlobalProtect VPN client
+
 - Connection to Polimi network
 
 Procedure:
