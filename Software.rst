@@ -945,6 +945,7 @@ This will create a directory called spack; in order to use it, you need to add t
 or you can create an alias to be placed with your aliases:
 
 .. code-block:: console
+
    alias loadSpack='. /global-scratch/bulk_pool/$USER/spack/share/spack/setup-env.sh'
 
 To load spack you may just digit ``loadSpack``.
