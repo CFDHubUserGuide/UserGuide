@@ -947,7 +947,7 @@ or you can create an alias to be placed with your aliases:
 .. code-block:: console
 
    alias loadSpack='. /global-scratch/bulk_pool/$USER/spack/share/spack/setup-env.sh'
-
+   
 To load spack you may just digit ``loadSpack``.
    
 Spack, by default, will store test, cache and source files outside of your scratch folder, which might fill up all the available space; it is suggested that you create a folder in your main spack directory (for example ``tmp``), and then edit the config.yaml file found in /spack/etc/spack/defaults, so that it will save those files inside of the folder you made:
