@@ -27,7 +27,7 @@ All working areas are accessible from the login nodes and from the computational
 
 Generally source and compiled code files, libraries, documents are placed in the user ``/home``.
 
-Files that are used to run calculations are located in the scratch area ``/fast-scratch`` and ``/big-scratch`` where the disk has a quick IO speed. The disk space is large, but is shared among all users, when the disk is full nobody will be able to work on the cluster anymore.
+Files that are used to run calculations are located in the scratch area ``/global-scratch/bulk_pool`` and ``/global-scratch/flash_pool`` where the disk has a quick IO speed. The disk space is large, but is shared among all users, when the disk is full nobody will be able to work on the cluster anymore.
 
 When a computation is finished, results should be moved to ``/ARCHIVIO``, where each Research Group has its own archive space.
 
@@ -44,11 +44,11 @@ Let's go in detail across the disks
   | *Access*: all nodes  
   | *Backup*: YES 
 
-- | ``/fast-scratch`` & ``/big-scratch``
+- | ``/global-scratch/bulk_pool`` & ``/global-scratch/flash_pool``
   | *Purpose*: launch runs and put data actually on use.
   | In order to preserve the purpose of this area and avoid a filling up of the area all data older than 60 days will be deleted from this area.
   | Please be careful and move your data to ``/ARCHIVIO`` area when they are not on use anymore
-  | *Capacity*: approx. 6Tb to 30Tb on SSD (high speed) cache disk interfaces (normal) NLSAS disks to speed up data exchange processes.
+  | *Capacity*: approx. 6Tb to 30Tb on SSD (high speed) cache disk interfaces (normal) NLSAS disks to speed up data exchange processes. Default space on bulk_pool is 100Gb per user, Default space on flash_pool is 10Gb per user.
   | *Access*: all nodes
   | *Backup*: NO  
 
