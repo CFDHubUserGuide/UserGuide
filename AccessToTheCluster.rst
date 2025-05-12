@@ -25,7 +25,7 @@ In order to use the computing resources the user must log in to *nodevg-0-1*, *n
 
 - *nodevg-0-1*: All research groups; 
 
-- *nodevg-0-2*: Temporary access to old */big-scratch*;
+- *nodevg-0-2*: All research groups;
 
 - *nodevg-0-3*: All research groups; 
 
@@ -42,11 +42,7 @@ In order to use the computing resources the user must log in to *nodevg-0-1*, *n
 
 *Note for long-term users:*
 
-Users that used to work in login node *nodevg-0-2* should know that new login nodes **can not mount /big-scratch and /fast-scratch directories**.
-These users should migrate their working directory from */big-scratch* or */fast-scratch* to the new */global-scratch* which is only available from new login nodes *nodevg-0-1*, *nodevg-0-3* or *nodevg-0-4*. To do so, it is advised to use *scp* command.
-
-
-It could be also useful to know that */ARCHIVIO* directory is available from both old or new login nodes. It should just be noted that on new login nodes all the volumes in */ARCHIVIO* are mounted on demand as soon as the user access the folders and unmounted after a certain inactivity time.
+All the volumes in */ARCHIVIO* are mounted on demand as soon as the user access the folders and unmounted after a certain inactivity time.
 
 .. GLOBAL SCRATCH LIMITE DOVE LAVORARE, COME MUOVERSI, FARSI CARTELLA GLOBAL E ARCHIVIO
 .. dovrebbe essere capitolo 3.6:
@@ -279,10 +275,9 @@ At the password change prompt request, insert the temporary password provided by
 
 **Be carefull because the password characters inserted are not shown at all, so be sure that the string you filled or copied is correct. If you are not sure, close the terminal and open it again. Remenber that three wrong password change attempts will lock your user.**
 
-If the password change is needed nomore, you will than get the bash prompt.
+If the password change is not needed anymore, you will get the bash prompt.
 
 
-.. dovrebbe essere capitolo 3.5.1:
 __________________________________
 Access from terminal
 __________________________________
@@ -299,7 +294,7 @@ where *x = 3,4* depending on your :ref:`Research Group<ResearchGroups>`.
 
 For data transferring between cluster and your local machine, refer to chapter :ref:`Data transferring for Linux/MacOS<DataTransferLinuxMacOs>`. 
 
-.. dovrebbe essere capitolo 3.5.2:
+
 __________________________________
 Access with VNC remote desktop (MacOS)
 __________________________________
@@ -322,7 +317,7 @@ Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy*
 
 .. **MacOS**: Open Safari browser, type in the adress bar: **vnc://localhost:59yy** where *yy* is the the :ref:`user-specific graphic port<CREATION_OF_A_GRAPHICAL_PORT>`. Enter your login password when asked. 
 
-.. dovrebbe essere capitolo 3.5.3:
+
 __________________________________
 Access with VNC remote desktop (Linux)
 __________________________________
@@ -351,7 +346,7 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 5. Click on *Save*. The configuration is ended and saved, you should be able to enter to your graphical port just by clicking on the new created session. 
 
-.. dovrebbe essere capitolo 3.7:
+
 
 .. _DataTransfer:
 
@@ -361,7 +356,7 @@ However for Ubuntu it is possibile to follow this guide_ to install it. For othe
 
 .. Depending on the OS used by the user, the procedure change as follows. 
 
-.. dovrebbe essere capitolo 3.8:
+
 
 .. _DataTransferWindows:
 
@@ -473,18 +468,7 @@ Then, in Filezilla, connect to the cluster with the following settings:
 Click connect and you can now access the local directories on the left branch and the remote ones on the right one.
 
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
 
 
 
