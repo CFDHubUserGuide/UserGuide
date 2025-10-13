@@ -445,6 +445,11 @@ In order to transfer files from your terminal to the cluster and vice versa, you
 	| ``scp -r <localDirectory> <username>@131.175.56.199:<remoteDirectory>``
 	| ``scp -r <username>@131.175.56.199:<remoteDirectory> <localDirectory>``
 
+Since the global scratch directory is not visible on the master node, it is possible to copy the files directly to the scratch area using the following instructions, using any nodevg-0-x node:
+
+	| ``scp -r -o ProxyCommand="ssh <username>@131.175.56.199 -W nodevg-0-1:22" <username>@nodevg-0-1:<remoteDirectory> <localDirectory>``
+	| ``scp -r -o ProxyCommand="ssh <username>@131.175.56.199 -W nodevg-0-1:22" <localDirectory> <username>@nodevg-0-1:<remoteDirectory>``
+
 .. _dovrebbe essere capitolo 3.9.1:
 __________________________________
 Filezilla
