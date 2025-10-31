@@ -450,6 +450,11 @@ Since the global scratch directory is not visible on the master node, it is poss
 	| ``scp -r -o ProxyCommand="ssh <username>@131.175.56.199 -W nodevg-0-1:22" <username>@nodevg-0-1:<remoteDirectory> <localDirectory>``
 	| ``scp -r -o ProxyCommand="ssh <username>@131.175.56.199 -W nodevg-0-1:22" <localDirectory> <username>@nodevg-0-1:<remoteDirectory>``
 
+You may also use ``rsync`` for a smarter data transfer, using the following command:
+
+	| ``rsync -chavP -e 'ssh -o ProxyCommand="ssh -A <username>@131.175.56.199 -W %h:%p"' <username>@nodevg-0-1:<remoteDirectory> <localDirectory>``
+	| ``rsync -chavP -e 'ssh -o ProxyCommand="ssh -A <username>@131.175.56.199 -W %h:%p"' <localDirectory> <username>@nodevg-0-1:<remoteDirectory>``
+
 .. _dovrebbe essere capitolo 3.9.1:
 __________________________________
 Filezilla
