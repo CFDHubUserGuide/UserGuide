@@ -34,7 +34,7 @@ Follow the three points for the installation:
 
 Procedure:
 1. Connect to the `VPN portal <https://www.ict.polimi.it/network/vpn/?lang=en>`_
-2. The "*Portal Address*" is: gp-deng.vpn.polimi.it (Energy Department)
+2. The "*Portal Address*" is: gp-deng-saml.vpn.polimi.it (Energy Department)
 
 
 HOW TO ACCESS CALIMERO
