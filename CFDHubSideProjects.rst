@@ -57,13 +57,13 @@ Mario Rossi: mrossi).
 
 Click ok: your new session is available on the left column.
 
-Open the session just created: you are now in the Master environment
+Open the session just created: you are now in the Master environment.
+The very first time you access to Calimero you wil be asked to change your first access password (typically it will be the concatenation of matricola and PersonCode without spaces).
+When you enter the new password the characters will not be shown.
 
 **Important**: do not launch anything from here. Everything launched from here is stopped by default.
 
-The very first time you access to Calimero you wil be asked to change your password.
-
-After changing password you need to configure your environment by copying the configuration files:
+After changing password you need to configure your environment by copying the configuration files (do not worry if the directories are not copied):
 ::
     cp /etc/skel/.* ~/.
 
