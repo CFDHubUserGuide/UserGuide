@@ -153,5 +153,18 @@ To check the status of the job you may use the ``qstat -u <username>`` command t
 
 ``[<username>@nodevg-0-1 jobDirectory]$ tail -f log.simpleFoam``
 
+Useful commands are:
 
-
++-----------+---------------------------------+-----------------------------+
+| Command   | Description                     | Example                     |
++===========+=================================+=============================+
+| ``qsub``  | Submit a job                    | ``qsub launchFile.sh``      |
++-----------+---------------------------------+-----------------------------+
+| ``qstat`` | Show status of jobs             | ``qstat -u <username>``     |
++           +---------------------------------+-----------------------------+
+|           | Show status of queue            |``qstat -f -q all.q``        |
++-----------+---------------------------------+-----------------------------+
+| ``qdel``  | Delete a job                    | ``qdel 84249``              |
++-----------+---------------------------------+-----------------------------+
+| ``qmove`` | Move a job to a different queue | ``qmove hub.72 84249``      |
++-----------+---------------------------------+-----------------------------+
