@@ -168,3 +168,10 @@ Useful commands are:
 +-----------+---------------------------------+-----------------------------+
 | ``qmove`` | Move a job to a different queue | ``qmove hub.72 84249``      |
 +-----------+---------------------------------+-----------------------------+
+
+To check the status of the cluster you may add to your .bashrc file the following aliases and by digiting ``check`` or ``check2`` you may control the job status:
+
+::
+    alias check='echo "===========RUNNING JOBS============="; echo "    ALL.Q"; qstat -q all.q -s r -u "*"; echo "    DIDA.Q"; qstat -q dida.q -s r -u "*";  echo "============PENDING JOBS=============="; echo "    ALL.Q"; qstat -q all.q -s p -u "*"; echo "    DIDA.Q"; qstat -q dida.q -s p -u "*"; echo "=============SUSPENDED JOBS============="; qstat -q all.q -s s -u "*"; qstat -q dida.q -s s -u "*"; qstat -g c | grep "QUEUE\|.q"'
+
+    alias check2='qstat -f -u "*"'
