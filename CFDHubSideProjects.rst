@@ -179,6 +179,8 @@ To check the status of the cluster you may add to your .bashrc file the followin
 You may find all the software installed on the cluster by using the module command. All software is installed with spack.
 To see all the software installed you may first load the correct module, and then list all the software; finally you may load your preferred software:
 
-``[<username>@nodevg-0-1 jobDirectory]$ module use /software/spack/spack/share/spack/modules/linux-rocky8-sandybridge/``
-``[<username>@nodevg-0-1 jobDirectory]$ module avail``
-``[<username>@nodevg-0-1 jobDirectory]$ module load <software>``
+::
+
+    [<username>@nodevg-0-1 jobDirectory]$ module use /software/spack/spack/share/spack/modules/linux-rocky8-sandybridge/
+    [<username>@nodevg-0-1 jobDirectory]$ module avail
+    [<username>@nodevg-0-1 jobDirectory]$ module load <software>
