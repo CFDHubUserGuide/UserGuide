@@ -126,7 +126,7 @@ Here an example of launch file:
     #---------------------------------------------------------
     
     ### LOAD THE OPENFOAM ENVIRONMENT
-    module use module use /software/spack/spack/share/spack/modules/linux-rocky8-sandybridge/
+    module use /software/spack/spack/share/spack/modules/linux-rocky8-sandybridge/
     module load openfoam/2306-gcc-13.2.0-tnytlfv
     
     #---------------------------------------------------------
@@ -175,3 +175,9 @@ To check the status of the cluster you may add to your .bashrc file the followin
 
     alias check='echo "===========RUNNING JOBS============="; echo "    ALL.Q"; qstat -q all.q -s r -u "*"; echo "    DIDA.Q"; qstat -q dida.q -s r -u "*";  echo "============PENDING JOBS=============="; echo "    ALL.Q"; qstat -q all.q -s p -u "*"; echo "    DIDA.Q"; qstat -q dida.q -s p -u "*"; echo "=============SUSPENDED JOBS============="; qstat -q all.q -s s -u "*"; qstat -q dida.q -s s -u "*"; qstat -g c | grep "QUEUE\|.q"'
     alias check2='qstat -f -u "*"'
+
+You may find all the software installed on the cluster by using the module command. All software is installed with spack.
+To see all the software installed you may first load the correct module, and then list all the software; finally you may load your preferred software:
+``[<username>@nodevg-0-1 jobDirectory]$ module use /software/spack/spack/share/spack/modules/linux-rocky8-sandybridge/``
+``[<username>@nodevg-0-1 jobDirectory]$ module avail``
+``[<username>@nodevg-0-1 jobDirectory]$ module load <software>``
