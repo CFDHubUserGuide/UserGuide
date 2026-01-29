@@ -76,11 +76,7 @@ To launch you job, three possibilities are available:
 
 - :ref:`Interactve job working on a node<InteractiveNode>`;.
 
-The submission of jobs through a queue require some instructions to the job scheduler to reserve a node (or some cpus of a node) to the user. The Job Scheduler of CFDHub is `PBS Pro`__. In the :ref:`Software <Software>` section you may find some job submission examples.
-
-.. _PBS: https://www.altair.com/pbs-professional/
-
-__ PBS_
+The submission of jobs through a queue require some instructions to the job scheduler to reserve a node (or some cpus of a node) to the user. The Job Scheduler of CFDHub is `SGE`. In the :ref:`Software <Software>` section you may find some job submission examples.
 
 Batch jobs require a script with the instructions. In the :ref:`Software<Software>` section you may find some script examples for your specific application.
 
@@ -212,5 +208,6 @@ From there you can have an overview of the CPU usage of all the nodes. The main 
 2. | After having accessed the node you must check the active processes of all users: 
    | ``[<username>@<node> ~]$ ps -aux``
    | It will list all the processes and you will have to look for the ones that may use CPU (3rd column) and/or RAM memory (4th column). You should not occupy a computing node if you see processes that use CPU and/or RAM. It means it is not free. If you have doubts you can ask your :ref:`CFDHub Contact Person<ContactPerson>`.
+
 
 
