@@ -428,6 +428,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
 **x86_64_v4 architecture** + **rocky8** (meccsys2.q)
 
 ::
+
     module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
     module load openfoam/2412-gcc-9.1.0-zilnpkw
     module load openfoam/2306-gcc-9.1.0-ppy3of4
@@ -439,6 +440,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
 **zen3 architecture** + **rocky8** (meccsys1.q)
 
 ::
+
     module use /software/spack/spack_202601/share/spack/modules/linux-rocky8-zen3
     module use /software/spack/spack_202601/share/spack/modules/linux-rocky8-x86_64/
     module load openfoam/2412-gcc-14.2.0-32zlt6n
@@ -451,6 +453,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
 **zen3 architecture** + **centos7** (meccsys1.q)
 
 ::
+
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
     module load openfoam/2412-gcc-9.1.0-l6ptveh
     module load openfoam/2306-gcc-9.1.0-a4lldmf
@@ -462,6 +465,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
 **cascadelake architecture** + **centos7** (mecc4.q)
 
 ::
+
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
     module load openfoam/2412-gcc-9.1.0-tsbl4gm
     module load openfoam/2306-gcc-9.2.0-mfpm3lk
@@ -470,6 +474,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
     module load openfoam-org/10-gcc-10.3.0-rogs5zz
 
 ::
+
     module use /software/modulefiles/CFD/
     module load openfoam-v2112
 
@@ -477,6 +482,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
 **broadwell architecture** + **centos7** (mecc2.q)
 
 ::
+
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
     module load openfoam/2412-gcc-9.1.0-kpjnmco
     module load openfoam/2306-gcc-9.1.0-jyrxdkf
@@ -488,6 +494,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
 **ivybridge architecture** + **centos7** (mecc.q)
 
 ::
+
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam/2412-gcc-9.1.0-pkrygox
     module load openfoam/2306-gcc-9.1.0-jcy5gwz
@@ -1020,4 +1027,5 @@ Below, a list of useful commands:
    spack add <package_name> # adds package to current environment, must be done before installation
    spack remove <package_name> # removes package from current environment, must be done before uninstallation
    spack find -ldf # lists all the installed packages, showing how the dependencies are linked
+
 
