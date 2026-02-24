@@ -444,10 +444,11 @@ For any question on OpenFOAM installations please contact Paolo Schito.
     module use /software/spack/spack_202601/share/spack/modules/linux-rocky8-zen3
     module use /software/spack/spack_202601/share/spack/modules/linux-rocky8-x86_64/
     module load openfoam/2412-gcc-14.2.0-32zlt6n
-    openfoam/2112_220610-gcc-14.2.0-nhlhq6e
-    openfoam-org/12-gcc-14.2.0-dr6zz2e
-    openfoam-org/11-gcc-14.2.0-e5s5byy
-    openfoam-org/10-gcc-14.2.0-edq5ehn
+    module load openfoam/2112_220610-gcc-14.2.0-nhlhq6e
+    module load openfoam-org/13-gcc-14.2.0-hdneyea
+    module load openfoam-org/12-gcc-14.2.0-dr6zz2e
+    module load openfoam-org/11-gcc-14.2.0-e5s5byy
+    module load openfoam-org/10-gcc-14.2.0-edq5ehn
 
 
 **zen2 architecture** + **centos7**
@@ -488,7 +489,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
     module load openfoam/2306-gcc-9.1.0-jyrxdkf
     module load openfoam-org/12-gcc-9.1.0-ph6nxle
     module load openfoam-org/11-gcc-9.1.0-drbzxto
-    openfoam-org/10-gcc-9.1.0-37satjd
+    module load openfoam-org/10-gcc-9.1.0-37satjd
 
 
 **ivybridge architecture** + **centos7** (mecc.q)
@@ -1027,6 +1028,7 @@ Below, a list of useful commands:
    spack add <package_name> # adds package to current environment, must be done before installation
    spack remove <package_name> # removes package from current environment, must be done before uninstallation
    spack find -ldf # lists all the installed packages, showing how the dependencies are linked
+
 
 
 
