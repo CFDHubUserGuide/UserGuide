@@ -425,127 +425,74 @@ List of OpenFOAM installations
 
 For any question on OpenFOAM installations please contact Paolo Schito.
 
-**x86_64_v4 architecture** (meccsys2.q)
+**x86_64_v4 architecture** + **rocky8** (meccsys2.q)
 
-OpenFOAM 2412
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
     module load openfoam/2412-gcc-9.1.0-zilnpkw
-OpenFOAM 2306
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
     module load openfoam/2306-gcc-9.1.0-ppy3of4
-OpenFOAM 12
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
     module load openfoam-org/12-gcc-9.1.0-wfcs6c4
-OpenFOAM 11
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
     module load openfoam-org/11-gcc-9.1.0-hy3jfx7
-OpenFOAM 10
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-rocky8-x86_64_v4
     module load openfoam-org/10-gcc-10.2.0-euwkm23
 
 
-**zen2 architecture** (meccsys1.q)
+**zen3 architecture** + **rocky8** (meccsys1.q)
 
-OpenFOAM 2412
+::
+    module use /software/spack/spack_202601/share/spack/modules/linux-rocky8-zen3
+    module use /software/spack/spack_202601/share/spack/modules/linux-rocky8-x86_64/
+    module load openfoam/2412-gcc-14.2.0-32zlt6n
+    openfoam/2112_220610-gcc-14.2.0-nhlhq6e
+    openfoam-org/12-gcc-14.2.0-dr6zz2e
+    openfoam-org/11-gcc-14.2.0-e5s5byy
+    openfoam-org/10-gcc-14.2.0-edq5ehn
+
+
+**zen3 architecture** + **centos7** (meccsys1.q)
+
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
     module load openfoam/2412-gcc-9.1.0-l6ptveh
-OpenFOAM 2306
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
     module load openfoam/2306-gcc-9.1.0-a4lldmf
-OpenFOAM 12
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2/
     module load openfoam-org/12-gcc-9.1.0-3oaflrd
-OpenFOAM 11
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2/
     module load openfoam-org/11-gcc-10.2.0-5gzg4ht
-OpenFOAM 10
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-zen2
     module load openfoam-org/10-gcc-10.2.0-d3rsyaq
 
 
-**cascadelake architecture** (mecc4.q)
+**cascadelake architecture** + **centos7** (mecc4.q)
 
-OpenFOAM 2412
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
     module load openfoam/2412-gcc-9.1.0-tsbl4gm
-OpenFOAM 2306
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
     module load openfoam/2306-gcc-9.2.0-mfpm3lk
-OpenFOAM 2112
+    module load openfoam-org/12-gcc-9.1.0-aj7gt6l
+    module load openfoam-org/11-gcc-10.3.0-fhsnhie
+    module load openfoam-org/10-gcc-10.3.0-rogs5zz
+
 ::
     module use /software/modulefiles/CFD/
     module load openfoam-v2112
-OpenFOAM 12
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake/
-    module load openfoam-org/12-gcc-9.1.0-aj7gt6l
-OpenFOAM 11
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake/
-    module load openfoam-org/11-gcc-10.3.0-fhsnhie
-OpenFOAM 10
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
-    module load openfoam-org/10-gcc-10.3.0-rogs5zz
 
 
-**broadwell architecture** (mecc2.q)
+**broadwell architecture** + **centos7** (mecc2.q)
 
-OpenFOAM 2412
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
     module load openfoam/2412-gcc-9.1.0-kpjnmco
-OpenFOAM 2306
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
     module load openfoam/2306-gcc-9.1.0-jyrxdkf
-OpenFOAM 12
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
     module load openfoam-org/12-gcc-9.1.0-ph6nxle
-OpenFOAM 11
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
     module load openfoam-org/11-gcc-9.1.0-drbzxto
-OpenFOAM 10
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-broadwell
     openfoam-org/10-gcc-9.1.0-37satjd
 
 
-**ivybridge architecture** (mecc.q)
+**ivybridge architecture** + **centos7** (mecc.q)
 
-OpenFOAM 2412
 ::
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam/2412-gcc-9.1.0-pkrygox
-OpenFOAM 2306
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam/2306-gcc-9.1.0-jcy5gwz
-OpenFOAM 12
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam-org/12-gcc-10.2.0-v4kiqsz
-OpenFOAM 11
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam-org/11-gcc-10.2.0-t7q4wif
-OpenFOAM 10
-::
-    module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam-org/10-gcc-10.2.0-lebsikt
 
 
@@ -1073,3 +1020,4 @@ Below, a list of useful commands:
    spack add <package_name> # adds package to current environment, must be done before installation
    spack remove <package_name> # removes package from current environment, must be done before uninstallation
    spack find -ldf # lists all the installed packages, showing how the dependencies are linked
+
