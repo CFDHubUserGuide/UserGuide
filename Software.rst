@@ -450,7 +450,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
     openfoam-org/10-gcc-14.2.0-edq5ehn
 
 
-**zen3 architecture** + **centos7** (meccsys1.q)
+**zen2 architecture** + **centos7**
 
 ::
 
@@ -1027,5 +1027,6 @@ Below, a list of useful commands:
    spack add <package_name> # adds package to current environment, must be done before installation
    spack remove <package_name> # removes package from current environment, must be done before uninstallation
    spack find -ldf # lists all the installed packages, showing how the dependencies are linked
+
 
 
