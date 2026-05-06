@@ -499,6 +499,7 @@ For any question on OpenFOAM installations please contact Paolo Schito.
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-ivybridge
     module load openfoam/2412-gcc-9.1.0-pkrygox
     module load openfoam/2306-gcc-9.1.0-jcy5gwz
+    module load openfoam/2206-gcc-9.1.0-schuhpa
     module load openfoam-org/12-gcc-10.2.0-v4kiqsz
     module load openfoam-org/11-gcc-10.2.0-t7q4wif
     module load openfoam-org/10-gcc-10.2.0-lebsikt
