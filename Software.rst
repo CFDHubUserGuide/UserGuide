@@ -17,6 +17,7 @@ A not-comprehensive list of available software is:
 - :ref:`ParaView<ParaViewSection>`
 - :ref:`Python<PythonSection>`
 - :ref:`Spack<SpackSection>`
+- :ref:`StarCCM+<StarCCMSection>`
 
 Other software and software versions may be found through *modules* or in the directory ``/software``.
 
@@ -1032,4 +1033,11 @@ Below, a list of useful commands:
 
 
 
+.. _StarCCMSection:
 
+-------------------------
+StarCCM+
+-------------------------
+
+
+`StarCCM+ <https://www.siemens.com/en-us/products/simcenter/fluids-thermal-simulation/star-ccm/>`_  is a commercial CFD software.
