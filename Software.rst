@@ -1048,7 +1048,7 @@ Open the terminal
 
 To access STAR-CCM+ through the cluster, the user first needs to open a terminal window. From the Linux desktop, select:
 
-** Applications --> System Tools --> Terminal **
+**Applications --> System Tools --> Terminal**
 
 
 
