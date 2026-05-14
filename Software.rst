@@ -17,7 +17,7 @@ A not-comprehensive list of available software is:
 - :ref:`ParaView<ParaViewSection>`
 - :ref:`Python<PythonSection>`
 - :ref:`Spack<SpackSection>`
-- :ref:`StarCCM+<StarCCMSection>`
+- :ref:`Star-CCM+<StarCCMSection>`
 
 Other software and software versions may be found through *modules* or in the directory ``/software``.
 
@@ -1036,8 +1036,40 @@ Below, a list of useful commands:
 .. _StarCCMSection:
 
 -------------------------
-StarCCM+
+Star-CCM+
 -------------------------
 
 
 `StarCCM+ <https://www.siemens.com/en-us/products/simcenter/fluids-thermal-simulation/star-ccm/>`_  is a commercial CFD software.
+This section describes how to start and configure STAR-CCM+ on the cluster. The user is expected to have basic experience with STAR-CCM+ and with the Linux terminal. This guide focuses mainly on accessing STAR-CCM+ in graphical mode from a compute node.
+
+Open the terminal
+---------------------------
+
+To access STAR-CCM+ through the cluster, the user first needs to open a terminal window. From the Linux desktop, select:
+
+** Applications --> System Tools --> Terminal **
+
+
+
+Access a compute node
+---------------------------
+
+Before launching STAR-CCM+, the user must connect to an available compute node. From the terminal, the following command can be used:
+``ssh -CYX <node>``
+where ``<node>`` has to be replaced with the compute node that the user wants to use.
+The ``-CYX``  (capital) option enables remote graphical visualization, which is required to open the STAR-CCM+ graphical user interface from the compute node.
+
+
+Launch STAR-CCM+ from terminal
+---------------------------
+
+
+
+
+
+
+
+
+
+
