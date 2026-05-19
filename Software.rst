@@ -1086,10 +1086,28 @@ Furthermore, if the software crashes but the case remains open, the license hour
 
 
 
+Parallel run on a single node
+---------------------------
+
+In order to open or create a file, with the Parallel on Local Host option, it is possible to choose the number of CPUs to work with (generally from 1 to 16).
+
+If the user wants to run a parallel simulation using only the resources of a single node, the number of requested processes must be compatible with the resources available on that node.
+
+The number of CPUs should be chosen according to the available cores and to the instructions provided by the cluster administrator or CFDHub contact person.
 
 
 
+Management of residual or crashed processes
+---------------------------
 
+If STAR-CCM+ closes unexpectedly or the simulation stops because of an error, some residual processes may remain active on the compute node.
 
+The user can check this by using:
 
+``top`` or ``htop``
+
+If residual STAR-CCM+ processes are present, they should be closed carefully. Before manually terminating a process, the user should make sure that the process is actually related to the STAR-CCM+ session that has crashed.
+
+When the work is completed, STAR-CCM+ should be closed properly and the user should leave the compute node by typing:
+``exit``
 
