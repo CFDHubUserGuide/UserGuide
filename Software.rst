@@ -1064,6 +1064,26 @@ The ``-CYX``  (capital) option enables remote graphical visualization, which is 
 Launch STAR-CCM+ from terminal
 ---------------------------
 
+After selecting a free compute node, STAR-CCM+ can be launched from the same terminal window using the following command:
+
+``/software/starccm_2002008/20.02.008/STAR-CCM+20.02.008/star/bin/starccm+``
+
+This command starts the STAR-CCM+ graphical user interface on the selected compute node.
+If the command is executed correctly, the main STAR-CCM+ window will open after a few moments. From this window, the user can either create a new simulation or open an existing **.sim* file.
+
+
+
+In order to open correctly a file with the licence the Power on Demand option should be activated with the server (1999@flex.cd-adapco.com) and personal licence key.
+
+**Distributed license hours are independent of the number of processors used and refer exclusively to the usage time associated with each individual simulation. Consequently, a simulation run in serial mode (using a single processor) and a simulation run on 1000 processors for a duration of 500 hours will consume the same number of license hours.
+
+By contrast, two serial simulations run simultaneously for 500 hours each will result in a total consumption of 1000 license hours. Therefore, from a license usage optimization standpoint, it is more advantageous to run a single case on a large number of processors rather than multiple separate cases on individual processors.
+
+The counting of license hours begins when the case is opened and continues until it is closed. Accordingly, all phases of work are included in the count, including pre-processing activities (CAD and mesh generation), simulation, and post-processing (contours, videos, etc.).
+
+Furthermore, if the software crashes but the case remains open, the license hours will continue to be counted. For this reason, it is recommended to monitor the simulation regularly and to save and close the case whenever it is not expected to be used for several hours.**
+
+
 
 
 
