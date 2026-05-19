@@ -1050,6 +1050,7 @@ To access STAR-CCM+ through the cluster, the user first needs to open a terminal
 
 **Applications --> System Tools --> Terminal**
 
+.. figure:: images/Star-terminal.png
 
 
 Access a compute node
@@ -1071,7 +1072,9 @@ After selecting a free compute node, STAR-CCM+ can be launched from the same ter
 This command starts the STAR-CCM+ graphical user interface on the selected compute node.
 If the command is executed correctly, the main STAR-CCM+ window will open after a few moments. From this window, the user can either create a new simulation or open an existing **.sim* file.
 
+.. figure:: images/Star-initialView.png
 
+.. figure:: images/Star-openFile.png
 
 In order to open correctly a file with the licence the Power on Demand option should be activated with the server (1999@flex.cd-adapco.com) and personal licence key.
 
