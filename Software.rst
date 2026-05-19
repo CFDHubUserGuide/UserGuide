@@ -1078,13 +1078,13 @@ If the command is executed correctly, the main STAR-CCM+ window will open after 
 
 In order to open correctly a file with the licence the Power on Demand option should be activated with the server (1999@flex.cd-adapco.com) and personal licence key.
 
-**Distributed license hours are independent of the number of processors used and refer exclusively to the usage time associated with each individual simulation. Consequently, a simulation run in serial mode (using a single processor) and a simulation run on 1000 processors for a duration of 500 hours will consume the same number of license hours.
+**Distributed license hours are independent of the number of processors used and refer exclusively to the usage time associated with each individual simulation. Consequently, a simulation run in serial mode (using a single processor) and a simulation run on 1000 processors for a duration of 500 hours will consume the same number of license hours.**
 
-By contrast, two serial simulations run simultaneously for 500 hours each will result in a total consumption of 1000 license hours. Therefore, from a license usage optimization standpoint, it is more advantageous to run a single case on a large number of processors rather than multiple separate cases on individual processors.
+**By contrast, two serial simulations run simultaneously for 500 hours each will result in a total consumption of 1000 license hours. Therefore, from a license usage optimization standpoint, it is more advantageous to run a single case on a large number of processors rather than multiple separate cases on individual processors.**
 
-The counting of license hours begins when the case is opened and continues until it is closed. Accordingly, all phases of work are included in the count, including pre-processing activities (CAD and mesh generation), simulation, and post-processing (contours, videos, etc.).
+**The counting of license hours begins when the case is opened and continues until it is closed. Accordingly, all phases of work are included in the count, including pre-processing activities (CAD and mesh generation), simulation, and post-processing (contours, videos, etc.).**
 
-Furthermore, if the software crashes but the case remains open, the license hours will continue to be counted. For this reason, it is recommended to monitor the simulation regularly and to save and close the case whenever it is not expected to be used for several hours.**
+**Furthermore, if the software crashes but the case remains open, the license hours will continue to be counted. For this reason, it is recommended to monitor the simulation regularly and to save and close the case whenever it is not expected to be used for several hours.**
 
 
 
