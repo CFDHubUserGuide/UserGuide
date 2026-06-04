@@ -468,6 +468,13 @@ For any question on OpenFOAM installations please contact Paolo Schito.
 
 ::
 
+    module use /software/spack/spack_202601/share/spack/modules/linux-centos7-cascadelake/
+    module use /software/spack/spack_202601/share/spack/modules/linux-centos7-x86_64/
+    module load openfoam-org/13-gcc-14.2.0sandy-5b6v5q3
+
+
+::
+
     module use /software/spack/spack_202401/share/spack/modules/linux-centos7-cascadelake
     module load openfoam/2412-gcc-9.1.0-tsbl4gm
     module load openfoam/2306-gcc-9.2.0-mfpm3lk
