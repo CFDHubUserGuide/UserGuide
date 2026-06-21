@@ -53,7 +53,8 @@ The result of the computation will be written on file (please make sure to save 
     #$ -S /bin/bash         # scripting language
     #$ -l walltime=1:00:00  # jobDuration hh:mm:ss
     #$ -q hub.q             # queueName
-    #$ -pe mpi 2            # cpuNumber
+    #$ -pe smp 2            # asking 2 processes on single node
+    ##$ -pe mpi 2           # asking 2 processes on any node
     #________________________________________________________
 
     /software/Abaqus2021/DassaultSystemes/SIMULIA/Commands/abaqus j=JobInpName cpus=2 int
@@ -113,11 +114,12 @@ The result of the computation will be written on file (please make sure to save 
     #$ -S /bin/bash         # scripting language
     #$ -l h_rt=1:00:00      # jobDuration hh:mm:ss
     #$ -q hub.q             # queueName
-    #$ -pe mpi 4            # cpuNumber
+    #$ -pe smp 2            # asking 2 processes on single node
+    ##$ -pe mpi 2           # asking 2 processes on any node
     #________________________________________________________
 
-    # -t4 --> 4 must be equal to cpuNumber
-    /software/ansys2023R2/v232/fluent/bin/fluent 3ddp -t4 -cnf=machinefile.$JOB_ID -g < inputfile.txt > outputfile.txt
+    # -t2 --> 2 must be equal to cpuNumber
+    /software/ansys2023R2/v232/fluent/bin/fluent 3ddp -t2 -cnf=machinefile.$JOB_ID -g < inputfile.txt > outputfile.txt
 
     echo End Parallel Run
 
@@ -232,7 +234,8 @@ The result of the computation will be written on file (please make sure to save 
     #$ -S /bin/bash         # scripting language
     #$ -l h_rt=1:00:00      # jobDuration hh:mm:ss
     #$ -q hub.q             # queueName
-    #$ -pe mpi 2            # cpuNumber
+    #$ -pe smp 2            # asking 2 processes on single node
+    ##$ -pe mpi 2            # asking 2 processes on any node
     #________________________________________________________
     
     ### Runs the Matlab "script.m" file.
@@ -535,7 +538,8 @@ Here an example of launch file:
     #$ -S /bin/bash         # scripting language
     #$ -l h_rt=3:00:00      # jobDuration hh:mm:ss
     #$ -q hub.q             # queueName
-    #$ -pe mpi 4            # cpuNumber
+    #$ -pe smp 2            # asking 2 processes on single node
+    ##$ -pe mpi 2           # asking 2 processes on any node
     #---------------------------------------------------------
     
     ### LOAD THE OPENFOAM ENVIRONMENT
@@ -552,8 +556,8 @@ Here an example of launch file:
     
     blockMesh >& log.blockMesh
     decomposePar >& log.decomposePar
-    mpirun -np 4 --bind-to none --hostfile machinefile.$JOB_ID snappyHexMesh -parallel >& log.snappyHexMesh
-    mpirun -np 4 --bind-to none --hostfile machinefile.$JOB_ID simpleFoam -parallel >& log.simpleFoam
+    mpirun -np 2 --bind-to none --hostfile machinefile.$JOB_ID snappyHexMesh -parallel >& log.snappyHexMesh
+    mpirun -np 2 --bind-to none --hostfile machinefile.$JOB_ID simpleFoam -parallel >& log.simpleFoam
     reconstructPar -latestTime >& log.reconstructPar
     sample -latestTime >& log.sample
 
@@ -810,7 +814,8 @@ Here an example of launch file:
     #$ -S /bin/bash         # scripting language
     #$ -l h_rt=2:00:00      # jobDuration hh:mm:ss
     #$ -q hub.q             # queueName
-    #$ -pe mpi 2            # cpuNumber
+    #$ -pe smp 2            # asking 2 processes on single node
+    ##$ -pe mpi 2           # asking 2 processes on any node
     #---------------------------------------------------------
     
     ### EXECUTE COMMANDS
